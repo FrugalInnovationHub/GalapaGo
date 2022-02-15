@@ -1,15 +1,14 @@
-import 'react-native-gesture-handler';
+import "react-native-gesture-handler";
 // import React, { Component } from 'react';
-import * as React from 'react';
-import * as firebase from 'firebase';
+import * as React from "react";
+import * as firebase from "firebase";
 
-import { getStorage } from '@firebase/storage';
-import '@firebase/database';
-import { getDatabase, ref} from '@firebase/database';
+import { getStorage } from "@firebase/storage";
+import { getDatabase, ref } from "@firebase/database";
 
-import TabNavigator from './Routes';
-import { NavigationContainer } from '@react-navigation/native';
-import { Tab } from 'native-base';
+import TabNavigator from "./Routes";
+import { NavigationContainer } from "@react-navigation/native";
+import { Tab } from "native-base";
 // import { getDatabase, ref, onValue } from "firebase/database";
 // import NetInfo from "@react-native-community/netinfo";
 //
@@ -44,8 +43,6 @@ import { Tab } from 'native-base';
 
 export default class App extends React.Component {
   render() {
-    return (
-      <TabNavigator/>
-    );
+    return <TabNavigator />;
   }
 }
