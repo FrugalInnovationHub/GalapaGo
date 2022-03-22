@@ -6,7 +6,7 @@ import * as firebase from "firebase";
 import { getStorage } from "@firebase/storage";
 import { getDatabase, ref } from "@firebase/database";
 
-import TabNavigator from "./Routes";
+import NavigationApp from "./routers";
 import { NavigationContainer } from "@react-navigation/native";
 import { Tab } from "native-base";
 // import { getDatabase, ref, onValue } from "firebase/database";
@@ -43,6 +43,6 @@ import { Tab } from "native-base";
 
 export default class App extends React.Component {
   render() {
-    return <TabNavigator />;
+    return <NavigationApp />;
   }
 }
