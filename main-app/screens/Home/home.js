@@ -14,51 +14,6 @@ const entireScreenWidth = Dimensions.get("window").width;
 let rem;
 rem = entireScreenWidth / 350;
 
-const styles = StyleSheet.create({
-  header: {
-    fontSize: 34 * rem,
-    fontWeight: "600",
-    paddingVertical: 16,
-    paddingLeft: 34,
-    paddingRight: 59
-  },
-  buttonText: {
-    fontSize: 17 * rem,
-    paddingLeft: 16
-  },
-  buttonContainer: {
-    flexDirection: "row",
-    borderBottomWidth: 1,
-    borderColor: "#C0C0C0",
-    paddingVertical: 10,
-    paddingLeft: 34,
-    paddingRight: 14
-  },
-  lastButtonContainer: {
-    flexDirection: "row",
-    borderBottomWidth: 1,
-    paddingVertical: 10,
-    borderColor: "#C0C0C0",
-    paddingLeft: 34,
-    paddingRight: 14
-  },
-  buttonLeft: {
-    flex: 1,
-    flexDirection: "row",
-    alignItems: "center"
-  },
-  buttonRight: {
-    flex: 1,
-    flexDirection: "row",
-    justifyContent: "flex-end",
-    alignItems: "center"
-  },
-  chevron: {
-    width: 11 * rem,
-    height: 18 * rem
-  }
-});
-
 class Home extends React.Component {
   // videoBuffer = (isBuffer) =>{
   //
@@ -122,3 +77,48 @@ class Home extends React.Component {
 }
 
 export default Home;
+
+const styles = StyleSheet.create({
+  header: {
+    fontSize: 34 * rem,
+    fontWeight: "600",
+    paddingVertical: 16,
+    paddingLeft: 34,
+    paddingRight: 59
+  },
+  buttonText: {
+    fontSize: 17 * rem,
+    paddingLeft: 16
+  },
+  buttonContainer: {
+    flexDirection: "row",
+    borderBottomWidth: 1,
+    borderColor: "#C0C0C0",
+    paddingVertical: 10,
+    paddingLeft: 34,
+    paddingRight: 14
+  },
+  lastButtonContainer: {
+    flexDirection: "row",
+    borderBottomWidth: 1,
+    paddingVertical: 10,
+    borderColor: "#C0C0C0",
+    paddingLeft: 34,
+    paddingRight: 14
+  },
+  buttonLeft: {
+    flex: 1,
+    flexDirection: "row",
+    alignItems: "center"
+  },
+  buttonRight: {
+    flex: 1,
+    flexDirection: "row",
+    justifyContent: "flex-end",
+    alignItems: "center"
+  },
+  chevron: {
+    width: 11 * rem,
+    height: 18 * rem
+  }
+});
