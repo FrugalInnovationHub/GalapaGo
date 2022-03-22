@@ -1,5 +1,4 @@
 import "react-native-gesture-handler";
-// import React, { Component } from 'react';
 import * as React from "react";
 import * as firebase from "firebase";
 
@@ -7,8 +6,6 @@ import { getStorage } from "@firebase/storage";
 import { getDatabase, ref } from "@firebase/database";
 
 import NavigationApp from "./routers";
-import { NavigationContainer } from "@react-navigation/native";
-import { Tab } from "native-base";
 // import { getDatabase, ref, onValue } from "firebase/database";
 // import NetInfo from "@react-native-community/netinfo";
 //
