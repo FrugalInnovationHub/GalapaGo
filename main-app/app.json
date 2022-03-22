@@ -30,6 +30,7 @@
     "android": {
       "package": "host.fih.galapago",
       "versionCode": 1
-    }
+    },
+    "description": ""
   }
 }
