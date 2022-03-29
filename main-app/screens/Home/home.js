@@ -6,7 +6,9 @@ import {
   View,
   TouchableOpacity,
   Image,
-  Dimensions
+  Dimensions,
+  SafeAreaView,
+  ScrollView
 } from "react-native";
 
 //get scaling factors
@@ -23,55 +25,61 @@ class Home extends React.Component {
   //   //such as show a loading icon
   // }
 
+  navigate(pageName) {
+    this.props.navigation.navigate(pageName);
+  }
+
   render() {
     return (
-      <View style={{ backgroundColor: "history_gray", flex: 1 }}>
-        <Image
-          source={require("../../app/assets/images/Main.png")}
-          style={{ width: entireScreenWidth, height: 200 }}
-        />
-        <TouchableOpacity
-          style={styles.buttonContainer}
-          onPress={() => this.props.navigation.navigate("RelevantInformation")}
-        >
-          <View style={styles.buttonLeft}>
-            <Image
-              source={require("../../app/assets/icons/info.jpg")}
-              style={{ width: 33 * rem, height: 25 * rem }}
-            />
-            <Text style={styles.buttonText}>Galapagos Overview</Text>
-          </View>
-          <View style={styles.buttonRight}>
-            <Image
-              source={require("../../app/assets/icons/chevron.png")}
-              style={styles.chevron}
-            />
-          </View>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={styles.lastButtonContainer}
-          onPress={() => this.props.navigation.navigate("Maps")}
-        >
-          <View style={styles.buttonLeft}>
-            <Image
-              source={require("../../app/assets/icons/Map.png")}
-              style={{ width: 31 * rem, height: 27 * rem }}
-            />
-            <Text style={styles.buttonText}>Maps</Text>
-          </View>
-          <View style={styles.buttonRight}>
-            <Image
-              source={require("../../app/assets/icons/chevron.png")}
-              style={styles.chevron}
-            />
-          </View>
-          <View style={{ borderBottomWidth: 1 }}></View>
-        </TouchableOpacity>
-        <Image
-          source={require("../../app/assets/images/Ga_withLogo.png")}
-          style={{ width: entireScreenWidth, height: 355 * rem }}
-        />
-      </View>
+      <SafeAreaView style={styles.container}>
+        <ScrollView showsVerticalScrollIndicator={false}>
+          <Image
+            source={require("../../app/assets/images/Main.png")}
+            style={{ width: entireScreenWidth, height: 200 }}
+          />
+          <TouchableOpacity
+            style={styles.buttonContainer}
+            onPress={() => this.navigate("RelevantInformation")}
+          >
+            <View style={styles.buttonLeft}>
+              <Image
+                source={require("../../app/assets/icons/info.jpg")}
+                style={{ width: 33 * rem, height: 25 * rem }}
+              />
+              <Text style={styles.buttonText}>Galapagos Overview</Text>
+            </View>
+            <View style={styles.buttonRight}>
+              <Image
+                source={require("../../app/assets/icons/chevron.png")}
+                style={styles.chevron}
+              />
+            </View>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.lastButtonContainer}
+            onPress={() => this.navigate("Maps")}
+          >
+            <View style={styles.buttonLeft}>
+              <Image
+                source={require("../../app/assets/icons/Map.png")}
+                style={{ width: 31 * rem, height: 27 * rem }}
+              />
+              <Text style={styles.buttonText}>Maps</Text>
+            </View>
+            <View style={styles.buttonRight}>
+              <Image
+                source={require("../../app/assets/icons/chevron.png")}
+                style={styles.chevron}
+              />
+            </View>
+            <View style={{ borderBottomWidth: 1 }}></View>
+          </TouchableOpacity>
+          <Image
+            source={require("../../app/assets/images/Ga_withLogo.png")}
+            style={{ width: entireScreenWidth, height: 355 * rem }}
+          />
+        </ScrollView>
+      </SafeAreaView>
     );
   }
 }
@@ -79,13 +87,7 @@ class Home extends React.Component {
 export default Home;
 
 const styles = StyleSheet.create({
-  header: {
-    fontSize: 34 * rem,
-    fontWeight: "600",
-    paddingVertical: 16,
-    paddingLeft: 34,
-    paddingRight: 59
-  },
+  container: { flex: 1 },
   buttonText: {
     fontSize: 17 * rem,
     paddingLeft: 16
