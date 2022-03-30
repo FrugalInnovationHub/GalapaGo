@@ -17,13 +17,10 @@ let rem;
 rem = entireScreenWidth / 350;
 
 class Home extends React.Component {
-  // videoBuffer = (isBuffer) =>{
-  //
-  //
-  //   console.log(isBuffer)
-  //   //here you could set the isBuffer value to the state and then do something with it
-  //   //such as show a loading icon
-  // }
+  // static navigationOptions = {
+  //   title: "Home",
+  //   headerStyle: {}
+  // };
 
   navigate(pageName) {
     this.props.navigation.navigate(pageName);
