@@ -11,9 +11,9 @@ const images = [
     id: 1,
     source: Galapagos_homepage_whales
   },
-  { id: 2, source: Galapagos_homepage_coral },
-  { id: 3, source: Galapagos_homepage_reptile },
-  { id: 4, source: Galapagos_homepage_tortoise }
+  { id: 2, source: Galapagos_homepage_reptile },
+  { id: 3, source: Galapagos_homepage_tortoise },
+  { id: 4, source: Galapagos_homepage_coral }
 ];
 
 const HomeImageSwiper = () => {
