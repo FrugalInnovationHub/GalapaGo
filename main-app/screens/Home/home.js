@@ -17,20 +17,15 @@ let rem;
 rem = entireScreenWidth / 350;
 
 class Home extends React.Component {
-  // static navigationOptions = {
-  //   title: "Home",
-  //   headerStyle: {}
-  // };
-
   navigate(pageName) {
     this.props.navigation.navigate(pageName);
   }
 
   render() {
     return (
-      <View style={styles.container}>
+      <SafeAreaView style={styles.container}>
         <HomeImageSwiper />
-      </View>
+      </SafeAreaView>
     );
   }
 }
