@@ -2,14 +2,14 @@ import "react-native-gesture-handler";
 import * as React from "react";
 import {
   StyleSheet,
-  Button,
+  SafeAreaView,
   Text,
   View,
   TouchableOpacity,
   Image,
   Dimensions
 } from "react-native";
-
+import Header from "../../components/Header";
 //get scaling factors
 const entireScreenWidth = Dimensions.get("window").width;
 let rem;
@@ -18,12 +18,8 @@ rem = entireScreenWidth / 350;
 class Learn extends React.Component {
   render() {
     return (
-      <View style={{ backgroundColor: "white", flex: 1 }}>
-        <Image
-          source={require("../../app/assets/images/Learn.png")}
-          style={{ width: entireScreenWidth, height: 200 }}
-        />
-
+      <SafeAreaView>
+        <Header title="Learn" color="#FFB800" />
         <TouchableOpacity
           style={styles.buttonContainer}
           onPress={() => this.props.navigation.navigate("AboutUs")}
@@ -80,11 +76,7 @@ class Learn extends React.Component {
           </View>
           <View style={{ borderBottomWidth: 1 }}></View>
         </TouchableOpacity>
-        <Image
-          source={require("../../app/assets/images/g1.jpg")}
-          style={{ width: entireScreenWidth, height: 355 * rem }}
-        />
-      </View>
+      </SafeAreaView>
     );
   }
 }

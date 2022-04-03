@@ -22,15 +22,6 @@ const HomeSection = createStackNavigator(
 HomeSection.navigationOptions = ({ navigation }) => {
   return {
     tabBarLabel: "Home",
-    headerVisible: false,
-    transparentHeader: {
-      position: "absolute",
-      backgroundColor: "transparent",
-      zIndex: 100,
-      top: 0,
-      left: 0,
-      right: 0
-    },
     tabBarIcon: ({ tintcolor }) => (
       <Image
         source={require("../app/assets/icons/turtle-1.png")}
