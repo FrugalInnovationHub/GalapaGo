@@ -14,11 +14,13 @@ import NewSpecies from "../screens/learn/science/NewSpecies";
 import Protect from "../screens/learn/science/Protect";
 import ScienceAndSus from "../screens/learn/science/ScienceAndSus";
 import EndangeredSpecies from "../screens/learn/science/EndangeredSpecies";
+import Overview from "../screens/learn/Overview";
 
 const LearnSection = createStackNavigator({
   Learn: { screen: Learn },
   AboutUs: { screen: AboutUs },
   History: { screen: History },
+  Overview: { screen: Overview },
   People: { screen: People },
   Timeline: { screen: Timeline },
   ScienceAndSus: { screen: ScienceAndSus },
