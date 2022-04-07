@@ -1,81 +1,58 @@
 import "react-native-gesture-handler";
 import * as React from "react";
-import {
-  StyleSheet,
-  SafeAreaView,
-  Text,
-  View,
-  TouchableOpacity,
-  Image,
-  Dimensions
-} from "react-native";
-import Header from "../../components/Header";
-//get scaling factors
-const entireScreenWidth = Dimensions.get("window").width;
-let rem;
-rem = entireScreenWidth / 350;
+import { StyleSheet, SafeAreaView, ScrollView } from "react-native";
+
+import { MaterialIcons } from "@expo/vector-icons";
+import { Header, NavigationButton } from "../../components";
 
 class Learn extends React.Component {
+  constructor() {
+    super();
+    this.buttons = [
+      {
+        id: 1,
+        name: "About Us",
+        navigatePath: "AboutUs",
+        icon: <MaterialIcons name="groups" size={28} color="black" />
+      },
+      {
+        id: 2,
+        name: "Science & Sustainability",
+        navigatePath: "ScienceAndSus",
+        icon: <MaterialIcons name="groups" size={28} color="black" />
+      },
+      {
+        id: 3,
+        name: "History",
+        navigatePath: "History",
+        icon: <MaterialIcons name="groups" size={28} color="black" />
+      },
+      {
+        id: 4,
+        name: "Galapagos Overview",
+        navigatePath: "Overview",
+        icon: <MaterialIcons name="groups" size={28} color="black" />
+      }
+    ];
+  }
+  navigate(pageName) {
+    // eslint-disable-next-line react/prop-types
+    this.props.navigation.navigate(pageName);
+  }
   render() {
     return (
-      <SafeAreaView>
-        <Header title="Learn" color="#FFB800" />
-        <TouchableOpacity
-          style={styles.buttonContainer}
-          onPress={() => this.props.navigation.navigate("AboutUs")}
-        >
-          <View style={styles.buttonLeft}>
-            <Image
-              source={require("../../app/assets/icons/aboutUs_gray.png")}
-              style={{ width: 31 * rem, height: 25 * rem }}
+      <SafeAreaView style={styles.container}>
+        <ScrollView style={styles.scrollView}>
+          <Header title="Learn" color="#FFB800" />
+          {this.buttons.map(({ id, name, navigatePath, icon }) => (
+            <NavigationButton
+              key={id}
+              label={name}
+              onPress={() => this.navigate(navigatePath)}
+              icon={icon}
             />
-            <Text style={styles.buttonText}>About Us</Text>
-          </View>
-          <View style={styles.buttonRight}>
-            <Image
-              source={require("../../app/assets/icons/chevron.png")}
-              style={styles.chevron}
-            />
-          </View>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={styles.lastButtonContainer}
-          onPress={() => this.props.navigation.navigate("ScienceAndSus")}
-        >
-          <View style={styles.buttonLeft}>
-            <Image
-              source={require("../../app/assets/icons/scienceAndSus_gray.png")}
-              style={{ width: 31 * rem, height: 27 * rem }}
-            />
-            <Text style={styles.buttonText}>Science & Sustainability</Text>
-          </View>
-          <View style={styles.buttonRight}>
-            <Image
-              source={require("../../app/assets/icons/chevron.png")}
-              style={styles.chevron}
-            />
-          </View>
-          <View style={{ borderBottomWidth: 1 }}></View>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={styles.lastButtonContainer}
-          onPress={() => this.props.navigation.navigate("History")}
-        >
-          <View style={styles.buttonLeft}>
-            <Image
-              source={require("../../app/assets/icons/history_gray.png")}
-              style={{ width: 27 * rem, height: 28 * rem }}
-            />
-            <Text style={styles.buttonText}>History</Text>
-          </View>
-          <View style={styles.buttonRight}>
-            <Image
-              source={require("../../app/assets/icons/chevron.png")}
-              style={styles.chevron}
-            />
-          </View>
-          <View style={{ borderBottomWidth: 1 }}></View>
-        </TouchableOpacity>
+          ))}
+        </ScrollView>
       </SafeAreaView>
     );
   }
@@ -84,45 +61,9 @@ class Learn extends React.Component {
 export default Learn;
 
 const styles = StyleSheet.create({
-  header: {
-    fontSize: 34 * rem,
-    fontWeight: "600",
-    paddingVertical: 16,
-    paddingLeft: 34,
-    paddingRight: 59
+  container: {
+    backgroundColor: "#FFFFFF",
+    flex: 1
   },
-  buttonText: {
-    fontSize: 17 * rem,
-    paddingLeft: 16
-  },
-  buttonContainer: {
-    flexDirection: "row",
-    borderBottomWidth: 1,
-    borderColor: "#C0C0C0",
-    paddingVertical: 10,
-    paddingLeft: 34,
-    paddingRight: 14
-  },
-  lastButtonContainer: {
-    flexDirection: "row",
-    borderBottomWidth: 1,
-    paddingVertical: 10,
-    borderColor: "#C0C0C0",
-    paddingLeft: 34,
-    paddingRight: 14
-  },
-  buttonLeft: {
-    flex: 1,
-    flexDirection: "row",
-    alignItems: "center"
-  },
-  buttonRight: {
-    flexDirection: "row",
-    justifyContent: "flex-end",
-    alignItems: "center"
-  },
-  chevron: {
-    width: 11 * rem,
-    height: 18 * rem
-  }
+  scrollView: { backgroundColor: "#FFFFFF" }
 });

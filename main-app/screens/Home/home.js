@@ -1,23 +1,10 @@
-import "react-native-gesture-handler";
 import * as React from "react";
-import {
-  StyleSheet,
-  Text,
-  View,
-  TouchableOpacity,
-  Image,
-  Dimensions,
-  SafeAreaView,
-  ScrollView
-} from "react-native";
+import { StyleSheet, SafeAreaView } from "react-native";
 import HomeImageSwiper from "./HomeImageSwiper";
-//get scaling factors
-const entireScreenWidth = Dimensions.get("window").width;
-let rem;
-rem = entireScreenWidth / 350;
 
 class Home extends React.Component {
   navigate(pageName) {
+    // eslint-disable-next-line react/prop-types
     this.props.navigation.navigate(pageName);
   }
 

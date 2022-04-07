@@ -1,7 +1,7 @@
 //LearnSection imports
 import React from "react";
 import { createStackNavigator } from "react-navigation-stack";
-import { Image, View } from "react-native";
+import { Image } from "react-native";
 
 import Learn from "../screens/learn/Learn";
 import AboutUs from "../screens/learn/AboutUs";

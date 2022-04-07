@@ -3,7 +3,6 @@ import { createStackNavigator } from "react-navigation-stack";
 import { Image } from "react-native";
 
 import Home from "../screens/Home/home";
-import RelevantInformation from "../screens/Home/RelevantInformation";
 import Maps from "../screens/Home/Maps";
 
 import showMap from "../screens/Home/IslandMaps/showMap";
@@ -11,7 +10,6 @@ import showMap from "../screens/Home/IslandMaps/showMap";
 const HomeSection = createStackNavigator(
   {
     Home: { screen: Home },
-    RelevantInformation: { screen: RelevantInformation },
     Maps: { screen: Maps },
     showMap: { screen: showMap }
   },
