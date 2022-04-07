@@ -15,15 +15,23 @@ import Protect from "../screens/learn/science/Protect";
 import ScienceAndSus from "../screens/learn/science/ScienceAndSus";
 import EndangeredSpecies from "../screens/learn/science/EndangeredSpecies";
 import Overview from "../screens/learn/Overview";
+import Language from "../screens/learn/Language";
+import Customs from "../screens/learn/Customs";
+import Rules from "../screens/learn/Rules";
 
 const LearnSection = createStackNavigator({
   Learn: { screen: Learn },
   AboutUs: { screen: AboutUs },
   History: { screen: History },
   Overview: { screen: Overview },
+  ScienceAndSus: { screen: ScienceAndSus },
+  Language: { screen: Language },
+  Customs: { screen: Customs },
+  Rules: { screen: Rules },
+
+  //----------
   People: { screen: People },
   Timeline: { screen: Timeline },
-  ScienceAndSus: { screen: ScienceAndSus },
   Fauna: { screen: Fauna },
   Flora: { screen: Flora },
   NewSpecies: { screen: NewSpecies },

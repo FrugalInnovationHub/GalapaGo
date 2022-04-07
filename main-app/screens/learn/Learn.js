@@ -32,6 +32,24 @@ class Learn extends React.Component {
         name: "Galapagos Overview",
         navigatePath: "Overview",
         icon: <MaterialIcons name="groups" size={28} color="black" />
+      },
+      {
+        id: 5,
+        name: "Useful Phrases for Ecuador",
+        navigatePath: "Language",
+        icon: <MaterialIcons name="groups" size={28} color="black" />
+      },
+      {
+        id: 6,
+        name: "Cultural & Social Norms",
+        navigatePath: "Customs",
+        icon: <MaterialIcons name="groups" size={28} color="black" />
+      },
+      {
+        id: 7,
+        name: "Rules of the National Park",
+        navigatePath: "Rules",
+        icon: <MaterialIcons name="groups" size={28} color="black" />
       }
     ];
   }

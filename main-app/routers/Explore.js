@@ -5,9 +5,6 @@ import { Image } from "react-native";
 
 import Explore from "../screens/explore/Explore";
 import KnowBefore from "../screens/explore/know/KnowBefore";
-import Language from "../screens/explore/know/Language";
-import Customs from "../screens/explore/know/Customs";
-import Rules from "../screens/explore/know/Rules";
 import Plan from "../screens/explore/plan/Plan";
 import TravelAgencies from "../screens/explore/plan/TravelAgencies";
 import IslandHop from "../screens/explore/plan/IslandHop";
@@ -53,9 +50,6 @@ import SantaCruzTop from "../screens/explore/plan/islandHop/santaCruz/SantaCruzT
 const ExploreSection = createStackNavigator({
   Explore: { screen: Explore },
   KnowBefore: { screen: KnowBefore },
-  Language: { screen: Language },
-  Customs: { screen: Customs },
-  Rules: { screen: Rules },
   Plan: { screen: Plan },
   TravelAgencies: { screen: TravelAgencies },
   IslandHop: { screen: IslandHop },
