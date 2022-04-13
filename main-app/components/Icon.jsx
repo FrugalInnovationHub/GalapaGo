@@ -12,7 +12,6 @@ const IcoMoon = createIconSetFromIcoMoon(
 
 // eslint-disable-next-line react/prop-types
 const Icon = ({ name, size, color }) => {
-  console.log("show", name, size);
   const [fontsLoaded] = useFonts({
     IcoMoon: require("../assets/icomoon/icomoon.ttf")
   });
