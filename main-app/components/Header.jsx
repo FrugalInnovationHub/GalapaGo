@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React, { useCallback } from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
+import Icon from "./Icon";
 import { AntDesign } from "@expo/vector-icons";
 
 const Header = ({ title, color, subTitle, goBack }) => {
@@ -12,12 +12,9 @@ const Header = ({ title, color, subTitle, goBack }) => {
     <View style={styles.container}>
       <View style={[styles.labelWraper, { backgroundColor: color }]}>
         <View style={styles.label}>
-          <MaterialCommunityIcons
-            name="lightbulb-on-outline"
-            size={40}
-            color="white"
-            style={styles.icon}
-          />
+          <View style={styles.iconWrapper}>
+            <Icon name="learn" size={40} color="white" />
+          </View>
           <Text style={styles.labelText}>{title}</Text>
         </View>
       </View>
@@ -48,7 +45,7 @@ const styles = StyleSheet.create({
     justifyContent: "center"
   },
   label: { flexDirection: "row" },
-  icon: { marginLeft: 30 },
+  iconWrapper: { marginLeft: 30, width: 40 },
   labelText: {
     fontSize: 35,
     fontWeight: "bold",
