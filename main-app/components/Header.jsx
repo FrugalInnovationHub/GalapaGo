@@ -4,7 +4,7 @@ import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import Icon from "./Icon";
 import { AntDesign } from "@expo/vector-icons";
 
-const Header = ({ title, color, subTitle, goBack }) => {
+const Header = ({ title, color, subTitle, goBack, icon }) => {
   const onPress = useCallback(() => {
     goBack && goBack();
   }, [goBack]);
@@ -13,7 +13,7 @@ const Header = ({ title, color, subTitle, goBack }) => {
       <View style={[styles.labelWraper, { backgroundColor: color }]}>
         <View style={styles.label}>
           <View style={styles.iconWrapper}>
-            <Icon name="learn" size={40} color="white" />
+            <Icon name={icon} size={40} color="white" />
           </View>
           <Text style={styles.labelText}>{title}</Text>
         </View>
