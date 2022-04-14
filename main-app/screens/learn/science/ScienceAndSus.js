@@ -8,7 +8,8 @@ import {
   ScrollView,
   Image,
   Dimensions,
-  TouchableOpacity
+  TouchableOpacity,
+  SafeAreaView
 } from "react-native";
 import LearnHeader from "../LearnHeader";
 
@@ -80,113 +81,117 @@ const styles = StyleSheet.create({
 class ScienceAndSus extends React.Component {
   render() {
     return (
-      <ScrollView style={styles.container}>
-        <View>
-          <LearnHeader
-            subTitle="Science and Sustainability"
-            goBack={() => {
-              // eslint-disable-next-line react/prop-types
-              this.props.navigation.goBack();
-            }}
-          />
-          <View style={{ borderBottomWidth: 2, borderColor: "#FFCE4F" }}>
-            <Text style={styles.subHeader}>Flora & Fauna</Text>
+      <SafeAreaView style={styles.container}>
+        <ScrollView>
+          <View>
+            <LearnHeader
+              subTitle="Science and Sustainability"
+              goBack={() => {
+                // eslint-disable-next-line react/prop-types
+                this.props.navigation.goBack();
+              }}
+            />
+            <View style={{ borderBottomWidth: 2, borderColor: "#FFCE4F" }}>
+              <Text style={styles.subHeader}>Flora & Fauna</Text>
+            </View>
+            <TouchableOpacity
+              style={styles.topButtonContainer}
+              onPress={() => this.props.navigation.navigate("Flora")}
+            >
+              <View style={styles.buttonLeft}>
+                <Image
+                  source={require("../../../app/assets/icons/flora_gray.png")}
+                  style={{ width: 24 * rem, height: 23 * rem }}
+                />
+                <Text style={styles.buttonText}>Flora</Text>
+              </View>
+              <View style={styles.buttonRight}>
+                <Image
+                  source={require("../../../app/assets/icons/chevron.png")}
+                  style={styles.chevron}
+                />
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={styles.topButtonContainer}
+              onPress={() => this.props.navigation.navigate("Fauna")}
+            >
+              <View style={styles.buttonLeft}>
+                <Image
+                  source={require("../../../app/assets/icons/fauna_gray.png")}
+                  style={{ width: 27 * rem, height: 18 * rem }}
+                />
+                <Text style={styles.buttonText}>Fauna</Text>
+              </View>
+              <View style={styles.buttonRight}>
+                <Image
+                  source={require("../../../app/assets/icons/chevron.png")}
+                  style={styles.chevron}
+                />
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={styles.topButtonContainer}
+              onPress={() => this.props.navigation.navigate("Protect")}
+            >
+              <View style={styles.buttonLeft}>
+                <Image
+                  source={require("../../../app/assets/icons/protect_gray.png")}
+                  style={{ width: 28 * rem, height: 23 * rem }}
+                />
+                <Text style={styles.buttonText}>How to Protect Them</Text>
+              </View>
+              <View style={styles.buttonRight}>
+                <Image
+                  source={require("../../../app/assets/icons/chevron.png")}
+                  style={styles.chevron}
+                />
+              </View>
+            </TouchableOpacity>
+            <View style={{ borderBottomWidth: 2, borderColor: "#FFCE4F" }}>
+              <Text style={styles.subHeader}>Species</Text>
+            </View>
+            <TouchableOpacity
+              style={styles.topButtonContainer}
+              onPress={() =>
+                this.props.navigation.navigate("EndangeredSpecies")
+              }
+            >
+              <View style={styles.buttonLeft}>
+                <Image
+                  source={require("../../../app/assets/icons/endangered_gray.png")}
+                  style={{ width: 27 * rem, height: 24 * rem }}
+                />
+                <Text style={styles.buttonText}>Endangered Species</Text>
+              </View>
+              <View style={styles.buttonRight}>
+                <Image
+                  source={require("../../../app/assets/icons/chevron.png")}
+                  style={styles.chevron}
+                />
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={styles.topButtonContainer}
+              onPress={() => this.props.navigation.navigate("NewSpecies")}
+            >
+              <View style={styles.buttonLeft}>
+                <Image
+                  source={require("../../../app/assets/icons/newSpecies_gray.png")}
+                  style={{ width: 29 * rem, height: 24 * rem }}
+                />
+                <Text style={styles.buttonText}>New Species</Text>
+              </View>
+              <View style={styles.buttonRight}>
+                <Image
+                  source={require("../../../app/assets/icons/chevron.png")}
+                  style={styles.chevron}
+                />
+              </View>
+            </TouchableOpacity>
           </View>
-          <TouchableOpacity
-            style={styles.topButtonContainer}
-            onPress={() => this.props.navigation.navigate("Flora")}
-          >
-            <View style={styles.buttonLeft}>
-              <Image
-                source={require("../../../app/assets/icons/flora_gray.png")}
-                style={{ width: 24 * rem, height: 23 * rem }}
-              />
-              <Text style={styles.buttonText}>Flora</Text>
-            </View>
-            <View style={styles.buttonRight}>
-              <Image
-                source={require("../../../app/assets/icons/chevron.png")}
-                style={styles.chevron}
-              />
-            </View>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={styles.topButtonContainer}
-            onPress={() => this.props.navigation.navigate("Fauna")}
-          >
-            <View style={styles.buttonLeft}>
-              <Image
-                source={require("../../../app/assets/icons/fauna_gray.png")}
-                style={{ width: 27 * rem, height: 18 * rem }}
-              />
-              <Text style={styles.buttonText}>Fauna</Text>
-            </View>
-            <View style={styles.buttonRight}>
-              <Image
-                source={require("../../../app/assets/icons/chevron.png")}
-                style={styles.chevron}
-              />
-            </View>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={styles.topButtonContainer}
-            onPress={() => this.props.navigation.navigate("Protect")}
-          >
-            <View style={styles.buttonLeft}>
-              <Image
-                source={require("../../../app/assets/icons/protect_gray.png")}
-                style={{ width: 28 * rem, height: 23 * rem }}
-              />
-              <Text style={styles.buttonText}>How to Protect Them</Text>
-            </View>
-            <View style={styles.buttonRight}>
-              <Image
-                source={require("../../../app/assets/icons/chevron.png")}
-                style={styles.chevron}
-              />
-            </View>
-          </TouchableOpacity>
-          <View style={{ borderBottomWidth: 2, borderColor: "#FFCE4F" }}>
-            <Text style={styles.subHeader}>Species</Text>
-          </View>
-          <TouchableOpacity
-            style={styles.topButtonContainer}
-            onPress={() => this.props.navigation.navigate("EndangeredSpecies")}
-          >
-            <View style={styles.buttonLeft}>
-              <Image
-                source={require("../../../app/assets/icons/endangered_gray.png")}
-                style={{ width: 27 * rem, height: 24 * rem }}
-              />
-              <Text style={styles.buttonText}>Endangered Species</Text>
-            </View>
-            <View style={styles.buttonRight}>
-              <Image
-                source={require("../../../app/assets/icons/chevron.png")}
-                style={styles.chevron}
-              />
-            </View>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={styles.topButtonContainer}
-            onPress={() => this.props.navigation.navigate("NewSpecies")}
-          >
-            <View style={styles.buttonLeft}>
-              <Image
-                source={require("../../../app/assets/icons/newSpecies_gray.png")}
-                style={{ width: 29 * rem, height: 24 * rem }}
-              />
-              <Text style={styles.buttonText}>New Species</Text>
-            </View>
-            <View style={styles.buttonRight}>
-              <Image
-                source={require("../../../app/assets/icons/chevron.png")}
-                style={styles.chevron}
-              />
-            </View>
-          </TouchableOpacity>
-        </View>
-      </ScrollView>
+        </ScrollView>
+      </SafeAreaView>
     );
   }
 }

@@ -9,7 +9,6 @@ import {
   SafeAreaView,
   ScrollView
 } from "react-native";
-import { Header } from "../../components";
 import LearnHeader from "./LearnHeader";
 //get scaling factors
 const entireScreenWidth = Dimensions.get("window").width;
@@ -19,7 +18,7 @@ rem = entireScreenWidth / 350;
 class Rules extends React.Component {
   render() {
     return (
-      <SafeAreaView style={styles.container}>
+      <SafeAreaView>
         <ScrollView style={styles.scrollView}>
           <View style={{ backgroundColor: "white", flex: 1 }}>
             <LearnHeader

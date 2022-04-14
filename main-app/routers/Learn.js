@@ -19,25 +19,28 @@ import Language from "../screens/learn/Language";
 import Customs from "../screens/learn/Customs";
 import Rules from "../screens/learn/Rules";
 
-const LearnSection = createStackNavigator({
-  Learn: { screen: Learn },
-  AboutUs: { screen: AboutUs },
-  History: { screen: History },
-  Overview: { screen: Overview },
-  ScienceAndSus: { screen: ScienceAndSus },
-  Language: { screen: Language },
-  Customs: { screen: Customs },
-  Rules: { screen: Rules },
+const LearnSection = createStackNavigator(
+  {
+    Learn: { screen: Learn },
+    AboutUs: { screen: AboutUs },
+    History: { screen: History },
+    Overview: { screen: Overview },
+    ScienceAndSus: { screen: ScienceAndSus },
+    Language: { screen: Language },
+    Customs: { screen: Customs },
+    Rules: { screen: Rules },
 
-  //----------
-  People: { screen: People },
-  Timeline: { screen: Timeline },
-  Fauna: { screen: Fauna },
-  Flora: { screen: Flora },
-  NewSpecies: { screen: NewSpecies },
-  Protect: { screen: Protect },
-  EndangeredSpecies: { screen: EndangeredSpecies }
-});
+    //----------
+    People: { screen: People },
+    Timeline: { screen: Timeline },
+    Fauna: { screen: Fauna },
+    Flora: { screen: Flora },
+    NewSpecies: { screen: NewSpecies },
+    Protect: { screen: Protect },
+    EndangeredSpecies: { screen: EndangeredSpecies }
+  },
+  { headerMode: "none" }
+);
 
 LearnSection.navigationOptions = ({ navigation }) => {
   return {

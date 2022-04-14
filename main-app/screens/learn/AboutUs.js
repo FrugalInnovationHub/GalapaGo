@@ -4,9 +4,9 @@ import {
   StyleSheet,
   Text,
   View,
-  Image,
   Dimensions,
-  ScrollView
+  ScrollView,
+  SafeAreaView
 } from "react-native";
 import {
   Collapse,
@@ -23,116 +23,121 @@ rem = entireScreenWidth / 350;
 class AboutUs extends React.Component {
   render() {
     return (
-      <ScrollView style={styles.container}>
-        <View>
-          <LearnHeader
-            subTitle="About Us"
-            goBack={() => {
-              // eslint-disable-next-line react/prop-types
-              this.props.navigation.goBack();
-            }}
-          />
+      <SafeAreaView style={styles.container}>
+        <ScrollView>
           <View>
-            <Collapse>
-              <CollapseHeader>
-                <Separator bordered style={styles.dropHeader}>
-                  <Text style={styles.dropHeaderText}>Mission</Text>
-                </Separator>
-              </CollapseHeader>
-              <CollapseBody>
-                <ListItem>
-                  <Text style={styles.dropBodyText}>
-                    We are an organization committed to strengthening the
-                    tourism sector as the main productive activity of Galapagos,
-                    through the promotion, technical assistance and training of
-                    its members and the community, guided by a principle of
-                    sustainable tourism.
-                  </Text>
-                </ListItem>
-              </CollapseBody>
-            </Collapse>
-            <Collapse>
-              <CollapseHeader>
-                <Separator bordered style={styles.dropHeader}>
-                  <Text style={styles.dropHeaderText}>Vision</Text>
-                </Separator>
-              </CollapseHeader>
-              <CollapseBody>
-                <ListItem>
-                  <Text style={styles.dropBodyText}>
-                    To be the organization that leads the representation of the
-                    tourism sector in the Province under standards of excellence
-                    and ethics, promoting sustainable tourism and a solidarity
-                    participation with its members and the community.
-                  </Text>
-                </ListItem>
-              </CollapseBody>
-            </Collapse>
-            <Collapse>
-              <CollapseHeader>
-                <Separator bordered style={styles.dropHeader}>
-                  <Text style={styles.dropHeaderText}>Objectives</Text>
-                </Separator>
-              </CollapseHeader>
-              <CollapseBody>
-                <ListItem>
-                  <Text style={styles.dropBodyText}>
-                    Art. 5.- The Provincial Chamber of Tourism of Galapagos has
-                    the following objectives:{"\n\n"}
-                    Promote the development of tourism and its services in
-                    general in harmony with the need for conservation,
-                    preservation and management of the Galapagos Islands.
-                    {"\n\n"}
-                    Ensure the prosperity of its members, providing cooperation
-                    and support for the development of their activities and the
-                    necessary services in accordance with the legal provisions
-                    and the present Statute.{"\n\n"}
-                    Foster collaboration and understanding between the various
-                    social sectors and tourism service providers, promoting the
-                    harmonious progress of the Galapagos province in every
-                    aspect.{"\n\n"}
-                    Stimulate cooperation between the private sector and the
-                    public sector for the benefit of tourism.{"\n\n"}
-                    Cooperate in the orientation of state policies and in the
-                    elaboration of regulations regarding tourism, conservation
-                    and management of the Galapagos Islands.{"\n\n"}
-                    To guide the national and international public opinion on
-                    the problems that affect tourism, other productive
-                    activities, the community and, in general, the Galapagos
-                    Islands, aiming at the achievement of goals that benefit
-                    them.{"\n\n"}
-                    All others provided in the Law and more regulations.{"\n"}
-                  </Text>
-                </ListItem>
-              </CollapseBody>
-            </Collapse>
-          </View>
+            <LearnHeader
+              subTitle="About Us"
+              goBack={() => {
+                // eslint-disable-next-line react/prop-types
+                this.props.navigation.goBack();
+              }}
+            />
+            <View>
+              <Collapse>
+                <CollapseHeader>
+                  <Separator bordered style={styles.dropHeader}>
+                    <Text style={styles.dropHeaderText}>Mission</Text>
+                  </Separator>
+                </CollapseHeader>
+                <CollapseBody>
+                  <ListItem>
+                    <Text style={styles.dropBodyText}>
+                      We are an organization committed to strengthening the
+                      tourism sector as the main productive activity of
+                      Galapagos, through the promotion, technical assistance and
+                      training of its members and the community, guided by a
+                      principle of sustainable tourism.
+                    </Text>
+                  </ListItem>
+                </CollapseBody>
+              </Collapse>
+              <Collapse>
+                <CollapseHeader>
+                  <Separator bordered style={styles.dropHeader}>
+                    <Text style={styles.dropHeaderText}>Vision</Text>
+                  </Separator>
+                </CollapseHeader>
+                <CollapseBody>
+                  <ListItem>
+                    <Text style={styles.dropBodyText}>
+                      To be the organization that leads the representation of
+                      the tourism sector in the Province under standards of
+                      excellence and ethics, promoting sustainable tourism and a
+                      solidarity participation with its members and the
+                      community.
+                    </Text>
+                  </ListItem>
+                </CollapseBody>
+              </Collapse>
+              <Collapse>
+                <CollapseHeader>
+                  <Separator bordered style={styles.dropHeader}>
+                    <Text style={styles.dropHeaderText}>Objectives</Text>
+                  </Separator>
+                </CollapseHeader>
+                <CollapseBody>
+                  <ListItem>
+                    <Text style={styles.dropBodyText}>
+                      Art. 5.- The Provincial Chamber of Tourism of Galapagos
+                      has the following objectives:{"\n\n"}
+                      Promote the development of tourism and its services in
+                      general in harmony with the need for conservation,
+                      preservation and management of the Galapagos Islands.
+                      {"\n\n"}
+                      Ensure the prosperity of its members, providing
+                      cooperation and support for the development of their
+                      activities and the necessary services in accordance with
+                      the legal provisions and the present Statute.{"\n\n"}
+                      Foster collaboration and understanding between the various
+                      social sectors and tourism service providers, promoting
+                      the harmonious progress of the Galapagos province in every
+                      aspect.{"\n\n"}
+                      Stimulate cooperation between the private sector and the
+                      public sector for the benefit of tourism.{"\n\n"}
+                      Cooperate in the orientation of state policies and in the
+                      elaboration of regulations regarding tourism, conservation
+                      and management of the Galapagos Islands.{"\n\n"}
+                      To guide the national and international public opinion on
+                      the problems that affect tourism, other productive
+                      activities, the community and, in general, the Galapagos
+                      Islands, aiming at the achievement of goals that benefit
+                      them.{"\n\n"}
+                      All others provided in the Law and more regulations.{"\n"}
+                    </Text>
+                  </ListItem>
+                </CollapseBody>
+              </Collapse>
+            </View>
 
-          <Text style={styles.bodyText}>
-            The Provincial Chamber of Tourism of Galapagos CAPTURGAL, is a
-            non-profit organization created in 1996 (Ministerial Agreement No.
-            0013).{"\n\n"}
-            With its main office in Puerto Ayora, on the island of Santa Cruz,
-            with its respective Chapters of San Cristóbal, it serves its almost
-            100 associates of the four inhabited islands of the archipelago
-            (Floreana Island is a parish of the San Cristóbal Municipal
-            Government), a who provides services in the fields of legal and
-            technical advice, arbitration, training and business references.
-            {"\n\n"}
-            In fulfilling its functions, CAPTURGAL takes positive measures to
-            ensure the conservation of these extraordinary islands. Since its
-            foundation, CAPTURGAL has worked determinedly and jointly with the
-            Galapagos National Park in order to promote tourism, without causing
-            any damage to these unique ecosystems.{"\n\n"}
-            But CAPTURGAL's job is also to take care of the Galapagos visitors,
-            their comfort, their safety, their well-being. In a word: offer them
-            quality.{"\n\n"}
-            The Provincial Chamber of Tourism of Galapagos is at your service,
-            to make your visit to these enchanted islands unforgettable.{"\n\n"}
-            Therefore, just enjoy it!
-          </Text>
-        </View>
-      </ScrollView>
+            <Text style={styles.bodyText}>
+              The Provincial Chamber of Tourism of Galapagos CAPTURGAL, is a
+              non-profit organization created in 1996 (Ministerial Agreement No.
+              0013).{"\n\n"}
+              With its main office in Puerto Ayora, on the island of Santa Cruz,
+              with its respective Chapters of San Cristóbal, it serves its
+              almost 100 associates of the four inhabited islands of the
+              archipelago (Floreana Island is a parish of the San Cristóbal
+              Municipal Government), a who provides services in the fields of
+              legal and technical advice, arbitration, training and business
+              references.
+              {"\n\n"}
+              In fulfilling its functions, CAPTURGAL takes positive measures to
+              ensure the conservation of these extraordinary islands. Since its
+              foundation, CAPTURGAL has worked determinedly and jointly with the
+              Galapagos National Park in order to promote tourism, without
+              causing any damage to these unique ecosystems.{"\n\n"}
+              But CAPTURGAL's job is also to take care of the Galapagos
+              visitors, their comfort, their safety, their well-being. In a
+              word: offer them quality.{"\n\n"}
+              The Provincial Chamber of Tourism of Galapagos is at your service,
+              to make your visit to these enchanted islands unforgettable.
+              {"\n\n"}
+              Therefore, just enjoy it!
+            </Text>
+          </View>
+        </ScrollView>
+      </SafeAreaView>
     );
   }
 }

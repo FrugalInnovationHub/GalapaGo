@@ -2,7 +2,7 @@ import "react-native-gesture-handler";
 import * as React from "react";
 import {
   StyleSheet,
-  Button,
+  SafeAreaView,
   Text,
   View,
   TouchableOpacity,
@@ -87,8 +87,8 @@ const styles = StyleSheet.create({
 class History extends React.Component {
   render() {
     return (
-      <ScrollView style={styles.container}>
-        <View>
+      <SafeAreaView style={styles.container}>
+        <ScrollView>
           <LearnHeader
             subTitle="History"
             goBack={() => {
@@ -160,8 +160,8 @@ class History extends React.Component {
             {"\n\n"}
             Therefore, just enjoy it!
           </Text>
-        </View>
-      </ScrollView>
+        </ScrollView>
+      </SafeAreaView>
     );
   }
 }

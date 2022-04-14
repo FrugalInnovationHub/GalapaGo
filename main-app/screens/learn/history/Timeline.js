@@ -1,13 +1,20 @@
 import "react-native-gesture-handler";
 import * as React from "react";
-import { StyleSheet, Text, View, Dimensions, ScrollView } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Dimensions,
+  ScrollView,
+  SafeAreaView
+} from "react-native";
 import LearnHeader from "../LearnHeader";
 
 class Timeline extends React.Component {
   render() {
     return (
-      <ScrollView style={styles.container}>
-        <View>
+      <SafeAreaView style={styles.container}>
+        <ScrollView>
           <LearnHeader
             subTitle="History / Timeline"
             goBack={() => {
@@ -75,8 +82,8 @@ class Timeline extends React.Component {
             Galapagos Marine Reserve in the list of Natural Heritage of
             Humanity.
           </Text>
-        </View>
-      </ScrollView>
+        </ScrollView>
+      </SafeAreaView>
     );
   }
 }

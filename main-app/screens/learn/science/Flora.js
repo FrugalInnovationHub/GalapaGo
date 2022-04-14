@@ -14,62 +14,64 @@ import LearnHeader from "../LearnHeader";
 class Flora extends React.Component {
   render() {
     return (
-      <ScrollView style={styles.container}>
-        <LearnHeader
-          subTitle="Science and Sustainability / Flora"
-          goBack={() => {
-            // eslint-disable-next-line react/prop-types
-            this.props.navigation.goBack();
-          }}
-        />
-        <View style={styles.header}>
-          <Image
-            source={require("../../../app/assets/icons/flora.png")}
-            style={{ width: 30 * rem, height: 30 * rem }}
+      <SafeAreaView style={styles.container}>
+        <ScrollView>
+          <LearnHeader
+            subTitle="Science and Sustainability / Flora"
+            goBack={() => {
+              // eslint-disable-next-line react/prop-types
+              this.props.navigation.goBack();
+            }}
           />
-          <Text style={styles.headerText}>Flora</Text>
-        </View>
-        <SafeAreaView style={styles.container}>
-          <View style={styles.bodyContainer}>
-            <Text style={styles.bodyText}>
-              Scientifically, it is known that the Galapagos flora has managed
-              to grow thanks to the winds, the transport of the seeds in the
-              legs and digestive tract of the animals, and through floating
-              rafts that came from the rivers to the sea. It should be clarified
-              that not all seeds were suitable for all types of soils, so they
-              germinated in the different vegetation zones to which they best
-              adapted. Now let's talk about each of these areas to get an idea
-              of the flora that grows in the Galapagos.
-            </Text>
+          <View style={styles.header}>
+            <Image
+              source={require("../../../app/assets/icons/flora.png")}
+              style={{ width: 30 * rem, height: 30 * rem }}
+            />
+            <Text style={styles.headerText}>Flora</Text>
           </View>
-          <Text style={styles.subHeader}>Coastal Zone</Text>
-          <View style={styles.bodyContainer}>
-            <Text style={styles.bodyText}>
-              The coastal zone is characterized by its high saline level, so the
-              local plants can withstand these hypersaline conditions. The most
-              representative are the Monte Salado, the Red Mangrove and the
-              Morning Glory.{" "}
-            </Text>
-          </View>
-          <Text style={styles.subHeader}>Arid Zone</Text>
-          <View style={styles.bodyContainer}>
-            <Text style={styles.bodyText}>
-              In the arid zone we find the three species of cactus on the
-              islands: Opuntia, Candelabra and Lava, which provide food for
-              iguanas and land turtles.
-            </Text>
-          </View>
-          <Text style={styles.subHeader}>Humid Zone</Text>
-          <View style={styles.bodyContainer}>
-            <Text style={styles.bodyText}>
-              In the humid zone we find a microclimate very similar to that of
-              the cloud forests, and that has created great distance with the
-              arid zone. This area has ferns, orchids, moss, lichen, cat's claw
-              and other plants.{" "}
-            </Text>
-          </View>
-        </SafeAreaView>
-      </ScrollView>
+          <SafeAreaView style={styles.container}>
+            <View style={styles.bodyContainer}>
+              <Text style={styles.bodyText}>
+                Scientifically, it is known that the Galapagos flora has managed
+                to grow thanks to the winds, the transport of the seeds in the
+                legs and digestive tract of the animals, and through floating
+                rafts that came from the rivers to the sea. It should be
+                clarified that not all seeds were suitable for all types of
+                soils, so they germinated in the different vegetation zones to
+                which they best adapted. Now let's talk about each of these
+                areas to get an idea of the flora that grows in the Galapagos.
+              </Text>
+            </View>
+            <Text style={styles.subHeader}>Coastal Zone</Text>
+            <View style={styles.bodyContainer}>
+              <Text style={styles.bodyText}>
+                The coastal zone is characterized by its high saline level, so
+                the local plants can withstand these hypersaline conditions. The
+                most representative are the Monte Salado, the Red Mangrove and
+                the Morning Glory.{" "}
+              </Text>
+            </View>
+            <Text style={styles.subHeader}>Arid Zone</Text>
+            <View style={styles.bodyContainer}>
+              <Text style={styles.bodyText}>
+                In the arid zone we find the three species of cactus on the
+                islands: Opuntia, Candelabra and Lava, which provide food for
+                iguanas and land turtles.
+              </Text>
+            </View>
+            <Text style={styles.subHeader}>Humid Zone</Text>
+            <View style={styles.bodyContainer}>
+              <Text style={styles.bodyText}>
+                In the humid zone we find a microclimate very similar to that of
+                the cloud forests, and that has created great distance with the
+                arid zone. This area has ferns, orchids, moss, lichen, cat's
+                claw and other plants.{" "}
+              </Text>
+            </View>
+          </SafeAreaView>
+        </ScrollView>
+      </SafeAreaView>
     );
   }
 }
