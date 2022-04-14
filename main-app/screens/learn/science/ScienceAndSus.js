@@ -67,7 +67,6 @@ const styles = StyleSheet.create({
     alignItems: "center"
   },
   buttonRight: {
-    flex: 1,
     flexDirection: "row",
     justifyContent: "flex-end",
     alignItems: "center"
@@ -90,7 +89,7 @@ class ScienceAndSus extends React.Component {
               this.props.navigation.goBack();
             }}
           />
-          <View style={{ borderBottomWidth: 2, borderColor: "#27C4CC" }}>
+          <View style={{ borderBottomWidth: 2, borderColor: "#FFCE4F" }}>
             <Text style={styles.subHeader}>Flora & Fauna</Text>
           </View>
           <TouchableOpacity
@@ -147,7 +146,7 @@ class ScienceAndSus extends React.Component {
               />
             </View>
           </TouchableOpacity>
-          <View style={{ borderBottomWidth: 2, borderColor: "#27C4CC" }}>
+          <View style={{ borderBottomWidth: 2, borderColor: "#FFCE4F" }}>
             <Text style={styles.subHeader}>Species</Text>
           </View>
           <TouchableOpacity
