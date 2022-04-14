@@ -14,7 +14,7 @@ import {
   CollapseBody
 } from "accordion-collapse-react-native";
 import { ListItem, Separator } from "native-base";
-import { Header } from "../../components";
+import LearnHeader from "./LearnHeader";
 //get scaling factors
 const entireScreenWidth = Dimensions.get("window").width;
 let rem;
@@ -25,10 +25,8 @@ class AboutUs extends React.Component {
     return (
       <ScrollView style={styles.container}>
         <View>
-          <Header
-            title="Learn"
+          <LearnHeader
             subTitle="About Us"
-            color="#FFB800"
             goBack={() => {
               // eslint-disable-next-line react/prop-types
               this.props.navigation.goBack();
@@ -208,8 +206,10 @@ const styles = StyleSheet.create({
     lineHeight: 22 * rem
   },
   dropHeader: {
-    backgroundColor: "rgba(39, 196, 204, 0.1)",
-    height: 50 * rem
+    backgroundColor: "#FFF6DE",
+    height: 50 * rem,
+    borderColor: "#FFCE4F",
+    borderBottomWidth: 2
   },
   dropHeaderText: {
     fontSize: 17 * rem,

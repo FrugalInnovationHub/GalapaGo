@@ -1,8 +1,8 @@
 import "react-native-gesture-handler";
 import * as React from "react";
 import { StyleSheet, SafeAreaView, ScrollView } from "react-native";
-import { Header, NavigationButton, Icon } from "../../components";
-
+import { NavigationButton, Icon } from "../../components";
+import LearnHeader from "./LearnHeader";
 class Learn extends React.Component {
   constructor() {
     super();
@@ -60,7 +60,7 @@ class Learn extends React.Component {
     return (
       <SafeAreaView style={styles.container}>
         <ScrollView style={styles.scrollView}>
-          <Header title="Learn" color="#FFB800" />
+          <LearnHeader />
           {this.buttons.map(({ id, name, navigatePath, icon }) => (
             <NavigationButton
               key={id}

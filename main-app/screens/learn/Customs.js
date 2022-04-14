@@ -8,7 +8,7 @@ import {
   SafeAreaView,
   ScrollView
 } from "react-native";
-import { Header } from "../../components";
+import LearnHeader from "./LearnHeader";
 
 class Customs extends React.Component {
   render() {
@@ -16,10 +16,8 @@ class Customs extends React.Component {
       <SafeAreaView style={styles.container}>
         <ScrollView style={styles.scrollView}>
           <View style={{ backgroundColor: "white", flex: 1 }}>
-            <Header
-              title="Learn"
+            <LearnHeader
               subTitle="Social Customs"
-              color="#FFB800"
               goBack={() => {
                 // eslint-disable-next-line react/prop-types
                 this.props.navigation.goBack();

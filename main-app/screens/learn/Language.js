@@ -10,6 +10,7 @@ import {
   SectionList
 } from "react-native";
 import { Header } from "../../components";
+import LearnHeader from "./LearnHeader";
 //get scaling factors
 const entireScreenWidth = Dimensions.get("window").width;
 let rem;
@@ -20,10 +21,8 @@ class Language extends React.Component {
     return (
       <SafeAreaView style={styles.container}>
         <ScrollView style={styles.scrollView} horizontal={false}>
-          <Header
-            title="Learn"
+          <LearnHeader
             subTitle="Useful Phrases for Ecuador"
-            color="#FFB800"
             goBack={() => {
               // eslint-disable-next-line react/prop-types
               this.props.navigation.goBack();
