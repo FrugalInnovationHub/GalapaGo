@@ -14,6 +14,7 @@ import {
   Linking
 } from "react-native";
 import OpenMap from "react-native-open-map";
+import ExploreHeader from "../ExploreHeader";
 
 //get scaling factors
 const entireScreenWidth = Dimensions.get("window").width;
@@ -150,6 +151,10 @@ class IslandHop extends React.Component {
   render() {
     return (
       <SafeAreaView style={styles.container}>
+        <ExploreHeader
+          subTitle="Island Hop"
+          goBack={() => this.props.navigation.goBack()}
+        />
         <ScrollView style={styles.scrollView}>
           <View style={{ backgroundColor: "white", flex: 1 }}>
             <View style={styles.header}>

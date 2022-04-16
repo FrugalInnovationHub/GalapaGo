@@ -47,22 +47,23 @@ import SantaCruzHotels from "../screens/explore/plan/islandHop/santaCruz/SantaCr
 import SantaCruzTop from "../screens/explore/plan/islandHop/santaCruz/SantaCruzTop";
 */
 
-const ExploreSection = createStackNavigator({
-  Explore: { screen: Explore },
-  KnowBefore: { screen: KnowBefore },
-  Plan: { screen: Plan },
-  TravelAgencies: { screen: TravelAgencies },
-  IslandHop: { screen: IslandHop },
-  TopActivities: { screen: TopActivities },
-  Cycling: { screen: Cycling },
-  Camping: { screen: Camping },
-  Hiking: { screen: Hiking },
-  Cruise: { screen: Cruise },
-  Diving: { screen: Diving },
-  Surfing: { screen: Surfing },
-  Kayaking: { screen: Kayaking },
-  Fishing: { screen: Fishing },
-  /*
+const ExploreSection = createStackNavigator(
+  {
+    Explore: { screen: Explore },
+    KnowBefore: { screen: KnowBefore },
+    Plan: { screen: Plan },
+    TravelAgencies: { screen: TravelAgencies },
+    IslandHop: { screen: IslandHop },
+    TopActivities: { screen: TopActivities },
+    Cycling: { screen: Cycling },
+    Camping: { screen: Camping },
+    Hiking: { screen: Hiking },
+    Cruise: { screen: Cruise },
+    Diving: { screen: Diving },
+    Surfing: { screen: Surfing },
+    Kayaking: { screen: Kayaking },
+    Fishing: { screen: Fishing },
+    /*
     Floreana:{screen: Floreana},
     FloreanaFood: {screen: FloreanaFood},
     FloreanaHotels:{screen:FloreanaHotels},
@@ -76,13 +77,15 @@ const ExploreSection = createStackNavigator({
     SanCristobalHotels: {screen: SanCristobalHotels},
     SanCristobalTop: {screen: SanCristobalTop},
     */
-  SantaCruz: { screen: SantaCruz },
-  SantaCruzFood: { screen: SantaCruzFood },
-  SantaCruzHotels: { screen: SantaCruzHotels }
-  /*
+    SantaCruz: { screen: SantaCruz },
+    SantaCruzFood: { screen: SantaCruzFood },
+    SantaCruzHotels: { screen: SantaCruzHotels }
+    /*
     SantaCruzTop: {screen: SantaCruzTop}
     */
-});
+  },
+  { headerMode: "none" }
+);
 
 ExploreSection.navigationOptions = ({ navigation }) => {
   return {
