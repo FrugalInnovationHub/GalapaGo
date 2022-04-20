@@ -34,42 +34,6 @@ const styles = StyleSheet.create({
     fontSize: 28 * rem,
     fontWeight: "600"
   },
-  buttonText: {
-    fontSize: 17 * rem,
-    paddingLeft: 16
-  },
-  buttonContainer: {
-    flexDirection: "row",
-    borderTopWidth: 1,
-    borderColor: "#C0C0C0",
-    paddingVertical: 10,
-    paddingLeft: 34,
-    paddingRight: 14
-  },
-  lastButtonContainer: {
-    flexDirection: "row",
-    borderTopWidth: 1,
-    borderBottomWidth: 1,
-    paddingVertical: 10,
-    borderColor: "#C0C0C0",
-    paddingLeft: 34,
-    paddingRight: 14
-  },
-  buttonLeft: {
-    flex: 1,
-    flexDirection: "row",
-    alignItems: "center"
-  },
-  buttonRight: {
-    flex: 1,
-    flexDirection: "row",
-    justifyContent: "flex-end",
-    alignItems: "center"
-  },
-  chevron: {
-    width: 11 * rem,
-    height: 18 * rem
-  },
   regularBold: {
     fontWeight: "600",
     color: "#000000",
@@ -78,12 +42,6 @@ const styles = StyleSheet.create({
     paddingTop: 16,
     paddingBottom: 16,
     flexWrap: "wrap"
-  },
-  regular: {
-    fontSize: 17 * rem,
-    color: "#616161",
-    padding: 30,
-    lineHeight: 20 * rem
   },
   numberRow: {
     flexDirection: "row",
@@ -103,11 +61,6 @@ const styles = StyleSheet.create({
   slideImage: {
     height: 200 * rem,
     width: Dimensions.get("window").width
-  },
-  text: {
-    color: "#fff",
-    fontSize: 30,
-    fontWeight: "bold"
   },
   infoPhone: {
     width: 20 * rem,
