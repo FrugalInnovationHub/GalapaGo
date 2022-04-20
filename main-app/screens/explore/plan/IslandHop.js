@@ -16,90 +16,6 @@ import {
 import OpenMap from "react-native-open-map";
 import ExploreHeader from "../ExploreHeader";
 
-//get scaling factors
-const entireScreenWidth = Dimensions.get("window").width;
-let rem;
-rem = entireScreenWidth / 350;
-
-const styles = StyleSheet.create({
-  header: {
-    flexDirection: "row",
-    paddingTop: 16,
-    paddingBottom: 16,
-    paddingLeft: 34,
-    alignItems: "center"
-  },
-  headerText: {
-    paddingLeft: 16,
-    fontSize: 28 * rem,
-    fontWeight: "600"
-  },
-  regularBold: {
-    fontWeight: "600",
-    color: "#000000",
-    fontSize: 17 * rem,
-    paddingLeft: 30,
-    paddingTop: 16,
-    paddingBottom: 16,
-    flexWrap: "wrap"
-  },
-  numberRow: {
-    flexDirection: "row",
-    paddingTop: 16,
-    paddingBottom: 16,
-    paddingLeft: 34,
-    alignItems: "stretch"
-  },
-  wrapper: {
-    height: 200 * rem
-  },
-  slide: {
-    justifyContent: "center",
-    alignItems: "center",
-    width: Dimensions.get("window").width
-  },
-  slideImage: {
-    height: 200 * rem,
-    width: Dimensions.get("window").width
-  },
-  infoPhone: {
-    width: 20 * rem,
-    height: 18 * rem
-  },
-  infoEmail: {
-    width: 21 * rem,
-    height: 16 * rem
-  },
-  infoAddress: {
-    width: 18 * rem,
-    height: 21 * rem
-  },
-  infoWeb: {
-    width: 20 * rem,
-    height: 20 * rem
-  },
-  infoText: {
-    fontSize: 17 * rem,
-    color: "#616161",
-    lineHeight: 20 * rem,
-    marginLeft: 10 * rem,
-    marginRight: 20 * rem
-  },
-  numberRow: {
-    flexDirection: "row",
-    paddingTop: 20,
-    justifyContent: "center",
-    flexWrap: "wrap"
-  },
-  lastRow: {
-    flexDirection: "row",
-    paddingTop: 20,
-    paddingBottom: 50,
-    justifyContent: "center",
-    flexWrap: "wrap"
-  }
-});
-
 class IslandHop extends React.Component {
   render() {
     return (
@@ -1796,3 +1712,87 @@ class IslandHop extends React.Component {
 }
 
 export default IslandHop;
+
+//get scaling factors
+const entireScreenWidth = Dimensions.get("window").width;
+let rem;
+rem = entireScreenWidth / 350;
+
+const styles = StyleSheet.create({
+  header: {
+    flexDirection: "row",
+    paddingTop: 16,
+    paddingBottom: 16,
+    paddingLeft: 34,
+    alignItems: "center"
+  },
+  headerText: {
+    paddingLeft: 16,
+    fontSize: 28 * rem,
+    fontWeight: "600"
+  },
+  regularBold: {
+    fontWeight: "600",
+    color: "#000000",
+    fontSize: 17 * rem,
+    paddingLeft: 30,
+    paddingTop: 16,
+    paddingBottom: 16,
+    flexWrap: "wrap"
+  },
+  numberRow: {
+    flexDirection: "row",
+    paddingTop: 16,
+    paddingBottom: 16,
+    paddingLeft: 34,
+    alignItems: "stretch"
+  },
+  wrapper: {
+    height: 200 * rem
+  },
+  slide: {
+    justifyContent: "center",
+    alignItems: "center",
+    width: Dimensions.get("window").width
+  },
+  slideImage: {
+    height: 200 * rem,
+    width: Dimensions.get("window").width
+  },
+  infoPhone: {
+    width: 20 * rem,
+    height: 18 * rem
+  },
+  infoEmail: {
+    width: 21 * rem,
+    height: 16 * rem
+  },
+  infoAddress: {
+    width: 18 * rem,
+    height: 21 * rem
+  },
+  infoWeb: {
+    width: 20 * rem,
+    height: 20 * rem
+  },
+  infoText: {
+    fontSize: 17 * rem,
+    color: "#616161",
+    lineHeight: 20 * rem,
+    marginLeft: 10 * rem,
+    marginRight: 20 * rem
+  },
+  numberRow: {
+    flexDirection: "row",
+    paddingTop: 20,
+    justifyContent: "center",
+    flexWrap: "wrap"
+  },
+  lastRow: {
+    flexDirection: "row",
+    paddingTop: 20,
+    paddingBottom: 50,
+    justifyContent: "center",
+    flexWrap: "wrap"
+  }
+});
