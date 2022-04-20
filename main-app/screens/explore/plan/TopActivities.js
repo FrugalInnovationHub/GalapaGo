@@ -29,7 +29,7 @@ class TopActivities extends React.Component {
             />
             <Text style={styles.headerText}>Top Activities</Text>
           </View>
-          <View style={{ borderBottomWidth: 2, borderColor: "#27C4CC" }}>
+          <View style={{ borderBottomWidth: 2, borderColor: "#304c90" }}>
             <Text style={styles.subHeader}>Land</Text>
           </View>
           <TouchableOpacity
@@ -86,7 +86,7 @@ class TopActivities extends React.Component {
               />
             </View>
           </TouchableOpacity>
-          <View style={{ borderBottomWidth: 2, borderColor: "#27C4CC" }}>
+          <View style={{ borderBottomWidth: 2, borderColor: "#304c90" }}>
             <Text style={styles.subHeader}>Sea</Text>
           </View>
           <TouchableOpacity
