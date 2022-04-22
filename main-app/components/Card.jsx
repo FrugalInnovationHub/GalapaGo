@@ -6,7 +6,8 @@ import {
   View,
   Image,
   TouchableOpacity,
-  Linking
+  Linking,
+  Dimensions
 } from "react-native";
 import Swiper from "react-native-swiper";
 import {
@@ -16,50 +17,23 @@ import {
 } from "@expo/vector-icons";
 import OpenMap from "react-native-open-map";
 
-const Card = ({
-  Name,
-  PhoneNo,
-  Email,
-  // Image,
-  Website,
-  Latitude,
-  Longitude
-}) => {
+const Card = ({ name, phoneNo, email, website, position, images }) => {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.headerText}>{Name}</Text>
+        <Text style={styles.headerText}>{name}</Text>
       </View>
-      <Swiper style={styles.body} showsButtons={true}>
-        <View style={styles.slide}>
-          <Image
-            source={require("../app/assets/images/travel-agencies/fds-travel/1.jpg")}
-            style={styles.slideImage}
-          />
-        </View>
-        <View style={styles.slide}>
-          <Image
-            source={require("../app/assets/images/travel-agencies/fds-travel/2.jpg")}
-            style={styles.slideImage}
-          />
-        </View>
-        <View style={styles.slide}>
-          <Image
-            source={require("../app/assets/images/travel-agencies/fds-travel/3.jpg")}
-            style={styles.slideImage}
-          />
-        </View>
-        <View style={styles.slide}>
-          <Image
-            source={require("../app/assets/images/travel-agencies/fds-travel/4.jpg")}
-            style={styles.slideImage}
-          />
-        </View>
+      <Swiper style={styles.body} showsButtons={false}>
+        {images.map((image) => (
+          <View style={styles.slide} key={`${image.title}+${name}`}>
+            <Image source={image.file} style={styles.slideImage} />
+          </View>
+        ))}
       </Swiper>
       <View style={styles.footer}>
         <TouchableOpacity
           style={styles.button}
-          onPress={() => Linking.openURL("tel:${" + PhoneNo + "}")}
+          onPress={() => Linking.openURL("tel:${" + phoneNo + "}")}
         >
           <Ionicons
             name="call-outline"
@@ -71,7 +45,7 @@ const Card = ({
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.button}
-          onPress={() => Linking.openURL(`mailto:${Email}`)}
+          onPress={() => Linking.openURL(`mailto:${email}`)}
         >
           <MaterialCommunityIcons
             name="email-outline"
@@ -83,7 +57,7 @@ const Card = ({
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.button}
-          onPress={() => Linking.openURL(Website)}
+          onPress={() => Linking.openURL(website)}
         >
           <Ionicons
             name="ios-globe-outline"
@@ -96,7 +70,10 @@ const Card = ({
         <TouchableOpacity
           style={styles.button}
           onPress={() =>
-            OpenMap.show({ latitude: Latitude, longitude: Longitude })
+            OpenMap.show({
+              latitude: position.latitude,
+              longitude: position.longitude
+            })
           }
         >
           <Ionicons
@@ -122,6 +99,11 @@ const Card = ({
 };
 
 export default Card;
+
+const entireScreenWidth = Dimensions.get("window").width;
+let rem;
+rem = entireScreenWidth / 350;
+
 const styles = StyleSheet.create({
   container: { borderBottomColor: "#e5e5e5e5", borderBottomWidth: 10 },
   header: { height: 60, justifyContent: "center" },
@@ -132,17 +114,16 @@ const styles = StyleSheet.create({
     fontWeight: "700"
   },
   body: {
-    height: 200
+    height: 220
   },
   footer: {
-    // height: 58,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-evenly"
   },
   slide: {},
   slideImage: {
-    height: 200,
+    height: 220,
     width: "100%"
   },
   button: {
