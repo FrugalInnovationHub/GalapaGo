@@ -6,7 +6,6 @@ import agenciesImages from "../../../assets/img/travel-agencies";
 import agencies from "../../../data/agencies.json";
 class TravelAgencies extends React.Component {
   render() {
-    console.log("agencies", agencies.agencies);
     const propertyNames = Object.keys(agencies.agencies);
     return (
       <SafeAreaView style={styles.container}>
