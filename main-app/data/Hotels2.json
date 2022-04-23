@@ -19,7 +19,8 @@
         "image1s": "barbongo1",
         "image2s": "barbongo2",
         "image3s": "barbongo3",
-        "image4s": "barbongo4"    },
+        "image4s": "barbongo4"
+    },
     {
         "email": "gerencia@electronautica.com.ec",
         "latitude": -0.7452797,
@@ -29,7 +30,8 @@
         "image1s": "discotecalapanga1",
         "image2s": "discotecalapanga2",
         "image3s": "discotecalapanga3",
-        "image4s": "discotecalapanga4"    },
+        "image4s": "discotecalapanga4"
+    },
     {
         "email": "admin@elmuellededarwin.com",
         "latitude": -0.7428072,
@@ -39,7 +41,8 @@
         "image1s": "elmuellededarwin1",
         "image2s": "elmuellededarwin2",
         "image3s": "elmuellededarwin3",
-        "image4s": "elmuellededarwin4"    },
+        "image4s": "elmuellededarwin4"
+    },
     {
         "email": "loylococinaecuatoriana@gmail.com",
         "latitude": -0.7464772,
@@ -49,7 +52,8 @@
         "image1s": "lolo1",
         "image2s": "lolo2",
         "image3s": "lolo3",
-        "image4s": "lolo4"    },
+        "image4s": "lolo4"
+    },
     {
         "email": "selvapro2014@hotmail.com",
         "latitude": -0.6929442,
@@ -59,7 +63,8 @@
         "image1s": "aquelarre1",
         "image2s": "aquelarre2",
         "image3s": "aquelarre3",
-        "image4s": "aquelarre4"    },
+        "image4s": "aquelarre4"
+    },
     {
         "email": "info@gpsdiesel.com",
         "latitude": -0.7447747,
@@ -69,7 +74,8 @@
         "image1s": "bahia1",
         "image2s": "bahia2",
         "image3s": "bahia3",
-        "image4s": "bahia4"    },
+        "image4s": "bahia4"
+    },
     {
         "email": "selvapro2010@hotmail.com",
         "latitude": -0.7438663,
@@ -79,7 +85,8 @@
         "image1s": "cevicheria1",
         "image2s": "cevicheria2",
         "image3s": "cevicheria3",
-        "image4s": "cevicheria4"    },
+        "image4s": "cevicheria4"
+    },
     {
         "email": "ilgiardinogalapagos@hotmail.com",
         "latitude": -0.7440473,
@@ -89,7 +96,8 @@
         "image1s": "ilgiardino1",
         "image2s": "ilgiardino2",
         "image3s": "ilgiardino3",
-        "image4s": "ilgiardino4"    },
+        "image4s": "ilgiardino4"
+    },
     {
         "email": "islagrillgalapagos@hotmail.com",
         "latitude": -0.7507154,
@@ -99,7 +107,8 @@
         "image1s": "islagrill1",
         "image2s": "islagrill2",
         "image3s": "islagrill3",
-        "image4s": "islagrill4"    },
+        "image4s": "islagrill4"
+    },
     {
         "email": "garrapata.restaurante@hotmail.com",
         "latitude": -0.7450692,
@@ -109,7 +118,8 @@
         "image1s": "garrapata1",
         "image2s": "garrapata2",
         "image3s": "garrapata3",
-        "image4s": "garrapata4"    },
+        "image4s": "garrapata4"
+    },
     {
         "email": "ventas@proinsular.com.ec",
         "latitude": -0.747853,
@@ -119,7 +129,8 @@
         "image1s": "proinsular1",
         "image2s": "proinsular2",
         "image3s": "proinsular3",
-        "image4s": "proinsular4"    },
+        "image4s": "proinsular4"
+    },
     {
         "email": "cervezagalapagos@gmail.com",
         "latitude": -0.743103,
@@ -129,5 +140,6 @@
         "image1s": "santacruzbrewery1",
         "image2s": "santacruzbrewery2",
         "image3s": "santacruzbrewery3",
-        "image4s": "santacruzbrewery4"    }
+        "image4s": "santacruzbrewery4"
+    }
 ]
