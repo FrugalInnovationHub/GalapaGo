@@ -7,14 +7,13 @@ console.warn = () => {};
 
 import {
   StyleSheet,
-  Button,
   Text,
   View,
   Image,
   TouchableOpacity,
   Dimensions,
   ScrollView,
-  Linking,
+  Linking
 } from "react-native";
 
 import AsyncStorage from "@react-native-async-storage/async-storage";
@@ -26,18 +25,18 @@ rem = entireScreenWidth / 350;
 
 const styles = StyleSheet.create({
   hidden: {
-    display: "none",
+    display: "none"
   },
   header: {
     fontSize: 34 * rem,
     fontWeight: "600",
     paddingVertical: 16,
     paddingLeft: 34,
-    paddingRight: 59,
+    paddingRight: 59
   },
   buttonText: {
     fontSize: 17 * rem,
-    paddingLeft: 16,
+    paddingLeft: 16
   },
   buttonContainer: {
     flexDirection: "row",
@@ -45,7 +44,7 @@ const styles = StyleSheet.create({
     borderColor: "#C0C0C0",
     paddingVertical: 10,
     paddingLeft: 34,
-    paddingRight: 14,
+    paddingRight: 14
   },
   lastButtonContainer: {
     flexDirection: "row",
@@ -53,22 +52,22 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     borderColor: "#C0C0C0",
     paddingLeft: 34,
-    paddingRight: 14,
+    paddingRight: 14
   },
   buttonLeft: {
     flex: 1,
     flexDirection: "row",
-    alignItems: "center",
+    alignItems: "center"
   },
   buttonRight: {
     flex: 1,
     flexDirection: "row",
     justifyContent: "flex-end",
-    alignItems: "center",
+    alignItems: "center"
   },
   chevron: {
     width: 11 * rem,
-    height: 18 * rem,
+    height: 18 * rem
   },
   regularBold: {
     fontWeight: "600",
@@ -77,36 +76,36 @@ const styles = StyleSheet.create({
     paddingLeft: 30,
     paddingTop: 16,
     paddingBottom: 16,
-    flexWrap: "wrap",
+    flexWrap: "wrap"
   },
   numberRow: {
     flexDirection: "row",
     paddingTop: 20,
     justifyContent: "center",
-    flexWrap: "wrap",
+    flexWrap: "wrap"
   },
   lastRow: {
     flexDirection: "row",
     paddingTop: 20,
     paddingBottom: 50,
     justifyContent: "center",
-    flexWrap: "wrap",
+    flexWrap: "wrap"
   },
   infoPhone: {
     width: 20 * rem,
-    height: 18 * rem,
+    height: 18 * rem
   },
   infoEmail: {
     width: 21 * rem,
-    height: 16 * rem,
+    height: 16 * rem
   },
   infoAddress: {
     width: 18 * rem,
-    height: 21 * rem,
+    height: 21 * rem
   },
   infoWeb: {
     width: 20 * rem,
-    height: 20 * rem,
+    height: 20 * rem
   },
   subHeader: {
     fontWeight: "700",
@@ -115,29 +114,29 @@ const styles = StyleSheet.create({
     paddingTop: 23,
     paddingBottom: 9,
     borderBottomWidth: 2,
-    borderColor: "#27C4CC",
+    borderColor: "#27C4CC"
   },
   infoText: {
     fontSize: 17 * rem,
     color: "#616161",
     lineHeight: 20 * rem,
     marginLeft: 10 * rem,
-    marginRight: 20 * rem,
+    marginRight: 20 * rem
   },
   entryBox: {
     paddingLeft: 15,
-    paddingVertical: 30 * rem,
+    paddingVertical: 30 * rem
   },
   slideImage: {
     alignItems: "center",
     height: 250 * rem,
-    width: Dimensions.get("window").width,
+    width: Dimensions.get("window").width
   },
   slide: {
     justifyContent: "center",
     alignItems: "center",
-    width: Dimensions.get("window").width,
-  },
+    width: Dimensions.get("window").width
+  }
 });
 
 class Favorites extends React.Component {
@@ -146,19 +145,19 @@ class Favorites extends React.Component {
     this.State = {
       Food: null,
       Hotel: null,
-      Time: new Date().toLocaleString(),
+      Time: new Date().toLocaleString()
     };
   }
 
   UNSAFE_componentWillMount() {
-    setInterval(
-      function () {
-        this.setState({
-          Time: new Date().toLocaleString(),
-        });
-      }.bind(this),
-      300
-    );
+    // setInterval(
+    //   function () {
+    //     this.setState({
+    //       Time: new Date().toLocaleString()
+    //     });
+    //   }.bind(this),
+    //   300
+    // );
   }
 
   async removeFavorites(type, key) {
@@ -252,7 +251,7 @@ class Favorites extends React.Component {
                 onPress={() =>
                   OpenMap.show({
                     latitude: value.Latitude,
-                    longitude: value.Longitude,
+                    longitude: value.Longitude
                   })
                 }
               >
@@ -331,7 +330,7 @@ class Favorites extends React.Component {
                 onPress={() =>
                   OpenMap.show({
                     latitude: value.Latitude,
-                    longitude: value.Longitude,
+                    longitude: value.Longitude
                   })
                 }
               >
@@ -373,7 +372,7 @@ class Favorites extends React.Component {
               borderColor: "#27C4CC",
               flexDirection: "row",
               alignItems: "center",
-              paddingLeft: 20,
+              paddingLeft: 20
             }}
           >
             <Image
@@ -389,7 +388,7 @@ class Favorites extends React.Component {
               borderColor: "#27C4CC",
               flexDirection: "row",
               alignItems: "center",
-              paddingLeft: 20,
+              paddingLeft: 20
             }}
           >
             <Image
@@ -403,11 +402,6 @@ class Favorites extends React.Component {
       </View>
     );
   }
-  // render() {
-  // return (
-  //     <Text>Favorites</Text>
-  // );
-  // }
 }
 
 export default Favorites;

@@ -1,20 +1,178 @@
-import Swiper from "react-native-swiper";
 import * as React from "react";
-import {
-  StyleSheet,
-  Text,
-  View,
-  TouchableOpacity,
-  Image,
-  Dimensions,
-  SafeAreaView,
-  ScrollView,
-  Linking
-} from "react-native";
-import OpenMap from "react-native-open-map";
+import { StyleSheet, Dimensions, SafeAreaView, ScrollView } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import * as Items from "../../../../app/assets/images/restaurants";
+import { Card } from "../../../../components";
 import ExploreHeader from "../../ExploreHeader";
+import restaurantImages from "../../../../assets/img/restaurants";
+import restaurants from "../../../../data/restaurants.json";
+class SantaCruzFood extends React.Component {
+  constructor() {
+    super();
+
+    this.state = {
+      restaurants: []
+    };
+  }
+
+  componentDidMount() {
+    this.setState({ restaurants: restaurants });
+  }
+
+  async addToFavorites(name, info) {
+    let value = await AsyncStorage.getItem("Food");
+    let new_value;
+    if (value !== null) {
+      new_value = JSON.parse(value);
+      new_value[name] = info;
+    } else {
+      new_value = {};
+      new_value[name] = info;
+    }
+    console.log(new_value);
+    await AsyncStorage.setItem("Food", JSON.stringify(new_value));
+  }
+
+  render() {
+    const propertyNames = Object.keys(restaurants.restaurants);
+    return (
+      <SafeAreaView style={styles.container}>
+        <ExploreHeader
+          subTitle="Food & Drinks"
+          goBack={() => this.props.navigation.goBack()}
+        />
+        <ScrollView style={styles.scrollView}>
+          {propertyNames.map((key) => {
+            const restaurant = restaurants.restaurants[key];
+            return (
+              <Card
+                key={key}
+                name={restaurant.Name}
+                phoneNo={restaurant.PhoneNo}
+                position={{
+                  latitude: restaurant.Latitude,
+                  longitude: restaurant.Longitude
+                }}
+                website={restaurant.Website}
+                email={restaurant.Email}
+                images={
+                  restaurantImages[restaurant.LocalImages.folderName].images
+                }
+              />
+            );
+          })}
+          {/* {this.state.restaurants.map((restaurant, index) => {
+            return (
+              <View key={index}>
+                <Text style={styles.regularBold}>{restaurant.name}</Text>
+                <Swiper style={styles.wrapper} showsButtons={true}>
+                  <View style={styles.slide}>
+                    <Image
+                      source={Items[`${restaurant.image1s}`]}
+                      style={styles.slideImage}
+                    />
+                  </View>
+                  <View style={styles.slide}>
+                    <Image
+                      source={Items[`${restaurant.image2s}`]}
+                      style={styles.slideImage}
+                    />
+                  </View>
+                  <View style={styles.slide}>
+                    <Image
+                      source={Items[`${restaurant.image3s}`]}
+                      style={styles.slideImage}
+                    />
+                  </View>
+                  <View style={styles.slide}>
+                    <Image
+                      source={Items[`${restaurant.image4s}`]}
+                      style={styles.slideImage}
+                    />
+                  </View>
+                </Swiper>
+                <View style={styles.numberRow}>
+                  <TouchableOpacity
+                    style={{ flexDirection: "row" }}
+                    onPress={() =>
+                      Linking.openURL("tel:${" + restaurant.phoneNo + "}")
+                    }
+                  >
+                    <Image
+                      source={require("../../../../app/assets/icons/phone.png")}
+                      style={styles.infoPhone}
+                    />
+                    <Text style={styles.infoText}>Call</Text>
+                  </TouchableOpacity>
+                  <TouchableOpacity
+                    style={{ flexDirection: "row" }}
+                    onPress={() =>
+                      Linking.openURL("mailto:" + restaurant.email)
+                    }
+                  >
+                    <Image
+                      source={require("../../../../app/assets/icons/email.png")}
+                      style={styles.infoEmail}
+                    />
+                    <Text style={styles.infoText}>Email</Text>
+                  </TouchableOpacity>
+                  <TouchableOpacity
+                    style={{ flexDirection: "row" }}
+                    onPress={() => Linking.openURL("https:www.coffeelabec.com")}
+                  >
+                    <Image
+                      source={require("../../../../app/assets/icons/www_gray.png")}
+                      style={styles.infoWeb}
+                    />
+                    <Text style={styles.infoText}>Website</Text>
+                  </TouchableOpacity>
+                </View>
+                <View style={styles.lastRow}>
+                  <TouchableOpacity
+                    style={{ flexDirection: "row" }}
+                    onPress={() =>
+                      OpenMap.show({
+                        latitude: restaurant.latitude,
+                        longitude: restaurant.longitude
+                      })
+                    }
+                  >
+                    <Image
+                      source={require("../../../../app/assets/icons/location_gray.png")}
+                      style={styles.infoAddress}
+                    />
+                    <Text style={styles.infoText}>Locate</Text>
+                  </TouchableOpacity>
+                  <TouchableOpacity
+                    style={{ flexDirection: "row" }}
+                    onPress={() =>
+                      this.addToFavorites(restaurant.name, {
+                        Name: restaurant.name,
+                        Latitude: restaurant.latitude,
+                        Longitude: restaurant.longitude,
+                        Mail: restaurant.email,
+                        Website: "https:www.coffeelabec.com",
+                        Phone: restaurant.phoneNo,
+                        Image: Items[`${restaurant.image4s}`]
+                      })
+                    }
+                  >
+                    <Image
+                      source={require("../../../../app/assets/icons/turtleBW.png")}
+                      style={styles.infoWeb}
+                    />
+                    <Text style={styles.infoText}>Favorites</Text>
+                  </TouchableOpacity>
+                </View>
+              </View>
+            );
+          })} */}
+        </ScrollView>
+      </SafeAreaView>
+    );
+  }
+}
+
+export default SantaCruzFood;
 
 const entireScreenWidth = Dimensions.get("window").width;
 let rem;
@@ -149,162 +307,3 @@ const styles = StyleSheet.create({
     flexWrap: "wrap"
   }
 });
-const data = require("../../../../data/Restaurants.json");
-class SantaCruzFood extends React.Component {
-  constructor() {
-    super();
-
-    this.state = {
-      restaurants: []
-    };
-  }
-
-  componentDidMount() {
-    this.setState({ restaurants: data });
-  }
-  async addToFavorites(name, info) {
-    let value = await AsyncStorage.getItem("Food");
-    let new_value;
-    if (value !== null) {
-      new_value = JSON.parse(value);
-      new_value[name] = info;
-    } else {
-      new_value = {};
-      new_value[name] = info;
-    }
-    console.log(new_value);
-    await AsyncStorage.setItem("Food", JSON.stringify(new_value));
-  }
-
-  render() {
-    return (
-      <SafeAreaView style={styles.container}>
-        <ExploreHeader
-          subTitle="Food & Drinks"
-          goBack={() => this.props.navigation.goBack()}
-        />
-        <ScrollView style={styles.scrollView}>
-          <View style={styles.header}>
-            <Image
-              source={require("../../../../app/assets/icons/food.png")}
-              style={{ width: 25 * rem, height: 31 * rem }}
-            />
-            <Text style={styles.headerText}>Food &amp; Drinks</Text>
-          </View>
-          {/*< Image
-          source={require('../../../app/assets/images/headerImage_short.png')}
-          style={{width: entireScreenWidth, height: 25*rem}}
-          />*/}
-          {this.state.restaurants.map((restaurant, index) => {
-            return (
-              <View key={index}>
-                <Text style={styles.regularBold}>{restaurant.name}</Text>
-                <Swiper style={styles.wrapper} showsButtons={true}>
-                  <View style={styles.slide}>
-                    <Image
-                      source={Items[`${restaurant.image1s}`]}
-                      style={styles.slideImage}
-                    />
-                  </View>
-                  <View style={styles.slide}>
-                    <Image
-                      source={Items[`${restaurant.image2s}`]}
-                      style={styles.slideImage}
-                    />
-                  </View>
-                  <View style={styles.slide}>
-                    <Image
-                      source={Items[`${restaurant.image3s}`]}
-                      style={styles.slideImage}
-                    />
-                  </View>
-                  <View style={styles.slide}>
-                    <Image
-                      source={Items[`${restaurant.image4s}`]}
-                      style={styles.slideImage}
-                    />
-                  </View>
-                </Swiper>
-                <View style={styles.numberRow}>
-                  <TouchableOpacity
-                    style={{ flexDirection: "row" }}
-                    onPress={() =>
-                      Linking.openURL("tel:${" + restaurant.phoneNo + "}")
-                    }
-                  >
-                    <Image
-                      source={require("../../../../app/assets/icons/phone.png")}
-                      style={styles.infoPhone}
-                    />
-                    <Text style={styles.infoText}>Call</Text>
-                  </TouchableOpacity>
-                  <TouchableOpacity
-                    style={{ flexDirection: "row" }}
-                    onPress={() =>
-                      Linking.openURL("mailto:" + restaurant.email)
-                    }
-                  >
-                    <Image
-                      source={require("../../../../app/assets/icons/email.png")}
-                      style={styles.infoEmail}
-                    />
-                    <Text style={styles.infoText}>Email</Text>
-                  </TouchableOpacity>
-                  <TouchableOpacity
-                    style={{ flexDirection: "row" }}
-                    onPress={() => Linking.openURL("https:www.coffeelabec.com")}
-                  >
-                    <Image
-                      source={require("../../../../app/assets/icons/www_gray.png")}
-                      style={styles.infoWeb}
-                    />
-                    <Text style={styles.infoText}>Website</Text>
-                  </TouchableOpacity>
-                </View>
-                <View style={styles.lastRow}>
-                  <TouchableOpacity
-                    style={{ flexDirection: "row" }}
-                    onPress={() =>
-                      OpenMap.show({
-                        latitude: restaurant.latitude,
-                        longitude: restaurant.longitude
-                      })
-                    }
-                  >
-                    <Image
-                      source={require("../../../../app/assets/icons/location_gray.png")}
-                      style={styles.infoAddress}
-                    />
-                    <Text style={styles.infoText}>Locate</Text>
-                  </TouchableOpacity>
-                  <TouchableOpacity
-                    style={{ flexDirection: "row" }}
-                    onPress={() =>
-                      this.addToFavorites(restaurant.name, {
-                        Name: restaurant.name,
-                        Latitude: restaurant.latitude,
-                        Longitude: restaurant.longitude,
-                        Mail: restaurant.email,
-                        Website: "https:www.coffeelabec.com",
-                        Phone: restaurant.phoneNo,
-                        Image: Items[`${restaurant.image4s}`]
-                      })
-                    }
-                  >
-                    <Image
-                      source={require("../../../../app/assets/icons/turtleBW.png")}
-                      style={styles.infoWeb}
-                    />
-                    <Text style={styles.infoText}>Favorites</Text>
-                  </TouchableOpacity>
-                </View>
-              </View>
-            );
-          })}
-        </ScrollView>
-      </SafeAreaView>
-    );
-  }
-}
-
-export default SantaCruzFood;
