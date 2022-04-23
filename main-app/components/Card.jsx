@@ -43,30 +43,34 @@ const Card = ({ name, phoneNo, email, website, position, images }) => {
           />
           <Text style={styles.buttonText}>Call</Text>
         </TouchableOpacity>
-        <TouchableOpacity
-          style={styles.button}
-          onPress={() => Linking.openURL(`mailto:${email}`)}
-        >
-          <MaterialCommunityIcons
-            name="email-outline"
-            size={21}
-            color="#7F7F7F"
-            style={styles.buttonIcon}
-          />
-          <Text style={styles.buttonText}>Email</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={styles.button}
-          onPress={() => Linking.openURL(website)}
-        >
-          <Ionicons
-            name="ios-globe-outline"
-            size={20}
-            color="#7F7F7F"
-            style={styles.buttonIcon}
-          />
-          <Text style={styles.buttonText}>Website</Text>
-        </TouchableOpacity>
+        {!!email && email !== "n/a" && (
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() => Linking.openURL(`mailto:${email}`)}
+          >
+            <MaterialCommunityIcons
+              name="email-outline"
+              size={21}
+              color="#7F7F7F"
+              style={styles.buttonIcon}
+            />
+            <Text style={styles.buttonText}>Email</Text>
+          </TouchableOpacity>
+        )}
+        {!!website && website !== "n/a" && (
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() => Linking.openURL(website)}
+          >
+            <Ionicons
+              name="ios-globe-outline"
+              size={20}
+              color="#7F7F7F"
+              style={styles.buttonIcon}
+            />
+            <Text style={styles.buttonText}>Website</Text>
+          </TouchableOpacity>
+        )}
         <TouchableOpacity
           style={styles.button}
           onPress={() =>
