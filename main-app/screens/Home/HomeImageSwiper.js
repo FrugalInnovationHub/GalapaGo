@@ -4,7 +4,6 @@ import Swiper from "react-native-swiper";
 import images from "../../assets/img/homescreen";
 
 const HomeImageSwiper = () => {
-  console.log(images);
   return (
     <Swiper>
       {images.map((item) => (
