@@ -1,8 +1,15 @@
 import React from "react";
 
-import { Header } from "../../components";
+import { Header, Icon } from "../../components";
 const ExploreHeader = (props) => {
-  return <Header {...props} title="EXPLORE" color="#294B95" icon="explore_1" />;
+  return (
+    <Header
+      {...props}
+      title="EXPLORE"
+      color="#294B95"
+      icon={<Icon name={"explore_1"} size={40} color="white" />}
+    />
+  );
 };
 
 export default ExploreHeader;

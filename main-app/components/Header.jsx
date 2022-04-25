@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React, { useCallback } from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
-import Icon from "./Icon";
+
 import { AntDesign } from "@expo/vector-icons";
 
 const Header = ({ title, color, subTitle, goBack, icon }) => {
@@ -12,9 +12,7 @@ const Header = ({ title, color, subTitle, goBack, icon }) => {
     <View style={styles.container}>
       <View style={[styles.labelWraper, { backgroundColor: color }]}>
         <View style={styles.label}>
-          <View style={styles.iconWrapper}>
-            <Icon name={icon} size={40} color="white" />
-          </View>
+          <View style={styles.iconWrapper}>{icon}</View>
           <Text style={styles.labelText}>{title}</Text>
         </View>
       </View>
