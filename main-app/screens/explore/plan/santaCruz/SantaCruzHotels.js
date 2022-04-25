@@ -16,6 +16,7 @@ class SantaCruzHotels extends React.Component {
       <SafeAreaView style={styles.container}>
         <ExploreHeader
           subTitle="Hotels"
+          // eslint-disable-next-line react/prop-types
           goBack={() => this.props.navigation.goBack()}
         />
         <ScrollView style={styles.scrollView}>
