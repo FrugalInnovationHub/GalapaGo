@@ -4,7 +4,7 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import { Card } from "../../../../components";
 import ExploreHeader from "../../ExploreHeader";
 import restaurantImages from "../../../../assets/img/restaurants";
-import restaurants from "../../../../data/restaurants.json";
+import restaurants from "../../../../data/Restaurants.json";
 class SantaCruzFood extends React.Component {
   constructor() {
     super();
