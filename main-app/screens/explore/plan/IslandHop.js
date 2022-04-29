@@ -5,7 +5,11 @@ import ExploreHeader from "../ExploreHeader";
 import transports from "../../../data/transport.json";
 import { Card } from "../../../components";
 import transportImages from "../../../assets/img/transport";
+import globalStateContext from "../../../context/globalContext";
+import { addFavorite } from "../../../utils";
 class IslandHop extends React.Component {
+  static contextType = globalStateContext;
+
   render() {
     const propertyNames = Object.keys(transports.transports);
     return (
@@ -30,6 +34,9 @@ class IslandHop extends React.Component {
                 email={transport.Email}
                 images={
                   transportImages[transport.LocalImages.folderName].images
+                }
+                addFavorite={() =>
+                  addFavorite(this.context, "travels", key, transport)
                 }
               />
             );

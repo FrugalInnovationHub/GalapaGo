@@ -1,35 +1,16 @@
 import * as React from "react";
-import { StyleSheet, Dimensions, SafeAreaView, ScrollView } from "react-native";
-import AsyncStorage from "@react-native-async-storage/async-storage";
+import { StyleSheet, SafeAreaView, ScrollView } from "react-native";
 import { Card } from "../../../../components";
 import ExploreHeader from "../../ExploreHeader";
 import restaurantImages from "../../../../assets/img/restaurants";
 import restaurants from "../../../../data/Restaurants.json";
+import globalStateContext from "../../../../context/globalContext";
+import { addFavorite } from "../../../../utils";
 class SantaCruzFood extends React.Component {
+  static contextType = globalStateContext;
+
   constructor() {
     super();
-
-    this.state = {
-      restaurants: []
-    };
-  }
-
-  componentDidMount() {
-    this.setState({ restaurants: restaurants });
-  }
-
-  async addToFavorites(name, info) {
-    let value = await AsyncStorage.getItem("Food");
-    let new_value;
-    if (value !== null) {
-      new_value = JSON.parse(value);
-      new_value[name] = info;
-    } else {
-      new_value = {};
-      new_value[name] = info;
-    }
-    console.log(new_value);
-    await AsyncStorage.setItem("Food", JSON.stringify(new_value));
   }
 
   render() {
@@ -56,6 +37,9 @@ class SantaCruzFood extends React.Component {
                 email={restaurant.Email}
                 images={
                   restaurantImages[restaurant.LocalImages.folderName].images
+                }
+                addFavorite={() =>
+                  addFavorite(this.context, "restaurants", key, restaurant)
                 }
               />
             );

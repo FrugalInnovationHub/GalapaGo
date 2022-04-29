@@ -95,7 +95,11 @@ ExploreSection.navigationOptions = ({ navigation }) => {
         source={require("../app/assets/icons/explore.png")}
         style={{ width: 30, height: 30 }}
       />
-    )
+    ),
+    tabBarOptions: {
+      activeTintColor: "#000000",
+      inactiveTintColor: "#919196"
+    }
   };
 };
 

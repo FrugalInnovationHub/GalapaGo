@@ -1,45 +1,39 @@
-import "react-native-gesture-handler";
 import * as React from "react";
-import * as firebase from "firebase";
-
-import { getStorage } from "@firebase/storage";
-import { getDatabase, ref } from "@firebase/database";
-
 import NavigationApp from "./routers";
-// import { getDatabase, ref, onValue } from "firebase/database";
-// import NetInfo from "@react-native-community/netinfo";
-//
-// const unsubscribe = NetInfo.addEventListener(state => {
-//   console.log("Connection type", state.type);
-//   console.log("Is connected?", state.isConnected);
-// });
+import GlobalStateContext from "./context/globalContext";
 
-// const firebaseConfig = {
-//   apiKey: "AIzaSyBkGmokW285RxesrlEOEGMOpL7DjBMvk_U",
-//   authDomain: "galapago-d4744.firebaseapp.com",
-//   databaseURL: "https://galapago-d4744-default-rtdb.firebaseio.com",
-//   projectId: "galapago-d4744",
-//   storageBucket: "galapago-d4744.appspot.com",
-//   messagingSenderId: "508955483910",
-//   appId: "1:508955483910:web:e910e43a67fdbca4c64887"
-// };
-//
-// const firebaseApp = firebase.initializeApp(firebaseConfig);
-// export const auth = firebase.auth;
-// export const db = firebase.database();
-// const storage = getStorage(firebaseApp);
-// const connectedRef = ref(db, ".info/connected");
-// onValue(connectedRef, (snap) => {
-//   if (snap.val() === true) {
-//     console.log("connected");
-//   } else {
-//     console.log("not connected");
-//   }
-// });
-// unsubscribe();
+const Favorites = {
+  restaurants: {},
+  hotels: {},
+  travels: {},
+  agencies: {}
+};
 
 export default class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      contextState: {
+        favorites: Favorites,
+        updateFavorites: (data) => this.updateFavorites(data)
+      }
+    };
+  }
+
+  updateFavorites(data) {
+    this.setState({
+      contextState: {
+        updateFavorites: (_data) => this.updateFavorites(_data),
+        favorites: data
+      }
+    });
+  }
+
   render() {
-    return <NavigationApp />;
+    return (
+      <GlobalStateContext.Provider value={this.state.contextState}>
+        <NavigationApp />
+      </GlobalStateContext.Provider>
+    );
   }
 }

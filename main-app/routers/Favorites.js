@@ -1,7 +1,7 @@
 import React from "react";
 import { createStackNavigator } from "react-navigation-stack";
 import { Image } from "react-native";
-
+import { Icon } from "../components";
 import Favorites from "../screens/favorites/Favorites";
 
 const FavoritesSection = createStackNavigator(
@@ -16,18 +16,13 @@ const FavoritesSection = createStackNavigator(
 FavoritesSection.navigationOptions = ({ navigation }) => {
   return {
     tabBarLabel: "Favorites",
-    tabBarIcon: ({ tintcolor }) => {
-      console.log("show color", tintcolor);
-      return (
-        <Image
-          source={require("../app/assets/icons/heartlogo.png")}
-          style={{ width: 30, height: 30 }}
-        />
-      );
+    tabBarIcon: ({ focused }) => {
+      if (focused) return <Icon name="favorites" size={24} color="#019934" />;
+      return <Icon name="favorites" size={24} color="#231F20" />;
     },
     tabBarOptions: {
-      // activeTintColor: "#e91e63",
-      // inactiveTintColor: "gray"
+      activeTintColor: "#000000",
+      inactiveTintColor: "#919196"
     }
   };
 };

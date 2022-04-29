@@ -4,7 +4,11 @@ import ExploreHeader from "../ExploreHeader";
 import { Card } from "../../../components";
 import agenciesImages from "../../../assets/img/travel-agencies";
 import agencies from "../../../data/agencies.json";
+import globalStateContext from "../../../context/globalContext";
+import { addFavorite } from "../../../utils";
 class TravelAgencies extends React.Component {
+  static contextType = globalStateContext;
+
   render() {
     const propertyNames = Object.keys(agencies.agencies);
     return (
@@ -28,6 +32,9 @@ class TravelAgencies extends React.Component {
                 website={agency.Website}
                 email={agency.Email}
                 images={agenciesImages[agency.LocalImages.folderName].images}
+                addFavorite={() =>
+                  addFavorite(this.context, "agencies", key, agency)
+                }
               />
             );
           })}

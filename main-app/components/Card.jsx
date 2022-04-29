@@ -17,7 +17,15 @@ import {
 } from "@expo/vector-icons";
 import OpenMap from "react-native-open-map";
 
-const Card = ({ name, phoneNo, email, website, position, images }) => {
+const Card = ({
+  name,
+  phoneNo,
+  email,
+  website,
+  position,
+  images,
+  addFavorite
+}) => {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -88,7 +96,12 @@ const Card = ({ name, phoneNo, email, website, position, images }) => {
           />
           <Text style={styles.buttonText}>Locate</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => {
+            addFavorite && addFavorite();
+          }}
+        >
           <MaterialIcons
             name="favorite-outline"
             size={22}

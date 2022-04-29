@@ -1,6 +1,7 @@
 import React from "react";
 import { createStackNavigator } from "react-navigation-stack";
 import { Image } from "react-native";
+import { Card } from "../components";
 
 import Home from "../screens/Home/home";
 import Maps from "../screens/Home/Maps";
@@ -24,7 +25,11 @@ HomeSection.navigationOptions = ({ navigation }) => {
         source={require("../app/assets/icons/turtle-1.png")}
         style={{ width: 30, height: 30 }}
       />
-    )
+    ),
+    tabBarOptions: {
+      activeTintColor: "#000000",
+      inactiveTintColor: "#919196"
+    }
   };
 };
 
