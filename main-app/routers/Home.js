@@ -1,7 +1,6 @@
 import React from "react";
 import { createStackNavigator } from "react-navigation-stack";
 import { Image } from "react-native";
-import { Card } from "../components";
 
 import Home from "../screens/Home/home";
 import Maps from "../screens/Home/Maps";

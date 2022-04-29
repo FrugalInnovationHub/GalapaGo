@@ -1,6 +1,6 @@
 import "react-native-gesture-handler";
 import * as React from "react";
-import { SafeAreaView, StyleSheet, ScrollView, View, Text } from "react-native";
+import { SafeAreaView, StyleSheet, ScrollView, View } from "react-native";
 import FavoritesHeader from "./FavoritesHeader";
 import globalStateContext from "../../context/globalContext";
 import { isEmpty } from "../../utils";

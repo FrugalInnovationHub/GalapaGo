@@ -1,6 +1,7 @@
 import * as React from "react";
 import NavigationApp from "./routers";
 import GlobalStateContext from "./context/globalContext";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const Favorites = {
   restaurants: {},
@@ -27,6 +28,18 @@ export default class App extends React.Component {
         favorites: data
       }
     });
+  }
+
+  async init() {
+    const data = await AsyncStorage.getItem("favorites");
+    console.log(JSON.parse(data));
+    if (data) {
+      this.updateFavorites(JSON.parse(data));
+    }
+  }
+
+  componentDidMount() {
+    this.init();
   }
 
   render() {
