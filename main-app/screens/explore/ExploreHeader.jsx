@@ -1,4 +1,5 @@
 import React from "react";
+import { MaterialIcons } from "@expo/vector-icons";
 
 import { Header, Icon } from "../../components";
 const ExploreHeader = (props) => {
@@ -7,7 +8,8 @@ const ExploreHeader = (props) => {
       {...props}
       title="EXPLORE"
       color="#294B95"
-      icon={<Icon name={"explore_1"} size={40} color="white" />}
+      icon={<MaterialIcons name="explore" size={40} color="white" />}
+      // icon={<Icon name={"explore_1"} size={40} color="white" />}
     />
   );
 };

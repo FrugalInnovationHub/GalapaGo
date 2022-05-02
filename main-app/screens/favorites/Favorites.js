@@ -8,6 +8,8 @@ import { Empty, Label, Icon, Card } from "../../components";
 import { addFavorite } from "../../utils";
 import hotelImages from "../../assets/img/hotels";
 import restaurantImages from "../../assets/img/restaurants";
+import agenciesImages from "../../assets/img/travel-agencies";
+import transportImages from "../../assets/img/transport";
 class Favorites extends React.Component {
   static contextType = globalStateContext;
   render() {
@@ -22,6 +24,8 @@ class Favorites extends React.Component {
 
     const hotelKeys = Object.keys(hotels);
     const restaurantKeys = Object.keys(restaurants);
+    const agencyKeys = Object.keys(agencies);
+    const travelKeys = Object.keys(travels);
     return (
       <SafeAreaView style={styles.container}>
         <FavoritesHeader />
@@ -83,16 +87,67 @@ class Favorites extends React.Component {
               })}
             </View>
           )}
-          {/* {!isEmpty(travels) && (
+          {!isEmpty(travels) && (
             <View>
-              <Label icon={<Icon name="hotels" size={27} />} title={"Hotels"} />
+              <Label
+                icon={<Icon name="island-hop" size={27} />}
+                title={"Island-hop"}
+              />
+
+              {travelKeys.map((key) => {
+                const transport = travels[key];
+                return (
+                  <Card
+                    key={key}
+                    name={transport.Name}
+                    phoneNo={transport.PhoneNo}
+                    position={{
+                      latitude: transport.Latitude,
+                      longitude: transport.Longitude
+                    }}
+                    website={transport.Website}
+                    email={transport.Email}
+                    images={
+                      transportImages[transport.LocalImages.folderName].images
+                    }
+                    addFavorite={() =>
+                      addFavorite(this.context, "travels", key, transport)
+                    }
+                  />
+                );
+              })}
             </View>
-          )} */}
-          {/* {!isEmpty(agencies) && (
+          )}
+          {!isEmpty(agencies) && (
             <View>
-              <Label icon={<Icon name="hotels" size={27} />} title={"Hotels"} />
+              <Label
+                icon={<Icon name="agencies" size={27} />}
+                title={"Agencies"}
+              />
+              {agencyKeys.map((key) => {
+                const agency = agencies[key];
+                return (
+                  <Card
+                    key={key}
+                    name={agency.Name}
+                    phoneNo={agency.PhoneNo}
+                    position={{
+                      latitude: agency.Latitude,
+                      longitude: agency.Longitude
+                    }}
+                    website={agency.Website}
+                    email={agency.Email}
+                    images={
+                      agenciesImages[agency.LocalImages.folderName].images
+                    }
+                    addFavorite={() =>
+                      addFavorite(this.context, "agencies", key, agency)
+                    }
+                  />
+                );
+              })}
             </View>
-          )} */}
+          )}
         </ScrollView>
       </SafeAreaView>
     );
