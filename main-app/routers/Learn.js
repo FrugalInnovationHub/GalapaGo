@@ -2,6 +2,7 @@
 import React from "react";
 import { createStackNavigator } from "react-navigation-stack";
 import { Image } from "react-native";
+import { Icon } from "../components";
 
 import Learn from "../screens/learn/Learn";
 import AboutUs from "../screens/learn/AboutUs";
@@ -45,12 +46,7 @@ const LearnSection = createStackNavigator(
 LearnSection.navigationOptions = ({ navigation }) => {
   return {
     tabBarLabel: "Learn",
-    tabBarIcon: ({ tintcolor }) => (
-      <Image
-        source={require("../app/assets/icons/bulb.png")}
-        style={{ width: 30, height: 30 }}
-      />
-    ),
+    tabBarIcon: ({ tintcolor }) => <Icon name="learn" size={26} />,
     tabBarOptions: {
       activeTintColor: "#000000",
       inactiveTintColor: "#919196"
