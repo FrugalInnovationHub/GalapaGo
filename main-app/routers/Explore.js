@@ -1,6 +1,7 @@
 //ExploreSection imports
 import React from "react";
 import { createStackNavigator } from "react-navigation-stack";
+import { Icon } from "../components";
 import { Image } from "react-native";
 
 import Explore from "../screens/explore/Explore";
@@ -23,6 +24,7 @@ import SantaCruz from "../screens/explore/plan/santaCruz/SantaCruz";
 import SantaCruzFood from "../screens/explore/plan/santaCruz/SantaCruzFood";
 import SantaCruzHotels from "../screens/explore/plan/santaCruz/SantaCruzHotels";
 import showMap from "../screens/Home/IslandMaps/showMap";
+import { ImageComponent } from "react-native";
 
 // Island Hop imports
 /*import IslandHop from "../screens/explore/plan/islandHop/IslandHop";
@@ -90,12 +92,16 @@ const ExploreSection = createStackNavigator(
 ExploreSection.navigationOptions = ({ navigation }) => {
   return {
     tabBarLabel: "Explore",
-    tabBarIcon: ({ tintcolor }) => (
-      <Image
-        source={require("../app/assets/icons/explore.png")}
-        style={{ width: 30, height: 30 }}
-      />
-    ),
+    tabBarIcon: ({ focused }) => {
+      if (focused)
+        return (
+          <Image
+            source={require("../assets/img/imageIcon/explore_selected.png")}
+            style={{ width: 24, height: 24 }}
+          />
+        );
+      return <Icon name="explore" size={24} color="#231F20" />;
+    },
     tabBarOptions: {
       activeTintColor: "#000000",
       inactiveTintColor: "#919196"

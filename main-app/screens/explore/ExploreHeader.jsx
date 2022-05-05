@@ -8,8 +8,7 @@ const ExploreHeader = (props) => {
       {...props}
       title="EXPLORE"
       color="#294B95"
-      icon={<MaterialIcons name="explore" size={40} color="white" />}
-      // icon={<Icon name={"explore_1"} size={40} color="white" />}
+      icon={<Icon name={"explore"} size={35} color="white" />}
     />
   );
 };

@@ -31,14 +31,14 @@ class Explore extends React.Component {
         name: "Food & Drinks",
         navigatePath: "SantaCruzFood",
         icon: (
-          <Icon name="food-and-drinks" size={28} color={styles.icon.color} />
+          <Icon name="food-and-drinks" size={27} color={styles.icon.color} />
         )
       },
       {
         id: 5,
         name: "Want to Island Hop",
         navigatePath: "IslandHop",
-        icon: <Icon name="island-hop" size={24} color={styles.icon.color} />
+        icon: <Icon name="island-hop" size={31} color={styles.icon.color} />
       }
     ];
   }
