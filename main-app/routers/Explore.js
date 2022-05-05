@@ -1,13 +1,11 @@
 //ExploreSection imports
 import React from "react";
 import { createStackNavigator } from "react-navigation-stack";
+import { Icon } from "../components";
 import { Image } from "react-native";
 
 import Explore from "../screens/explore/Explore";
 import KnowBefore from "../screens/explore/know/KnowBefore";
-import Language from "../screens/explore/know/Language";
-import Customs from "../screens/explore/know/Customs";
-import Rules from "../screens/explore/know/Rules";
 import Plan from "../screens/explore/plan/Plan";
 import TravelAgencies from "../screens/explore/plan/TravelAgencies";
 import IslandHop from "../screens/explore/plan/IslandHop";
@@ -26,6 +24,7 @@ import SantaCruz from "../screens/explore/plan/santaCruz/SantaCruz";
 import SantaCruzFood from "../screens/explore/plan/santaCruz/SantaCruzFood";
 import SantaCruzHotels from "../screens/explore/plan/santaCruz/SantaCruzHotels";
 import showMap from "../screens/Home/IslandMaps/showMap";
+import { ImageComponent } from "react-native";
 
 // Island Hop imports
 /*import IslandHop from "../screens/explore/plan/islandHop/IslandHop";
@@ -50,25 +49,23 @@ import SantaCruzHotels from "../screens/explore/plan/islandHop/santaCruz/SantaCr
 import SantaCruzTop from "../screens/explore/plan/islandHop/santaCruz/SantaCruzTop";
 */
 
-const ExploreSection = createStackNavigator({
-  Explore: { screen: Explore },
-  KnowBefore: { screen: KnowBefore },
-  Language: { screen: Language },
-  Customs: { screen: Customs },
-  Rules: { screen: Rules },
-  Plan: { screen: Plan },
-  TravelAgencies: { screen: TravelAgencies },
-  IslandHop: { screen: IslandHop },
-  TopActivities: { screen: TopActivities },
-  Cycling: { screen: Cycling },
-  Camping: { screen: Camping },
-  Hiking: { screen: Hiking },
-  Cruise: { screen: Cruise },
-  Diving: { screen: Diving },
-  Surfing: { screen: Surfing },
-  Kayaking: { screen: Kayaking },
-  Fishing: { screen: Fishing },
-  /*
+const ExploreSection = createStackNavigator(
+  {
+    Explore: { screen: Explore },
+    KnowBefore: { screen: KnowBefore },
+    Plan: { screen: Plan },
+    TravelAgencies: { screen: TravelAgencies },
+    IslandHop: { screen: IslandHop },
+    TopActivities: { screen: TopActivities },
+    Cycling: { screen: Cycling },
+    Camping: { screen: Camping },
+    Hiking: { screen: Hiking },
+    Cruise: { screen: Cruise },
+    Diving: { screen: Diving },
+    Surfing: { screen: Surfing },
+    Kayaking: { screen: Kayaking },
+    Fishing: { screen: Fishing },
+    /*
     Floreana:{screen: Floreana},
     FloreanaFood: {screen: FloreanaFood},
     FloreanaHotels:{screen:FloreanaHotels},
@@ -82,23 +79,33 @@ const ExploreSection = createStackNavigator({
     SanCristobalHotels: {screen: SanCristobalHotels},
     SanCristobalTop: {screen: SanCristobalTop},
     */
-  SantaCruz: { screen: SantaCruz },
-  SantaCruzFood: { screen: SantaCruzFood },
-  SantaCruzHotels: { screen: SantaCruzHotels }
-  /*
+    SantaCruz: { screen: SantaCruz },
+    SantaCruzFood: { screen: SantaCruzFood },
+    SantaCruzHotels: { screen: SantaCruzHotels }
+    /*
     SantaCruzTop: {screen: SantaCruzTop}
     */
-});
+  },
+  { headerMode: "none" }
+);
 
 ExploreSection.navigationOptions = ({ navigation }) => {
   return {
     tabBarLabel: "Explore",
-    tabBarIcon: ({ tintcolor }) => (
-      <Image
-        source={require("../app/assets/icons/explore.png")}
-        style={{ width: 30, height: 30 }}
-      />
-    )
+    tabBarIcon: ({ focused }) => {
+      if (focused)
+        return (
+          <Image
+            source={require("../assets/img/imageIcon/explore_selected.png")}
+            style={{ width: 24, height: 24 }}
+          />
+        );
+      return <Icon name="explore" size={24} color="#231F20" />;
+    },
+    tabBarOptions: {
+      activeTintColor: "#000000",
+      inactiveTintColor: "#919196"
+    }
   };
 };
 

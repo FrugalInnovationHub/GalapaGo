@@ -1,0 +1,457 @@
+{
+  "hotels": {
+    "-Mk0sNfzuCnlqjMbO_v9": {
+      "Email": "info@santafegalapagos.com.ec",
+      "Image": [
+        "santa_fe1.jpg",
+        "santa_fe2.jpg",
+        "santa_fe3.jpg",
+        "santa_fe4.jpg"
+      ],
+      "Latitude": -0.745768,
+      "Longitude": -90.3170659,
+      "Name": "Apartamentos Santa FÃ©",
+      "PhoneNo": 59352526593,
+      "Urls": [
+        "https://firebasestorage.googleapis.com/v0/b/galapago-d4744.appspot.com/o/images%2Fsanta_fe2.jpg?alt=media&token=1173bdff-d0e6-462f-b6d4-7c7f229e220c",
+        "https://firebasestorage.googleapis.com/v0/b/galapago-d4744.appspot.com/o/images%2Fsanta_fe3.jpg?alt=media&token=3da72c34-f83e-433a-adee-2d8999c50483",
+        "https://firebasestorage.googleapis.com/v0/b/galapago-d4744.appspot.com/o/images%2Fsanta_fe1.jpg?alt=media&token=a00caafe-025b-411a-9fb4-37c45144572e",
+        "https://firebasestorage.googleapis.com/v0/b/galapago-d4744.appspot.com/o/images%2Fsanta_fe4.jpg?alt=media&token=6983cd40-2306-4377-a1b9-ebd7bcbd65c7"
+      ],
+      "Website": "https:www.santafeii.com.ec",
+      "LocalImages": {
+        "folderName": "santafe"
+      }
+    },
+    "-Mk0sNlYRCiiBTzpTIhB": {
+      "Email": "bayviewhouse2013@gmail.com",
+      "Image": [
+        "4.jpg"
+      ],
+      "Latitude": -0.7462519,
+      "Longitude": -90.3122105,
+      "Name": "Bay View House",
+      "PhoneNo": 59352527218,
+      "Website": "n/a",
+      "LocalImages": {
+        "folderName": "bayview"
+      }
+    },
+    "-Mk0sNov3VL-tF4-OOKA": {
+      "Email": "antonio@seamastersgalapagos.com",
+      "Image": -90.310463,
+      "Latitude": -0.7514781,
+      "Longitude": -90.310463,
+      "Name": "BLUE HERON HOUSE",
+      "PhoneNo": 593999116066,
+      "Urls": [
+        "https://firebasestorage.googleapis.com/v0/b/galapago-d4744.appspot.com/o/images%2Fisland3.jpg?alt=media&token=32be7a49-6ec5-4a42-893c-6d0a8710282c",
+        "https://firebasestorage.googleapis.com/v0/b/galapago-d4744.appspot.com/o/images%2Fisland2.jpg?alt=media&token=1872bed1-6aec-40c0-bd27-6eb5d84009b3"
+      ],
+      "Website": "https:www.blueheronsgalapagos.com",
+      "LocalImages": {
+        "folderName": "blueheron"
+      }
+    },
+    "-Mk0sNrzcyU-gIfWqR4p": {
+      "Email": "michael@galapagossafaricamp.com",
+      "Image": [
+        "island2.jpg",
+        "1.jpg",
+        "2.jpg",
+        "3.jpg",
+        "4.jpg"
+      ],
+      "Latitude": -0.618203,
+      "Longitude": -90.4258736,
+      "Name": "Campamento GalÃ¡pagos Safari Camp",
+      "PhoneNo": 59353013011,
+      "Website": "https:www.galapagossafaricamp.com",
+      "LocalImages": {
+        "folderName": "safari"
+      }
+    },
+    "-Mk0sNv0V6CTTkKzMsO1": {
+      "Email": "galapagostwinsuites@gmail.com",
+      "Image": [
+        "island4.jpg",
+        "island1.jpg"
+      ],
+      "Latitude": -0.7357623,
+      "Longitude": -90.3127792,
+      "Name": "Casa de Huespedes The Island Home",
+      "PhoneNo": 59353014469,
+      "Urls": [
+        "https://firebasestorage.googleapis.com/v0/b/galapago-d4744.appspot.com/o/images%2Fisland4.jpg?alt=media&token=5decf157-20ec-4954-a55a-64317925379a"
+      ],
+      "Website": "n/a",
+      "LocalImages": {
+        "folderName": "huespedes"
+      }
+    },
+    "-Mk0sO2HzjiQXWQ3DgSP": {
+      "Email": "galapagoswalker@hotmail.com",
+      "Image": [
+        "island4.jpg"
+      ],
+      "Latitude": -0.683773,
+      "Longitude": -90.312015,
+      "Name": "CASA NATURA GALAPAGOS LODGE",
+      "PhoneNo": 59352526107,
+      "Website": "https:www.casanaturahotel.com",
+      "LocalImages": {
+        "folderName": "natura"
+      }
+    },
+    "-Mk0sO9l8B43wcr9yimC": {
+      "Email": "peladoda@yahoo.com",
+      "Latitude": -0.7367192,
+      "Longitude": -90.3116653,
+      "Name": "COZY GALAPAGOS",
+      "PhoneNo": 59353013843,
+      "Website": "n/a",
+      "LocalImages": {
+        "folderName": "cozy"
+      }
+    },
+    "-Mk0sOHwb7rHZsaZwz3U": {
+      "Email": "galapagoscottages@hotmail.com",
+      "Latitude": -0.7454221,
+      "Longitude": -90.3175521,
+      "Name": "Galapagos Cottages",
+      "PhoneNo": 59352526502,
+      "Website": "https:www.galapagoscottages.com",
+      "LocalImages": {
+        "folderName": "cottages"
+      }
+    },
+    "-Mk0sOL6xwevOz8bvW-3": {
+      "Email": "galapagos.native@gmail.com",
+      "Latitude": -0.745338,
+      "Longitude": -90.31259,
+      "Name": "GALAPAGOS NATIVE",
+      "PhoneNo": 59352524730,
+      "Website": "n/a",
+      "LocalImages": {
+        "folderName": "native"
+      }
+    },
+    "-Mk0sOQN18s7NXERXiCq": {
+      "Email": "reservas@galapagossuites.com",
+      "Latitude": -0.7415575,
+      "Longitude": -90.3120601,
+      "Name": "GALAPAGOS SUITES",
+      "PhoneNo": 59352526209,
+      "Website": "https:www.galapagossuites.com",
+      "LocalImages": {
+        "folderName": "suites"
+      }
+    },
+    "-Mk0sOYUK-kcds7MHhai": {
+      "Email": "alekrc@hotmail.com",
+      "Latitude": -0.7432082,
+      "Longitude": -90.3196244,
+      "Name": "Gecko Guest House",
+      "PhoneNo": 59352527244,
+      "Website": "n/a",
+      "LocalImages": {
+        "folderName": "gecko"
+      }
+    },
+    "-Mk0sOcLcBoL11gH_yRB": {
+      "Email": "chioperez72@hotmail.com",
+      "Latitude": -0.7346339,
+      "Longitude": -90.3167327,
+      "Name": "Hostal Casa Cascada",
+      "PhoneNo": 59352527212,
+      "Website": "n/a",
+      "LocalImages": {
+        "folderName": "cascada"
+      }
+    },
+    "-Mk0sOgELGxX5BbAejW4": {
+      "Email": "operaciones@hotelespanagalapagos.com",
+      "Latitude": -0.7455234,
+      "Longitude": -90.3128234,
+      "Name": "Hostal EspaÃ±a",
+      "PhoneNo": 59352526108,
+      "Website": "https:www.hotelespanagalapagos.com",
+      "LocalImages": {
+        "folderName": "espana"
+      }
+    },
+    "-Mk0sOkCQgHPs1616VAc": {
+      "Email": "manager@finchbayhotel.com",
+      "Latitude": -0.752756,
+      "Longitude": -90.311283,
+      "Name": "Hostal Finch Bay Hotel",
+      "PhoneNo": 59352526297,
+      "Website": "https:www.finchbayhotel.com",
+      "LocalImages": {
+        "folderName": "finch"
+      }
+    },
+    "-Mk0sOnWNs--HL97rKMn": {
+      "Email": "islaazul.galapagos@gmail.com",
+      "Image": [
+        "island1.jpg",
+        "island2.jpg",
+        "island1.jpg"
+      ],
+      "Latitude": -0.7413355,
+      "Longitude": -90.3137879,
+      "Name": "HOSTAL ISLA AZUL",
+      "PhoneNo": 5932527485,
+      "Website": "n/a",
+      "LocalImages": {
+        "folderName": "azul"
+      }
+    },
+    "-Mk0sOrLBhorKyla21iU": {
+      "Email": "posadadelmargalapagos@gmail.com",
+      "Latitude": -0.7462514,
+      "Longitude": -90.313436,
+      "Name": "Hostal Posada del Mar",
+      "PhoneNo": 59352526442,
+      "Website": "n/a",
+      "LocalImages": {
+        "folderName": "posada"
+      }
+    },
+    "-Mk0sOuQRgWXBw1sPRn1": {
+      "Email": "info@whitehousegalapagos.com.ec",
+      "Latitude": -0.7416026,
+      "Longitude": -90.3155438,
+      "Name": "HOSTAL WHITE HOUSE GALAPAGOS",
+      "PhoneNo": 59352527268,
+      "Website": "https:www.whitehousegalapagos.com.ec",
+      "LocalImages": {
+        "folderName": "white"
+      }
+    },
+    "-Mk0sP04wYYIJJhkZrxn": {
+      "Email": "frontoffice@royalpalmgalapagos.com",
+      "Image": [
+        "island2.jpg"
+      ],
+      "Latitude": -0.4475459,
+      "Longitude": -90.2770181,
+      "Name": "HosterÃ­a Royal Palm",
+      "PhoneNo": 59352527409,
+      "Website": "https:www.millenniumhotels.com",
+      "LocalImages": {
+        "folderName": "palm"
+      }
+    },
+    "-Mk0sP6B5wT7Yt32wjO2": {
+      "Email": "info@brisadelpacifico.com.ec",
+      "Latitude": -0.738991,
+      "Longitude": -90.3157182,
+      "Name": "Hotel Brisas del Pacifico",
+      "PhoneNo": 59352524482,
+      "Website": "https:www.hotelbrisasdelpacifico.com.ec",
+      "LocalImages": {
+        "folderName": "pacifico"
+      }
+    },
+    "-Mk0sPBIBw0pr7pii6Bc": {
+      "Email": "colomagalapagos@gmail.com",
+      "Latitude": -0.7436061,
+      "Longitude": -90.3156673,
+      "Name": "Hotel Coloma Galapagos",
+      "PhoneNo": 59352524825,
+      "Website": "n/a",
+      "LocalImages": {
+        "folderName": "coloma"
+      }
+    },
+    "-Mk0sPJJWSFENVFFpFZT": {
+      "Email": "lilianabetancourt1978@hotmail.com",
+      "Latitude": -0.7399606,
+      "Longitude": -90.3126226,
+      "Name": "HOTEL GALAPAGOS ISLANDS",
+      "PhoneNo": 59353013709,
+      "Website": "n/a",
+      "LocalImages": {
+        "folderName": "islands"
+      }
+    },
+    "-Mk0sPMOBhBANcGG9my8": {
+      "Email": "recepcion@ikalagalapagoshotel.com",
+      "Latitude": -0.7470129,
+      "Longitude": -90.3144196,
+      "Name": "HOTEL IKALA GALAPAGOS",
+      "PhoneNo": 59352527806,
+      "Website": "n/a",
+      "LocalImages": {
+        "folderName": "ikala"
+      }
+    },
+    "-Mk0sPRA-5FKR37d2t0f": {
+      "Email": "reservations@laislahotel.com.ec",
+      "Image": [
+        "island3.jpg"
+      ],
+      "Latitude": -0.7437264,
+      "Longitude": -90.3127765,
+      "Name": "HOTEL LA ISLA",
+      "PhoneNo": 59352524517,
+      "Urls": [
+        "https://firebasestorage.googleapis.com/v0/b/galapago-d4744.appspot.com/o/images%2Fisland3.jpg?alt=media&token=b25cc746-76a4-43b5-98db-b92a583899af"
+      ],
+      "Website": "n/a",
+      "LocalImages": {
+        "folderName": "laisla"
+      }
+    },
+    "-Mk0sPUhSwCM5obE7nfx": {
+      "Email": "galapagossuitespalace@gmail.com",
+      "Image": [
+        "island4.jpg"
+      ],
+      "Latitude": -0.7400845,
+      "Longitude": -90.313002,
+      "Name": "HOTEL PALACE",
+      "PhoneNo": 59353013682,
+      "Urls": [
+        "https://firebasestorage.googleapis.com/v0/b/galapago-d4744.appspot.com/o/images%2Fisland4.jpg?alt=media&token=ab36d13d-bc81-4a8f-9cb2-ed09e18b5b41"
+      ],
+      "Website": "n/a",
+      "LocalImages": {
+        "folderName": "palace"
+      }
+    },
+    "-Mk0sPZ9Y1B1z9SxXsed": {
+      "Email": "info@casademathias.com",
+      "Latitude": -0.7394291,
+      "Longitude": -90.3116796,
+      "Name": "La Casa de Mathias",
+      "PhoneNo": 59352527385,
+      "Website": "n/a",
+      "LocalImages": {
+        "folderName": "mathias"
+      }
+    },
+    "-Mk0sPglDwAOUPEp5fgT": {
+      "Email": "miguel8905@gmail.com",
+      "Latitude": -0.739531,
+      "Longitude": -90.311197,
+      "Name": "La Casa Redonda",
+      "PhoneNo": 59352526495,
+      "Website": "n/a",
+      "LocalImages": {
+        "folderName": "redonda"
+      }
+    },
+    "-Mk0sPkEmv5wa_mtZF1V": {
+      "Email": "lavahousehostal@gmail.com",
+      "Latitude": -0.7418246,
+      "Longitude": -90.3144836,
+      "Name": "Lava House Hostal",
+      "PhoneNo": 59352526794,
+      "Website": "n/a",
+      "LocalImages": {
+        "folderName": "hostal"
+      }
+    },
+    "-Mk0sPmvI_txhzTIAisO": {
+      "Email": "galapagosvilla@gmail.com",
+      "Latitude": -0.750352,
+      "Longitude": -90.3099561,
+      "Name": "PensiÃ³n Casalaiguana",
+      "PhoneNo": 59399290290,
+      "Website": "https:www.galapagosvilla.com",
+      "LocalImages": {
+        "folderName": "pension"
+      }
+    },
+    "-Mk0sPq5ZcCM_ErchFvN": {
+      "Email": "info@cucuvesuites.com",
+      "Latitude": -0.744638,
+      "Longitude": -90.312653,
+      "Name": "PensiÃ³n Cucuve Suites",
+      "PhoneNo": 59352524778,
+      "Website": "n/a",
+      "LocalImages": {
+        "folderName": "cucuve"
+      }
+    },
+    "-Mk0sPsnoREbOntEAcIP": {
+      "Email": "elbambugalapagos@hotmail.com",
+      "Latitude": -0.7460834,
+      "Longitude": -90.31284,
+      "Name": "PensiÃ³n El Bambu Galapagos",
+      "PhoneNo": 59352524085,
+      "Website": "n/a",
+      "LocalImages": {
+        "folderName": "bambu"
+      }
+    },
+    "-Mk0sPvRNui0so57siYR": {
+      "Email": "execpres@gmail.com",
+      "Latitude": -0.7396105,
+      "Longitude": -90.3105726,
+      "Name": "PensiÃ³n Mi Caleta Inn",
+      "PhoneNo": 59352527375,
+      "Website": "https:www.galapagos-micaletainn.com",
+      "LocalImages": {
+        "folderName": "caleta"
+      }
+    },
+    "-Mk0sQ1OQBM1zaijpJn5": {
+      "Email": "andrew.balfour@pikaialodge.com",
+      "Latitude": -0.6456405,
+      "Longitude": -90.2789474,
+      "Name": "PIKAIA LODGE",
+      "PhoneNo": 59353032056,
+      "Website": "https:www.pikaialodge.com",
+      "LocalImages": {
+        "folderName": "pikaia"
+      }
+    },
+    "-Mk0sQ5AqnTxalGg5DI9": {
+      "Email": "felipe@scalesialodge.com",
+      "Latitude": -0.7360958,
+      "Longitude": -90.3111283,
+      "Name": "SCALESIA LODGE",
+      "PhoneNo": 593999263804,
+      "Website": "n/a",
+      "LocalImages": {
+        "folderName": "scalesia"
+      }
+    },
+    "-Mk0sQ9yRtYa5Ld3erKa": {
+      "Email": "info@torremargalapagos.com",
+      "Latitude": -0.7424767,
+      "Longitude": -90.3153886,
+      "Name": "TORRE MAR GALAPAGOS",
+      "PhoneNo": 59352527345,
+      "Website": "n/a",
+      "LocalImages": {
+        "folderName": "torre"
+      }
+    },
+    "-Mk0sQDOQOE3xjSuJZDN": {
+      "Email": "twinlodgegal@gmail.com",
+      "Latitude": -0.691603,
+      "Longitude": -90.314868,
+      "Name": "Twin Lodge Galapagos",
+      "PhoneNo": 59352523060,
+      "Website": "n/a",
+      "LocalImages": {
+        "folderName": "twin"
+      }
+    },
+    "-Mk0sQGVw5rNhrg-NjSf": {
+      "Email": "luisfabricio1977@hotmail.com",
+      "Latitude": -0.7424751,
+      "Longitude": -90.3204934,
+      "Name": "ZURISADAI",
+      "PhoneNo": 59352526019,
+      "Website": "https:www.galapagoszurisadai.com",
+      "LocalImages": {
+        "folderName": "zuri"
+      }
+    }
+  }
+}

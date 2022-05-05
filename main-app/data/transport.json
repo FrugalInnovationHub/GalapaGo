@@ -1,0 +1,264 @@
+{
+  "transports": {
+    "-Mh2256HuNDqmrNI95S1": {
+      "Email": "info@santafegalapagos.com.ec",
+      "Image": "n/a",
+      "Latitude": "n/a",
+      "Longitude": "n/a",
+      "Name": "L/P Santa Fe III",
+      "PhoneNo": 59352526593,
+      "Website": "https:www.santafeii.com.ec",
+      "LocalImages": {
+        "folderName": "yate-santa-fe"
+      }
+    },
+    "-Mh2258RT14CKSlaRTsl": {
+      "Email": "kmartinez@oagalapagos.com",
+      "Image": [
+        "n",
+        "/",
+        "a",
+        "mc_xploration1.jpg",
+        "mc_xploration2.jpg",
+        "mc_xploration3.jpg",
+        "mc_xploration4.jpg"
+      ],
+      "Latitude": "n/a",
+      "Longitude": "n/a",
+      "Name": "M/C Xploration",
+      "PhoneNo": 59352526356,
+      "Urls": [
+        "https://firebasestorage.googleapis.com/v0/b/galapago-d4744.appspot.com/o/images%2Fmc_xploration2.jpg?alt=media&token=0e2cdf5c-47f4-4952-a46b-98dc9767be24",
+        "https://firebasestorage.googleapis.com/v0/b/galapago-d4744.appspot.com/o/images%2Fmc_xploration3.jpg?alt=media&token=65e5987f-2821-41f2-847b-894e3d8e6e83",
+        "https://firebasestorage.googleapis.com/v0/b/galapago-d4744.appspot.com/o/images%2Fmc_xploration4.jpg?alt=media&token=448f0751-e588-49be-ad2e-55c851641277",
+        "https://firebasestorage.googleapis.com/v0/b/galapago-d4744.appspot.com/o/images%2Fmc_xploration1.jpg?alt=media&token=e829a66a-f247-44e1-8e38-14b4f105b772"
+      ],
+      "Website": "https:www.oceanadventures.com.ec",
+      "LocalImages": {
+        "folderName": "mc-xploration"
+      }
+    },
+    "-Mh225AfAveGcFVK6tV3": {
+      "Email": "jceli@oagalapagos.com",
+      "Image": "n/a",
+      "Latitude": "n/a",
+      "Longitude": "n/a",
+      "Name": "M/N Celebity Xpedition",
+      "PhoneNo": 59352526356,
+      "Website": "https:www.oceanadventures.com.ec",
+      "LocalImages": {
+        "folderName": "mn-celebrity-xpedition"
+      }
+    },
+    "-Mh225CgozW7lBhaMbSK": {
+      "Email": "haguirre@xpedition.com.ec",
+      "Image": "n/a",
+      "Latitude": "n/a",
+      "Longitude": "n/a",
+      "Name": "M/N Celebrity Flora",
+      "PhoneNo": 59323809680,
+      "Website": "https:www.celebritycruises.com",
+      "LocalImages": {
+        "folderName": "mn-celebrity-flora"
+      }
+    },
+    "-Mh225F-74VNlPKkAT4Y": {
+      "Email": "ebrito@metropolitan-touring.com",
+      "Image": "n/a",
+      "Latitude": "n/a",
+      "Longitude": "n/a",
+      "Name": "M/N Endeavour",
+      "PhoneNo": 59352526159,
+      "Website": "https:www.ecuadorable.com",
+      "LocalImages": {
+        "folderName": "mn-endeavour"
+      }
+    },
+    "-Mh225GxjVSzhIaIw3xa": {
+      "Email": "ebrito@metropolitan-touring.com",
+      "Image": "n/a",
+      "Latitude": "n/a",
+      "Longitude": "n/a",
+      "Name": "M/N Isabela II",
+      "PhoneNo": 59352526157,
+      "Website": "https:www.ecuadorable.com",
+      "LocalImages": {
+        "folderName": "mn-isabela"
+      }
+    },
+    "-Mh225IxetGnPyT-lW8-": {
+      "Email": "ebrito@metropolitan-touring.com",
+      "Image": "n/a",
+      "Latitude": "n/a",
+      "Longitude": "n/a",
+      "Name": "M/N National Geographic Islander",
+      "PhoneNo": 59322986570,
+      "Website": "https:www.ecuadorable.com",
+      "LocalImages": {
+        "folderName": "mn-national-geographic"
+      }
+    },
+    "-Mh225L-9gir-qR0RQpz": {
+      "Email": "operk@kleintours.com.ec",
+      "Image": "n/a",
+      "Latitude": "n/a",
+      "Longitude": "n/a",
+      "Name": "M/V GalÃ¡pagos Legend",
+      "PhoneNo": 59352526327,
+      "Website": "https:www.kleintours.com",
+      "LocalImages": {
+        "folderName": "mv-galapagos-legend"
+      }
+    },
+    "-Mh225N0QqzGdIn-y8LV": {
+      "Email": "info@galapagos-aggresor.com",
+      "Image": "n/a",
+      "Latitude": "n/a",
+      "Longitude": "n/a",
+      "Name": "Y/ Albatros",
+      "PhoneNo": 59343711670,
+      "Website": "https:www.galapagos-aggressor.com",
+      "LocalImages": {
+        "folderName": "y-albatros"
+      }
+    },
+    "-Mh225OySiNI1BOwt4mh": {
+      "Email": "oficinabeluga2017@yahoo.com",
+      "Image": "n/a",
+      "Latitude": "n/a",
+      "Longitude": "n/a",
+      "Name": "Y/ Beluga",
+      "PhoneNo": 59352526294,
+      "Website": "https:www.angermeyer.com",
+      "LocalImages": {
+        "folderName": "y-beluga"
+      }
+    },
+    "-Mh225Qw4YfiCNVE3_ht": {
+      "Email": "galaven@islasantacruz.com",
+      "Image": "n/a",
+      "Latitude": "n/a",
+      "Longitude": "n/a",
+      "Name": "Y/ Infinity",
+      "PhoneNo": 59352526359,
+      "Website": "https:www.ninfatour.com",
+      "LocalImages": {
+        "folderName": "y-infinity"
+      }
+    },
+    "-Mh225SwTHdNxjoCDZ8s": {
+      "Email": "info@unigalapagos.com",
+      "Image": "n/a",
+      "Latitude": "n/a",
+      "Longitude": "n/a",
+      "Name": "Y/Anahi",
+      "PhoneNo": 59352527615,
+      "Website": "https:www.unigalapagos.com",
+      "LocalImages": {
+        "folderName": "y-anahi"
+      }
+    },
+    "-Mh225V-kjSiJMMzHT3U": {
+      "Email": "martinschreyrerg@yahoo.com",
+      "Image": "n/a",
+      "Latitude": "n/a",
+      "Longitude": "n/a",
+      "Name": "Y/Cachalote",
+      "PhoneNo": 59352526294,
+      "Website": "https:www.angermeyer.com",
+      "LocalImages": {
+        "folderName": "y-cachalote"
+      }
+    },
+    "-Mh225X08N5UIRTeXGRC": {
+      "Email": "operk@kleintours.com.ec",
+      "Image": [
+        "n",
+        "/",
+        "a",
+        "island2.jpg",
+        "island3.jpg"
+      ],
+      "Latitude": "n/a",
+      "Longitude": "n/a",
+      "Name": "Y/Coral I",
+      "PhoneNo": 59352526327,
+      "Website": "https:www.galapagosecuador.com",
+      "LocalImages": {
+        "folderName": "y-coral-i"
+      }
+    },
+    "-Mh225Z2PZaagnxyO99r": {
+      "Email": "yatecormorant@yahoo.com",
+      "Image": "n/a",
+      "Latitude": "n/a",
+      "Longitude": "n/a",
+      "Name": "Y/Cormorant",
+      "PhoneNo": 59352526407,
+      "Website": "n/a",
+      "LocalImages": {
+        "folderName": "y-cormorant"
+      }
+    },
+    "-Mh225a0chtyH-eOjEzp": {
+      "Email": "info@daphnecruises.com",
+      "Image": "n/a",
+      "Latitude": "n/a",
+      "Longitude": "n/a",
+      "Name": "Y/Daphne",
+      "PhoneNo": 59352526344,
+      "Website": "https:www.daphnecruises.com",
+      "LocalImages": {
+        "folderName": "y-daphne"
+      }
+    },
+    "-Mh225c0YH8MCFHv7XMW": {
+      "Email": "info@galapagos-aggresor.com",
+      "Image": "n/a",
+      "Latitude": "n/a",
+      "Longitude": "n/a",
+      "Name": "Y/JesÃºs del Gran Poder",
+      "PhoneNo": 59343711670,
+      "Website": "https:www.galapagos-aggressor.com",
+      "LocalImages": {
+        "folderName": "y-jesus-del-gran-poder"
+      }
+    },
+    "-Mh225expi2Yxgwyg2q9": {
+      "Email": "nemo@galapagosinformation.com",
+      "Image": "n/a",
+      "Latitude": "n/a",
+      "Longitude": "n/a",
+      "Name": "Y/Nemo II",
+      "PhoneNo": 59352526563,
+      "Website": "https:www.galapagosinformation.com",
+      "LocalImages": {
+        "folderName": "y-nemo-ii"
+      }
+    },
+    "-Mh225hXJBetYSpnbnIG": {
+      "Email": "pamarent@pamarent.com",
+      "Image": "n/a",
+      "Latitude": "n/a",
+      "Longitude": "n/a",
+      "Name": "Y/Reina Silvia",
+      "PhoneNo": 59352526210,
+      "Website": "https:www.reinasilvia.com",
+      "LocalImages": {
+        "folderName": "y-reina-silvia"
+      }
+    },
+    "-Mh225jfg5MrBnPFziM_": {
+      "Email": "gerencia-marchena@grupohojas.com",
+      "Image": "n/a",
+      "Latitude": "n/a",
+      "Longitude": "n/a",
+      "Name": "Y/San Jacinto",
+      "PhoneNo": 59342015482,
+      "Website": "operaciones-marchena@grupohojas.com",
+      "LocalImages": {
+        "folderName": "y-san-jacinto"
+      }
+    }
+  }
+}
