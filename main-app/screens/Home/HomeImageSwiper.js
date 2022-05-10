@@ -5,7 +5,7 @@ import images from "../../assets/img/homescreen";
 
 const HomeImageSwiper = () => {
   return (
-    <Swiper>
+    <Swiper autoplay={true}>
       {images.map((item) => (
         <Image key={item.id} source={item.source} style={styles.image} />
       ))}

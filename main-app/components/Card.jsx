@@ -24,7 +24,8 @@ const Card = ({
   website,
   position,
   images,
-  addFavorite
+  addFavorite,
+  isFavorite
 }) => {
   return (
     <View style={styles.container}>
@@ -105,7 +106,7 @@ const Card = ({
           <MaterialIcons
             name="favorite-outline"
             size={22}
-            color="#7F7F7F"
+            color={isFavorite ? "#439642" : "#7F7F7F"}
             style={styles.buttonIcon}
           />
           <Text style={styles.buttonText}>Favorite</Text>
