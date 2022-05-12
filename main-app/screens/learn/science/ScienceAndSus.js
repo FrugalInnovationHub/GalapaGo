@@ -39,8 +39,7 @@ const styles = StyleSheet.create({
     paddingLeft: 34,
     paddingTop: 23,
     paddingBottom: 9,
-    borderBottomWidth: 2,
-    borderColor: "#27C4CC"
+    borderBottomWidth: 2
   },
   buttonText: {
     fontSize: 17 * rem,
