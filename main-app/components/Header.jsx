@@ -1,6 +1,12 @@
 /* eslint-disable react/prop-types */
 import React, { useCallback } from "react";
-import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  TouchableOpacity,
+  Platform
+} from "react-native";
 
 import { AntDesign } from "@expo/vector-icons";
 
@@ -39,7 +45,8 @@ export default Header;
 const styles = StyleSheet.create({
   container: {},
   labelWraper: {
-    height: 85,
+    paddingTop: Platform.OS === "android" ? 20 : 0,
+    height: Platform.OS === "android" ? 105 : 85,
     justifyContent: "center"
   },
   label: { flexDirection: "row" },
