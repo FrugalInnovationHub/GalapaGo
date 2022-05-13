@@ -13,7 +13,8 @@ import Swiper from "react-native-swiper";
 import {
   Ionicons,
   MaterialCommunityIcons,
-  MaterialIcons
+  MaterialIcons,
+  AntDesign
 } from "@expo/vector-icons";
 import OpenMap from "react-native-open-map";
 
@@ -103,12 +104,22 @@ const Card = ({
             addFavorite && addFavorite();
           }}
         >
-          <MaterialIcons
-            name="favorite-outline"
-            size={22}
-            color={isFavorite ? "#BA2D24" : "#7F7F7F"}
-            style={styles.buttonIcon}
-          />
+          {isFavorite ? (
+            <AntDesign
+              name="heart"
+              size={19}
+              color="#BA2D24"
+              style={[styles.buttonIcon, { paddingTop: 1 }]}
+            />
+          ) : (
+            <MaterialIcons
+              name="favorite-outline"
+              size={22}
+              color={"#7F7F7F"}
+              style={styles.buttonIcon}
+            />
+          )}
+
           {isFavorite ? (
             <Text style={styles.buttonText}>Saved</Text>
           ) : (
@@ -154,7 +165,7 @@ const styles = StyleSheet.create({
     width: 58,
     marginVertical: 15
   },
-  buttonIcon: { height: 24 },
+  buttonIcon: { height: 24, alignSelf: "center" },
   buttonText: {
     color: "#000000",
     fontSize: 15
