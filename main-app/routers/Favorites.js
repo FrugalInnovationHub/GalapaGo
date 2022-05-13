@@ -15,9 +15,9 @@ const FavoritesSection = createStackNavigator(
 
 FavoritesSection.navigationOptions = ({ navigation }) => {
   return {
-    tabBarLabel: "Favorites",
+    tabBarLabel: "Saved",
     tabBarIcon: ({ focused }) => {
-      if (focused) return <Icon name="favorites" size={24} color="#019934" />;
+      if (focused) return <Icon name="favorites" size={24} color="#BA2D24" />;
       return <Icon name="favorites" size={24} color="#231F20" />;
     },
     tabBarOptions: {

@@ -18,7 +18,12 @@ const HomeSection = createStackNavigator(
 HomeSection.navigationOptions = ({ navigation }) => {
   return {
     tabBarLabel: "Home",
-    tabBarIcon: ({ tintcolor }) => <Icon name="home" size={28} />,
+    tabBarIcon: ({ focused }) =>
+      focused ? (
+        <Icon name="home" size={28} color="#019934" />
+      ) : (
+        <Icon name="home" size={28} />
+      ),
     tabBarOptions: {
       activeTintColor: "#000000",
       inactiveTintColor: "#919196"

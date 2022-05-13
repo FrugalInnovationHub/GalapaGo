@@ -106,10 +106,14 @@ const Card = ({
           <MaterialIcons
             name="favorite-outline"
             size={22}
-            color={isFavorite ? "#439642" : "#7F7F7F"}
+            color={isFavorite ? "#BA2D24" : "#7F7F7F"}
             style={styles.buttonIcon}
           />
-          <Text style={styles.buttonText}>Favorite</Text>
+          {isFavorite ? (
+            <Text style={styles.buttonText}>Saved</Text>
+          ) : (
+            <Text style={styles.buttonText}>Save</Text>
+          )}
         </TouchableOpacity>
       </View>
     </View>
