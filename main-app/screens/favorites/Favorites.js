@@ -52,6 +52,7 @@ class Favorites extends React.Component {
                     addFavorite={() => {
                       addFavorite(this.context, "hotels", key, hotel);
                     }}
+                    isFavorite
                   />
                 );
               })}
@@ -82,6 +83,7 @@ class Favorites extends React.Component {
                     addFavorite={() =>
                       addFavorite(this.context, "restaurants", key, restaurant)
                     }
+                    isFavorite
                   />
                 );
               })}
@@ -113,6 +115,7 @@ class Favorites extends React.Component {
                     addFavorite={() =>
                       addFavorite(this.context, "travels", key, transport)
                     }
+                    isFavorite
                   />
                 );
               })}
@@ -143,6 +146,7 @@ class Favorites extends React.Component {
                     addFavorite={() =>
                       addFavorite(this.context, "agencies", key, agency)
                     }
+                    isFavorite
                   />
                 );
               })}

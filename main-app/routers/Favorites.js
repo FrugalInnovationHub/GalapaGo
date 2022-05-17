@@ -1,9 +1,8 @@
 import React from "react";
 import { createStackNavigator } from "react-navigation-stack";
-import { Image } from "react-native";
 import { Icon } from "../components";
 import Favorites from "../screens/favorites/Favorites";
-
+import { AntDesign } from "@expo/vector-icons";
 const FavoritesSection = createStackNavigator(
   {
     Favorites: { screen: Favorites }
@@ -15,11 +14,13 @@ const FavoritesSection = createStackNavigator(
 
 FavoritesSection.navigationOptions = ({ navigation }) => {
   return {
-    tabBarLabel: "Favorites",
-    tabBarIcon: ({ focused }) => {
-      if (focused) return <Icon name="favorites" size={24} color="#019934" />;
-      return <Icon name="favorites" size={24} color="#231F20" />;
-    },
+    tabBarLabel: "Saved",
+    tabBarIcon: ({ focused }) =>
+      focused ? (
+        <AntDesign name="heart" size={24} color="#BA2D24" />
+      ) : (
+        <Icon name="favorites" size={24} color="#231F20" />
+      ),
     tabBarOptions: {
       activeTintColor: "#000000",
       inactiveTintColor: "#919196"

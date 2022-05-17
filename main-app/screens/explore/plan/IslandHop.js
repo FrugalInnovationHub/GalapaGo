@@ -12,6 +12,7 @@ class IslandHop extends React.Component {
 
   render() {
     const propertyNames = Object.keys(transports.transports);
+    const { favorites = undefined } = this.context;
     return (
       <SafeAreaView style={{ backgroundColor: "white", flex: 1 }}>
         <ExploreHeader
@@ -21,6 +22,7 @@ class IslandHop extends React.Component {
         <ScrollView style={styles.scrollView}>
           {propertyNames.map((key) => {
             const transport = transports.transports[key];
+            const isFavorite = !!favorites.travels[key];
             return (
               <Card
                 key={key}
@@ -38,6 +40,7 @@ class IslandHop extends React.Component {
                 addFavorite={() =>
                   addFavorite(this.context, "travels", key, transport)
                 }
+                isFavorite={isFavorite}
               />
             );
           })}

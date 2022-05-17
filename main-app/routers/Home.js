@@ -1,6 +1,7 @@
 import React from "react";
 import { createStackNavigator } from "react-navigation-stack";
 import { Icon } from "../components";
+import { Image } from "react-native";
 import Home from "../screens/Home/home";
 import Maps from "../screens/Home/Maps";
 
@@ -18,7 +19,15 @@ const HomeSection = createStackNavigator(
 HomeSection.navigationOptions = ({ navigation }) => {
   return {
     tabBarLabel: "Home",
-    tabBarIcon: ({ tintcolor }) => <Icon name="home" size={28} />,
+    tabBarIcon: ({ focused }) =>
+      focused ? (
+        <Image
+          source={require("../assets/img/imageIcon/home_selected.png")}
+          style={{ width: 28, height: 19 }}
+        />
+      ) : (
+        <Icon name="home" size={28} />
+      ),
     tabBarOptions: {
       activeTintColor: "#000000",
       inactiveTintColor: "#919196"

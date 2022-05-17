@@ -5,8 +5,8 @@ const FavoritesHeader = (props) => {
   return (
     <Header
       {...props}
-      title="FAVORITES"
-      color="#019934"
+      title="SAVED"
+      color="#BA2D24"
       icon={<Icon name={"favorites"} size={32} color="white" />}
     />
   );

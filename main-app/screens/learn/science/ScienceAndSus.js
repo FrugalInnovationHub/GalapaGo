@@ -33,14 +33,16 @@ const styles = StyleSheet.create({
     fontSize: 34 * rem,
     fontWeight: "600"
   },
+  headerWraper: {
+    borderBottomWidth: 2,
+    borderColor: "#FFCE4F"
+  },
   subHeader: {
     fontWeight: "600",
     fontSize: 17 * rem,
     paddingLeft: 34,
     paddingTop: 23,
-    paddingBottom: 9,
-    borderBottomWidth: 2,
-    borderColor: "#27C4CC"
+    paddingBottom: 9
   },
   buttonText: {
     fontSize: 17 * rem,
@@ -91,7 +93,7 @@ class ScienceAndSus extends React.Component {
                 this.props.navigation.goBack();
               }}
             />
-            <View style={{ borderBottomWidth: 2, borderColor: "#FFCE4F" }}>
+            <View style={styles.headerWraper}>
               <Text style={styles.subHeader}>Flora & Fauna</Text>
             </View>
             <TouchableOpacity
@@ -148,7 +150,7 @@ class ScienceAndSus extends React.Component {
                 />
               </View>
             </TouchableOpacity>
-            <View style={{ borderBottomWidth: 2, borderColor: "#FFCE4F" }}>
+            <View style={styles.headerWraper}>
               <Text style={styles.subHeader}>Species</Text>
             </View>
             <TouchableOpacity
