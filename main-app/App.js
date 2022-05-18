@@ -7,10 +7,8 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import { initializeApp } from "firebase/app";
 
 import { getDatabase, ref, onValue } from "firebase/database";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+import NetInfo from "@react-native-community/netinfo";
+
 const firebaseConfig = {
   apiKey: "AIzaSyBkGmokW285RxesrlEOEGMOpL7DjBMvk_U",
   authDomain: "galapago-d4744.firebaseapp.com",
@@ -58,12 +56,20 @@ export default class App extends React.Component {
     if (data) {
       this.updateFavorites(JSON.parse(data));
     }
-    // init database
-    // const starCountRef = ref(database);
-    // onValue(starCountRef, (snapshot) => {
-    //   const data = snapshot.val();
-    //   console.log("show database", data);
-    // });
+
+    const { type, isConnected } = await NetInfo.fetch();
+
+    console.log("Connection type", type);
+    console.log("Is connected?", isConnected);
+
+    if (isConnected) {
+      const starCountRef = ref(database);
+      onValue(starCountRef, (snapshot) => {
+        const data = snapshot.val();
+        // console.log("show database", data);
+        console.log("show database", data.Timestamp);
+      });
+    }
   }
 
   componentDidMount() {
