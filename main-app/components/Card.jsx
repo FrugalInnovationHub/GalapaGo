@@ -6,8 +6,7 @@ import {
   View,
   Image,
   TouchableOpacity,
-  Linking,
-  Dimensions
+  Linking
 } from "react-native";
 import Swiper from "react-native-swiper";
 import {
@@ -132,10 +131,6 @@ const Card = ({
 };
 
 export default React.memo(Card);
-
-const entireScreenWidth = Dimensions.get("window").width;
-let rem;
-rem = entireScreenWidth / 350;
 
 const styles = StyleSheet.create({
   container: { borderBottomColor: "#e5e5e5e5", borderBottomWidth: 10 },
