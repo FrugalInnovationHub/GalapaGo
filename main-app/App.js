@@ -106,12 +106,12 @@ export default class App extends React.Component {
     this.init();
   }
 
-  componentDidUpdate() {
-    console.log(
-      "show default database",
-      this.state.contextState.database.Timestamp
-    );
-  }
+  // componentDidUpdate() {
+  //   console.log(
+  //     "show default database",
+  //     this.state.contextState.database.Timestamp
+  //   );
+  // }
 
   render() {
     return (

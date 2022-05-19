@@ -10,8 +10,11 @@ class TravelAgencies extends React.Component {
   static contextType = globalStateContext;
 
   render() {
-    const propertyNames = Object.keys(agencies.agencies);
-    const { favorites = undefined } = this.context;
+    const { favorites = undefined, database } = this.context;
+    const { Agencies } = database;
+    const { Agencies_list } = Agencies;
+    const propertyNames = Object.keys(Agencies_list);
+
     return (
       <SafeAreaView style={styles.container}>
         <ExploreHeader
@@ -20,7 +23,7 @@ class TravelAgencies extends React.Component {
         />
         <ScrollView>
           {propertyNames.map((key) => {
-            const agency = agencies.agencies[key];
+            const agency = Agencies_list[key];
             const isFavorite = !!favorites.agencies[key];
             return (
               <Card

@@ -131,7 +131,7 @@ const Card = ({
   );
 };
 
-export default Card;
+export default React.memo(Card);
 
 const entireScreenWidth = Dimensions.get("window").width;
 let rem;

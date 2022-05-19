@@ -11,8 +11,11 @@ class IslandHop extends React.Component {
   static contextType = globalStateContext;
 
   render() {
-    const propertyNames = Object.keys(transports.transports);
     const { favorites = undefined, database } = this.context;
+    const { Transports } = database;
+    const { Transports_list } = Transports;
+
+    const propertyNames = Object.keys(Transports_list);
     return (
       <SafeAreaView style={{ backgroundColor: "white", flex: 1 }}>
         <ExploreHeader
@@ -21,7 +24,7 @@ class IslandHop extends React.Component {
         />
         <ScrollView style={styles.scrollView}>
           {propertyNames.map((key) => {
-            const transport = transports.transports[key];
+            const transport = Transports_list[key];
             const isFavorite = !!favorites.travels[key];
             console.log("render-1", key, database.timestamp);
             return (

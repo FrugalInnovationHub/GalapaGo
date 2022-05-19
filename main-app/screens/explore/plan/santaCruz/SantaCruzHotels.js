@@ -3,7 +3,6 @@ import { StyleSheet, SafeAreaView, ScrollView } from "react-native";
 import ExploreHeader from "../../ExploreHeader";
 import { Card } from "../../../../components";
 import hotelImages from "../../../../assets/img/hotels";
-import hotels from "../../../../data/newHotels.json";
 import globalStateContext from "../../../../context/globalContext";
 import { addFavorite } from "../../../../utils";
 class SantaCruzHotels extends React.Component {
@@ -13,8 +12,10 @@ class SantaCruzHotels extends React.Component {
   static contextType = globalStateContext;
 
   render() {
-    const propertyNames = Object.keys(hotels.hotels);
-    const { favorites = undefined } = this.context;
+    const { favorites = undefined, database } = this.context;
+    const { Hotels } = database;
+    const { Hotels_list } = Hotels;
+    const propertyNames = Object.keys(Hotels_list);
 
     return (
       <SafeAreaView style={styles.container}>
@@ -25,7 +26,7 @@ class SantaCruzHotels extends React.Component {
         />
         <ScrollView style={styles.scrollView}>
           {propertyNames.map((key) => {
-            const hotel = hotels.hotels[key];
+            const hotel = Hotels_list[key];
             const isFavorite = !!favorites.hotels[key];
             return (
               <Card
