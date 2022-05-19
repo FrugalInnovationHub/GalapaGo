@@ -17,7 +17,7 @@ class IslandHop extends React.Component {
 
     const propertyNames = Object.keys(Transports_list);
     return (
-      <SafeAreaView style={{ backgroundColor: "white", flex: 1 }}>
+      <SafeAreaView style={styles.container}>
         <ExploreHeader
           subTitle="Island Hop"
           goBack={() => this.props.navigation.goBack()}
@@ -26,7 +26,6 @@ class IslandHop extends React.Component {
           {propertyNames.map((key) => {
             const transport = Transports_list[key];
             const isFavorite = !!favorites.travels[key];
-            console.log("render-1", key, database.timestamp);
             return (
               <Card
                 key={key}
@@ -62,6 +61,10 @@ let rem;
 rem = entireScreenWidth / 350;
 
 const styles = StyleSheet.create({
+  container: {
+    backgroundColor: "white",
+    flex: 1
+  },
   header: {
     flexDirection: "row",
     paddingTop: 16,
