@@ -12,7 +12,7 @@ class IslandHop extends React.Component {
 
   render() {
     const propertyNames = Object.keys(transports.transports);
-    const { favorites = undefined } = this.context;
+    const { favorites = undefined, database } = this.context;
     return (
       <SafeAreaView style={{ backgroundColor: "white", flex: 1 }}>
         <ExploreHeader
@@ -23,6 +23,7 @@ class IslandHop extends React.Component {
           {propertyNames.map((key) => {
             const transport = transports.transports[key];
             const isFavorite = !!favorites.travels[key];
+            console.log("render-1", key, database.timestamp);
             return (
               <Card
                 key={key}

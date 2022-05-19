@@ -1,28 +1,14 @@
 import * as React from "react";
 import NavigationApp from "./routers";
 import GlobalStateContext from "./context/globalContext";
-import AsyncStorage from "@react-native-async-storage/async-storage";
-
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-
-import { getDatabase, ref, onValue } from "firebase/database";
+import DefaultDatabase from "./data/database.json";
 import NetInfo from "@react-native-community/netinfo";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import { getDatabaseSnapshot, getParsedDataFromAsyncStorage } from "./utils";
+import { getDatabase } from "firebase/database";
+import app from "./config/firebase";
 
-const firebaseConfig = {
-  apiKey: "AIzaSyBkGmokW285RxesrlEOEGMOpL7DjBMvk_U",
-  authDomain: "galapago-d4744.firebaseapp.com",
-  databaseURL: "https://galapago-d4744-default-rtdb.firebaseio.com",
-  projectId: "galapago-d4744",
-  storageBucket: "galapago-d4744.appspot.com",
-  messagingSenderId: "508955483910",
-  appId: "1:508955483910:web:e910e43a67fdbca4c64887",
-  measurementId: "G-YFNZ5NMK3Q"
-};
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-
-const database = getDatabase(app);
+const DATABASE = getDatabase(app);
 
 const Favorites = {
   restaurants: {},
@@ -31,12 +17,18 @@ const Favorites = {
   agencies: {}
 };
 
+const getLocalDatabase = async () => {
+  const data = await getParsedDataFromAsyncStorage("database");
+  return data !== null ? data : DefaultDatabase;
+};
+
 export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       contextState: {
         favorites: Favorites,
+        database: { ...DefaultDatabase },
         updateFavorites: (data) => this.updateFavorites(data)
       }
     };
@@ -46,34 +38,79 @@ export default class App extends React.Component {
     this.setState({
       contextState: {
         updateFavorites: (_data) => this.updateFavorites(_data),
-        favorites: data
+        favorites: data,
+        database: this.state.contextState.database
       }
     });
   }
 
-  async init() {
-    const data = await AsyncStorage.getItem("favorites");
-    if (data) {
-      this.updateFavorites(JSON.parse(data));
-    }
+  async updateLocalDatabase(data) {
+    this.setState({
+      contextState: {
+        updateFavorites: (_data) => this.updateFavorites(_data),
+        favorites: this.state.contextState.favorites,
+        database: data
+      }
+    });
+    await AsyncStorage.setItem("database", JSON.stringify(data));
+  }
 
+  initContextState(favorites, localDatabase) {
+    if (favorites && localDatabase) {
+      console.log("update favorites & localDatabase");
+      this.setState({
+        contextState: {
+          updateFavorites: (_data) => this.updateFavorites(_data),
+          favorites: favorites,
+          database: localDatabase
+        }
+      });
+      return;
+    }
+    if (favorites) {
+      console.log("update favorites ");
+      this.updateFavorites(favorites);
+      return;
+    }
+    if (localDatabase) {
+      console.log("update localDatabase");
+      this.updateLocalDatabase(localDatabase);
+      return;
+    }
+  }
+
+  async init() {
+    const database = await getLocalDatabase();
+    const favorites = await getParsedDataFromAsyncStorage("favorites");
     const { type, isConnected } = await NetInfo.fetch();
 
-    console.log("Connection type", type);
-    console.log("Is connected?", isConnected);
-
     if (isConnected) {
-      const starCountRef = ref(database);
-      onValue(starCountRef, (snapshot) => {
-        const data = snapshot.val();
-        // console.log("show database", data);
-        console.log("show database", data.Timestamp);
-      });
+      try {
+        const onlineDatabase = await getDatabaseSnapshot(DATABASE);
+        console.log("online data", onlineDatabase.Timestamp);
+        if (parseInt(onlineDatabase.Timestamp) > parseInt(database.Timestamp)) {
+          console.log("update LocalDatabase");
+          this.updateLocalDatabase(onlineDatabase);
+        } else {
+          console.log("not update");
+        }
+      } catch (error) {
+        console.log(error);
+      }
     }
+
+    this.initContextState(favorites, database);
   }
 
   componentDidMount() {
     this.init();
+  }
+
+  componentDidUpdate() {
+    console.log(
+      "show default database",
+      this.state.contextState.database.Timestamp
+    );
   }
 
   render() {
