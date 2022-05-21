@@ -35,7 +35,11 @@ const Card = ({
       <Swiper style={styles.body} showsButtons={false}>
         {images.map((image) => (
           <View style={styles.slide} key={`${image.title}+${name}`}>
-            <Image source={image.file} style={styles.slideImage} />
+            <Image
+              source={image.file}
+              style={styles.slideImage}
+              defaultSource={require("./../assets/img/default/Default_Image_Thumbnail.png")}
+            />
           </View>
         ))}
       </Swiper>
