@@ -4,7 +4,11 @@ import GlobalStateContext from "./context/globalContext";
 import DefaultDatabase from "./data/database.json";
 import NetInfo from "@react-native-community/netinfo";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import { getDatabaseSnapshot, getParsedDataFromAsyncStorage } from "./utils";
+import {
+  getDatabaseSnapshot,
+  getParsedDataFromAsyncStorage,
+  checkUpdateTime
+} from "./utils";
 import { getDatabase } from "firebase/database";
 import app from "./config/firebase";
 
@@ -83,23 +87,26 @@ export default class App extends React.Component {
     const database = await getLocalDatabase();
     const favorites = await getParsedDataFromAsyncStorage("favorites");
     const { type, isConnected } = await NetInfo.fetch();
+    const isLastUpdateOneWeekAgo = await checkUpdateTime();
 
-    if (isConnected) {
+    console.log("isLastUpdateOneWeekAgo", isLastUpdateOneWeekAgo);
+
+    if (isConnected && isLastUpdateOneWeekAgo) {
       try {
         const onlineDatabase = await getDatabaseSnapshot(DATABASE);
         console.log("online data", onlineDatabase.Timestamp);
         if (parseInt(onlineDatabase.Timestamp) > parseInt(database.Timestamp)) {
           console.log("update LocalDatabase");
-          this.updateLocalDatabase(onlineDatabase);
+          this.initContextState(favorites, onlineDatabase);
         } else {
           console.log("not update");
         }
       } catch (error) {
         console.log(error);
       }
+    } else {
+      this.initContextState(favorites, database);
     }
-
-    this.initContextState(favorites, database);
   }
 
   componentDidMount() {
