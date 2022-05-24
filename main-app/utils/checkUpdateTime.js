@@ -13,11 +13,10 @@ const checkUpdateTime = async () => {
   if (lastUpdateTime === null) {
     await updateTime(curTime);
     return true;
+  } else if (curTime - lastUpdateTime >= ONE_WEEK) {
+    await updateTime(curTime);
+    return true;
   } else {
-    if (curTime - lastUpdateTime >= ONE_WEEK) {
-      await updateTime(curTime);
-      return true;
-    }
     return false;
   }
 };
