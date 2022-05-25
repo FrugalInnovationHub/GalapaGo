@@ -7,8 +7,8 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import {
   getDatabaseSnapshot,
   getParsedDataFromAsyncStorage,
-  checkUpdateTime
-  // updateImages
+  checkUpdateTime,
+  updateImages
 } from "./utils";
 import { getDatabase } from "firebase/database";
 import { getStorage, ref, getDownloadURL } from "firebase/storage";
@@ -105,7 +105,7 @@ export default class App extends React.Component {
 
     console.log("isLastUpdateOneWeekAgo", isLastUpdateOneWeekAgo);
     console.log("isConnected", isConnected, type);
-    // if (type === "wifi") updateImages(localDatabase);
+    if (type === "wifi") updateImages(localDatabase);
 
     if (isConnected && isLastUpdateOneWeekAgo) {
       try {
