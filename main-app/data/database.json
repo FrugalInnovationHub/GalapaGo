@@ -4,7 +4,7 @@
     "Agencies_list": {
       "-Mh222j02013gsNUh0KS": {
         "Email": "info@fdstravel.com",
-        "Images": {
+        "Image": {
           "url": "travel-agencies/fds-travel/",
           "images": [
             {
@@ -36,7 +36,7 @@
       },
       "-Mh222lWmhW1zpriYuPt": {
         "Email": "bahamonde@gadventures.com",
-        "Images": {
+        "Image": {
           "url": "travel-agencies/g-adventures/",
           "images": [
             {
@@ -68,7 +68,7 @@
       },
       "-Mh222nr93lw6igQ2Rtc": {
         "Email": "admin@galapagosalacarte.com",
-        "Images": {
+        "Image": {
           "url": "travel-agencies/galapagos-a-la-carte/",
           "images": [
             {
@@ -100,7 +100,7 @@
       },
       "-Mh222qN1hKeXd4QKV9A": {
         "Email": "ptoayora@kleintours.com.ec",
-        "Images": {
+        "Image": {
           "url": "travel-agencies/galatours-sa/",
           "images": [
             {
@@ -132,7 +132,7 @@
       },
       "-Mh222suZNUnBPgvhTTS": {
         "Email": "galapagoscruisingmuran@yahoo.com",
-        "Images": {
+        "Image": {
           "url": "travel-agencies/galapagos-cruising/",
           "images": [
             {
@@ -160,7 +160,7 @@
       },
       "-Mh222vIS-V7XTtE4zQw": {
         "Email": "info.galamagic@gmail.com",
-        "Images": {
+        "Image": {
           "url": "travel-agencies/galamagic/",
           "images": [
             {
@@ -188,7 +188,7 @@
       },
       "-Mh222xsMtSsvoP66Bhl": {
         "Email": "misrael_sinai@hotmail.com",
-        "Images": {
+        "Image": {
           "url": "travel-agencies/geo-reisen-tour/",
           "images": [
             {
@@ -212,7 +212,7 @@
       },
       "-Mh223-EmrB4rtjyyj4X": {
         "Email": "guidingcontabilidad@gmail.com",
-        "Images": {
+        "Image": {
           "url": "travel-agencies/guiding-galapagos/",
           "images": [
             {
@@ -240,7 +240,7 @@
       },
       "-Mh2231SM9jlmSAwTOCT": {
         "Email": "asesoria@jethandling.com",
-        "Images": {
+        "Image": {
           "url": "travel-agencies/jethandling/",
           "images": [
             {
@@ -268,7 +268,7 @@
       },
       "-Mh2233rjN_PJkHaa_iW": {
         "Email": "info@scubaiguana.com",
-        "Images": {
+        "Image": {
           "url": "travel-agencies/scuba-iguana/",
           "images": [
             {
@@ -300,7 +300,7 @@
       },
       "-Mh2236Q5sTCa68aViWb": {
         "Email": "operations@seamastersgalapagos.com",
-        "Images": {
+        "Image": {
           "url": "travel-agencies/sea-masters/",
           "images": [
             {
@@ -332,7 +332,7 @@
       },
       "-Mh22397SD0eHjtuMiEu": {
         "Email": "hugo@unigalapagos.com",
-        "Images": {
+        "Image": {
           "url": "travel-agencies/viajes-unigalapagos/",
           "images": [
             {
@@ -364,7 +364,7 @@
       },
       "-Mh223BSWZzKjugYf1sd": {
         "Email": "get.travelciltda@gmail.com",
-        "Images": {
+        "Image": {
           "url": "travel-agencies/galapagos-experience/",
           "images": [
             {
