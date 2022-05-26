@@ -854,28 +854,58 @@
       "-Mh223GRmWdFd38R862x": {
         "Email": "oficina@1835coffeelabec.com",
         "Latitude": -0.7427225,
+        "Image": {
+          "url": "restaurants/coffeelab/",
+          "images": [
+            {
+              "id": "1",
+              "file": "coffeelab1.jpg"
+            },
+            {
+              "id": "2",
+              "file": "coffeelab2.jpg"
+            },
+            {
+              "id": "3",
+              "file": "coffeelab3.jpg"
+            },
+            {
+              "id": "4",
+              "file": "coffeelab4.jpg"
+            }
+          ]
+        },
         "LocalImages": {
           "folderName": "coffeelab"
         },
         "Longitude": -90.3108429,
         "Name": "1835 Coffee Lab",
         "PhoneNo": 59352526627,
-        "Urls": [
-          "https://firebasestorage.googleapis.com/v0/b/galapago-d4744.appspot.com/o/images%2F1835_coffee_lab3.jpg?alt=media&token=4aaa8cb9-1d89-445a-80b1-bb0195764985",
-          "https://firebasestorage.googleapis.com/v0/b/galapago-d4744.appspot.com/o/images%2F1835_coffee_lab4.jpg?alt=media&token=432b3399-84c4-49a9-b1aa-58011beacf4d",
-          "https://firebasestorage.googleapis.com/v0/b/galapago-d4744.appspot.com/o/images%2F1835_coffee_lab2.jpg?alt=media&token=8918001a-9591-4fdb-874e-dfd3661bb073",
-          "https://firebasestorage.googleapis.com/v0/b/galapago-d4744.appspot.com/o/images%2F1835_coffee_lab1.jpg?alt=media&token=5c2c756e-afca-4104-9f3f-03d8fdbe29ad"
-        ],
         "Website": "https:www.coffeelabec.com"
       },
       "-Mh223Ik5u6WiHkOi1tY": {
         "Email": "info@gpsdiesel.com",
-        "Image": [
-          "1.jpg",
-          "2.jpg",
-          "3.jpg",
-          "4.jpg"
-        ],
+        "Image": {
+          "url": "restaurants/barbongo/",
+          "images": [
+            {
+              "id": "1",
+              "file": "barbongo1.jpg"
+            },
+            {
+              "id": "2",
+              "file": "barbongo2.jpg"
+            },
+            {
+              "id": "3",
+              "file": "barbongo3.jpg"
+            },
+            {
+              "id": "4",
+              "file": "barbongo4.jpg"
+            }
+          ]
+        },
         "Latitude": -0.7451597,
         "LocalImages": {
           "folderName": "barbongo"
@@ -883,24 +913,31 @@
         "Longitude": -90.3113981,
         "Name": "Bar Bongo",
         "PhoneNo": 59352527520,
-        "Urls": [
-          "https://firebasestorage.googleapis.com/v0/b/galapago-d4744.appspot.com/o/images%2F1.jpg?alt=media&token=34430ae9-303d-4278-ad66-b2436b650eec",
-          "https://firebasestorage.googleapis.com/v0/b/galapago-d4744.appspot.com/o/images%2F3.jpg?alt=media&token=b5a42f0d-e06a-4812-9ec1-09edde5e9251",
-          "https://firebasestorage.googleapis.com/v0/b/galapago-d4744.appspot.com/o/images%2F4.jpg?alt=media&token=2d225073-34db-4687-bc0c-f47dd9ad4d68",
-          "https://firebasestorage.googleapis.com/v0/b/galapago-d4744.appspot.com/o/images%2F2.jpg?alt=media&token=66cc0774-0df4-485a-8e10-da4e56d03938"
-        ],
         "Website": "n/a"
       },
       "-Mh223L4d6N3dsrPcKys": {
         "Email": "gerencia@electronautica.com.ec",
-        "Image": [
-          "discoteca_la_panga_1.jpg",
-          "discoteca_la_panga_2.jpg",
-          "discoteca_la_panga_3.jpg",
-          "discoteca_la_panga_1.jpg",
-          "discoteca_la_panga_2.jpg",
-          "discoteca_la_panga_3.jpg"
-        ],
+        "Image": {
+          "url": "restaurants/discotecalapanga/",
+          "images": [
+            {
+              "id": "1",
+              "file": "discotecalapanga1.jpg"
+            },
+            {
+              "id": "2",
+              "file": "discotecalapanga2.jpg"
+            },
+            {
+              "id": "3",
+              "file": "discotecalapanga3.jpg"
+            },
+            {
+              "id": "4",
+              "file": "discotecalapanga4.jpg"
+            }
+          ]
+        },
         "Latitude": -0.7452797,
         "LocalImages": {
           "folderName": "discotecalapanga"
@@ -908,16 +945,31 @@
         "Longitude": -90.3113756,
         "Name": "Discoteca La Panga",
         "PhoneNo": 59352526266,
-        "Urls": [
-          "https://firebasestorage.googleapis.com/v0/b/galapago-d4744.appspot.com/o/images%2Fdiscoteca_la_panga_1.jpg?alt=media&token=897a60ad-78fe-49da-b9f4-23ad1a10fd4b",
-          "https://firebasestorage.googleapis.com/v0/b/galapago-d4744.appspot.com/o/images%2Fdiscoteca_la_panga_3.jpg?alt=media&token=b761ca2b-2b46-4793-a7a8-4528e70168d3",
-          "https://firebasestorage.googleapis.com/v0/b/galapago-d4744.appspot.com/o/images%2Fdiscoteca_la_panga_2.jpg?alt=media&token=c838bc2c-4e3a-4834-9dd2-63af4052ce2f"
-        ],
         "Website": "n/a"
       },
       "-Mh223NQa9Lxl4WD53q1": {
         "Email": "admin@elmuellededarwin.com",
-        "Image": "n/a",
+        "Image": {
+          "url": "restaurants/elmuellededarwin/",
+          "images": [
+            {
+              "id": "1",
+              "file": "elmuellededarwin1.jpg"
+            },
+            {
+              "id": "2",
+              "file": "elmuellededarwin2.jpg"
+            },
+            {
+              "id": "3",
+              "file": "elmuellededarwin3.jpg"
+            },
+            {
+              "id": "4",
+              "file": "elmuellededarwin4.jpg"
+            }
+          ]
+        },
         "Latitude": -0.7428072,
         "LocalImages": {
           "folderName": "elmuellededarwin"
@@ -929,7 +981,27 @@
       },
       "-Mh223PemdHXL_YquLWp": {
         "Email": "loylococinaecuatoriana@gmail.com",
-        "Image": "n/a",
+        "Image": {
+          "url": "restaurants/lolo/",
+          "images": [
+            {
+              "id": "1",
+              "file": "lolo1.jpg"
+            },
+            {
+              "id": "2",
+              "file": "lolo2.jpg"
+            },
+            {
+              "id": "3",
+              "file": "lolo3.jpg"
+            },
+            {
+              "id": "4",
+              "file": "lolo4.jpg"
+            }
+          ]
+        },
         "Latitude": -0.7464772,
         "LocalImages": {
           "folderName": "lolo"
@@ -941,7 +1013,27 @@
       },
       "-Mh223S7CJ99NXPIlwc-": {
         "Email": "selvapro2014@hotmail.com",
-        "Image": "n/a",
+        "Image": {
+          "url": "restaurants/aquelarre/",
+          "images": [
+            {
+              "id": "1",
+              "file": "aquelarre1.jpg"
+            },
+            {
+              "id": "2",
+              "file": "aquelarre2.jpg"
+            },
+            {
+              "id": "3",
+              "file": "aquelarre3.jpg"
+            },
+            {
+              "id": "4",
+              "file": "aquelarre4.jpg"
+            }
+          ]
+        },
         "Latitude": -0.6929442,
         "LocalImages": {
           "folderName": "aquelarre"
@@ -953,7 +1045,27 @@
       },
       "-Mh223UR_ZTiC09O7AJs": {
         "Email": "info@gpsdiesel.com",
-        "Image": "n/a",
+        "Image": {
+          "url": "restaurants/bahia/",
+          "images": [
+            {
+              "id": "1",
+              "file": "bahia1.jpg"
+            },
+            {
+              "id": "2",
+              "file": "bahia2.jpg"
+            },
+            {
+              "id": "3",
+              "file": "bahia3.jpg"
+            },
+            {
+              "id": "4",
+              "file": "bahia4.jpg"
+            }
+          ]
+        },
         "Latitude": -0.7447747,
         "LocalImages": {
           "folderName": "bahia"
@@ -965,7 +1077,27 @@
       },
       "-Mh223WruL_ushFt5L_i": {
         "Email": "selvapro2010@hotmail.com",
-        "Image": "n/a",
+        "Image": {
+          "url": "restaurants/cevicheria/",
+          "images": [
+            {
+              "id": "1",
+              "file": "cevicheria1.jpg"
+            },
+            {
+              "id": "2",
+              "file": "cevicheria2.jpg"
+            },
+            {
+              "id": "3",
+              "file": "cevicheria3.jpg"
+            },
+            {
+              "id": "4",
+              "file": "cevicheria4.jpg"
+            }
+          ]
+        },
         "Latitude": -0.7438663,
         "LocalImages": {
           "folderName": "cevicheria"
@@ -977,7 +1109,27 @@
       },
       "-Mh223ZLQzYGsS6oGGwB": {
         "Email": "ilgiardinogalapagos@hotmail.com",
-        "Image": "n/a",
+        "Image": {
+          "url": "restaurants/coffeelab/",
+          "images": [
+            {
+              "id": "1",
+              "file": "ilgiardino1.jpg"
+            },
+            {
+              "id": "2",
+              "file": "ilgiardino2.jpg"
+            },
+            {
+              "id": "3",
+              "file": "ilgiardino3.jpg"
+            },
+            {
+              "id": "4",
+              "file": "ilgiardino4.jpg"
+            }
+          ]
+        },
         "Latitude": -0.7440473,
         "LocalImages": {
           "folderName": "ilgiardino"
@@ -989,7 +1141,27 @@
       },
       "-Mh223ae4Uy5WD80l1pR": {
         "Email": "islagrillgalapagos@hotmail.com",
-        "Image": "n/a",
+        "Image": {
+          "url": "restaurants/islagrill/",
+          "images": [
+            {
+              "id": "1",
+              "file": "islagrill1.jpg"
+            },
+            {
+              "id": "2",
+              "file": "islagrill2.jpg"
+            },
+            {
+              "id": "3",
+              "file": "islagrill3.jpg"
+            },
+            {
+              "id": "4",
+              "file": "islagrill4.jpg"
+            }
+          ]
+        },
         "Latitude": -0.7507154,
         "LocalImages": {
           "folderName": "islagrill"
@@ -1001,7 +1173,27 @@
       },
       "-Mh223cwuYgRrmy-Jpmi": {
         "Email": "garrapata.restaurante@hotmail.com",
-        "Image": "n/a",
+        "Image": {
+          "url": "restaurants/garrapata/",
+          "images": [
+            {
+              "id": "1",
+              "file": "garrapata1.jpg"
+            },
+            {
+              "id": "2",
+              "file": "garrapata2.jpg"
+            },
+            {
+              "id": "3",
+              "file": "garrapata3.jpg"
+            },
+            {
+              "id": "4",
+              "file": "garrapata4.jpg"
+            }
+          ]
+        },
         "Latitude": -0.7450692,
         "LocalImages": {
           "folderName": "garrapata"
@@ -1013,7 +1205,27 @@
       },
       "-Mh223fHgEGOB-F8jyu_": {
         "Email": "ventas@proinsular.com.ec",
-        "Image": "n/a",
+        "Image": {
+          "url": "restaurants/proinsular/",
+          "images": [
+            {
+              "id": "1",
+              "file": "proinsular1.jpg"
+            },
+            {
+              "id": "2",
+              "file": "proinsular2.png"
+            },
+            {
+              "id": "3",
+              "file": "proinsular3.jpg"
+            },
+            {
+              "id": "4",
+              "file": "proinsular4.jpg"
+            }
+          ]
+        },
         "Latitude": -0.747853,
         "LocalImages": {
           "folderName": "proinsular"
@@ -1025,7 +1237,27 @@
       },
       "-Mh223hajVoWBc49HAyn": {
         "Email": "cervezagalapagos@gmail.com",
-        "Image": "n/a",
+        "Image": {
+          "url": "restaurants/santacruzbrewery/",
+          "images": [
+            {
+              "id": "1",
+              "file": "santacruzbrewery1.jpg"
+            },
+            {
+              "id": "2",
+              "file": "santacruzbrewery2.jpg"
+            },
+            {
+              "id": "3",
+              "file": "santacruzbrewery3.jpg"
+            },
+            {
+              "id": "4",
+              "file": "santacruzbrewery4.jpg"
+            }
+          ]
+        },
         "Latitude": -0.743103,
         "LocalImages": {
           "folderName": "santacruzbrewery"
