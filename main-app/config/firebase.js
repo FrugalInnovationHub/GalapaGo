@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-
+import { getStorage } from "firebase/storage";
 const firebaseConfig = {
   apiKey: "AIzaSyBkGmokW285RxesrlEOEGMOpL7DjBMvk_U",
   authDomain: "galapago-d4744.firebaseapp.com",
@@ -12,6 +12,9 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
+export const app = initializeApp(firebaseConfig);
 
-export default app;
+// Initialize Firebase/storage
+export const storage = getStorage(app);
+
+export const BASE_URL_OF_STORAGE = "gs://galapago-d4744.appspot.com/";

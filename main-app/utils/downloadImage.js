@@ -1,5 +1,5 @@
 import * as FileSystem from "expo-file-system";
-import ensureDirExists from "./ensureDirExists";
+import { ensureDirExists } from "./ensureDirExists";
 export const imageDir = FileSystem.documentDirectory + "images/";
 const imageFileUri = (fileName) => imageDir + `${fileName}`;
 
@@ -26,16 +26,17 @@ export const downloadSingleImage = async (
 /**
  * Downloads all gifs specified as array of IDs
  *
- * @param {string[]} gifIds
+ * @param {[]} images
  */
-// export async function downloadMultipleImages(imageUrl, fileFolderUrl, fileNames) {
-//   try {
-//     await ensureDirExists(imageFileUri(fileFolderUrl));
-//     console.log("Downloading", gifIds.length, "gif files...");
-//     await Promise.all(
-//       gifIds.map((id) => FileSystem.downloadAsync(imageUrl(id), gifFileUri(id)))
-//     );
-//   } catch (e) {
-//     console.error("Couldn't download gif files:", e);
-//   }
-// }
+export async function downloadMultipleImages(images) {
+  try {
+    console.log("Downloading", images.length, "image files...");
+    await Promise.all(
+      images.map(({ url, file, downloadUrl }) =>
+        FileSystem.downloadAsync(imageUrl(`${url}${file}`), downloadUrl)
+      )
+    );
+  } catch (e) {
+    console.error("Couldn't download gif files:", e);
+  }
+}
