@@ -396,12 +396,27 @@
     "Hotels_list": {
       "-Mk0sNfzuCnlqjMbO_v9": {
         "Email": "info@santafegalapagos.com.ec",
-        "Image": [
-          "santa_fe1.jpg",
-          "santa_fe2.jpg",
-          "santa_fe3.jpg",
-          "santa_fe4.jpg"
-        ],
+        "Image": {
+          "url": "hotels/santafe/",
+          "images": [
+            {
+              "id": "1",
+              "file": "santafe1.jpg"
+            },
+            {
+              "id": "2",
+              "file": "santafe2.jpg"
+            },
+            {
+              "id": "3",
+              "file": "santafe3.jpg"
+            },
+            {
+              "id": "4",
+              "file": "santafe4.jpg"
+            }
+          ]
+        },
         "Latitude": -0.745768,
         "LocalImages": {
           "folderName": "santafe"
@@ -413,9 +428,27 @@
       },
       "-Mk0sNlYRCiiBTzpTIhB": {
         "Email": "bayviewhouse2013@gmail.com",
-        "Image": [
-          "4.jpg"
-        ],
+        "Image": {
+          "url": "hotels/bayview/",
+          "images": [
+            {
+              "id": "1",
+              "file": "bayview1.jpg"
+            },
+            {
+              "id": "2",
+              "file": "bayview2.jpg"
+            },
+            {
+              "id": "3",
+              "file": "bayview3.jpg"
+            },
+            {
+              "id": "4",
+              "file": "bayview4.jpg"
+            }
+          ]
+        },
         "Latitude": -0.7462519,
         "LocalImages": {
           "folderName": "bayview"
@@ -427,7 +460,27 @@
       },
       "-Mk0sNov3VL-tF4-OOKA": {
         "Email": "antonio@seamastersgalapagos.com",
-        "Image": -90.310463,
+        "Image": {
+          "url": "hotels/blueheron/",
+          "images": [
+            {
+              "id": "1",
+              "file": "blueheron1.jpg"
+            },
+            {
+              "id": "2",
+              "file": "blueheron2.jpg"
+            },
+            {
+              "id": "3",
+              "file": "blueheron3.jpg"
+            },
+            {
+              "id": "4",
+              "file": "blueheron4.jpg"
+            }
+          ]
+        },
         "Latitude": -0.7514781,
         "LocalImages": {
           "folderName": "blueheron"
@@ -443,13 +496,27 @@
       },
       "-Mk0sNrzcyU-gIfWqR4p": {
         "Email": "michael@galapagossafaricamp.com",
-        "Image": [
-          "island2.jpg",
-          "1.jpg",
-          "2.jpg",
-          "3.jpg",
-          "4.jpg"
-        ],
+        "Image": {
+          "url": "hotels/safari/",
+          "images": [
+            {
+              "id": "1",
+              "file": "safari1.jpg"
+            },
+            {
+              "id": "2",
+              "file": "safari2.jpg"
+            },
+            {
+              "id": "3",
+              "file": "safari3.jpg"
+            },
+            {
+              "id": "4",
+              "file": "safari4.jpg"
+            }
+          ]
+        },
         "Latitude": -0.618203,
         "LocalImages": {
           "folderName": "safari"
@@ -461,10 +528,27 @@
       },
       "-Mk0sNv0V6CTTkKzMsO1": {
         "Email": "galapagostwinsuites@gmail.com",
-        "Image": [
-          "island4.jpg",
-          "island1.jpg"
-        ],
+        "Image": {
+          "url": "hotels/huespedes/",
+          "images": [
+            {
+              "id": "1",
+              "file": "huespedes1.jpg"
+            },
+            {
+              "id": "2",
+              "file": "huespedes2.jpg"
+            },
+            {
+              "id": "3",
+              "file": "huespedes3.jpg"
+            },
+            {
+              "id": "4",
+              "file": "huespedes4.jpg"
+            }
+          ]
+        },
         "Latitude": -0.7357623,
         "LocalImages": {
           "folderName": "huespedes"
@@ -479,9 +563,27 @@
       },
       "-Mk0sO2HzjiQXWQ3DgSP": {
         "Email": "galapagoswalker@hotmail.com",
-        "Image": [
-          "island4.jpg"
-        ],
+        "Image": {
+          "url": "hotels/natura/",
+          "images": [
+            {
+              "id": "1",
+              "file": "natura1.jpg"
+            },
+            {
+              "id": "2",
+              "file": "natura2.jpg"
+            },
+            {
+              "id": "3",
+              "file": "natura3.jpg"
+            },
+            {
+              "id": "4",
+              "file": "natura4.jpg"
+            }
+          ]
+        },
         "Latitude": -0.683773,
         "LocalImages": {
           "folderName": "natura"
@@ -492,6 +594,27 @@
         "Website": "https:www.casanaturahotel.com"
       },
       "-Mk0sO9l8B43wcr9yimC": {
+        "Image": {
+          "url": "hotels/cozy/",
+          "images": [
+            {
+              "id": "1",
+              "file": "cozy1.jpg"
+            },
+            {
+              "id": "2",
+              "file": "cozy2.jpg"
+            },
+            {
+              "id": "3",
+              "file": "cozy3.jpg"
+            },
+            {
+              "id": "4",
+              "file": "cozy4.jpg"
+            }
+          ]
+        },
         "Email": "peladoda@yahoo.com",
         "Latitude": -0.7367192,
         "LocalImages": {
@@ -504,6 +627,27 @@
       },
       "-Mk0sOHwb7rHZsaZwz3U": {
         "Email": "galapagoscottages@hotmail.com",
+        "Image": {
+          "url": "hotels/cottages/",
+          "images": [
+            {
+              "id": "1",
+              "file": "cottages1.jpg"
+            },
+            {
+              "id": "2",
+              "file": "cottages2.jpg"
+            },
+            {
+              "id": "3",
+              "file": "cottages3.jpg"
+            },
+            {
+              "id": "4",
+              "file": "cottages4.jpg"
+            }
+          ]
+        },
         "Latitude": -0.7454221,
         "LocalImages": {
           "folderName": "cottages"
@@ -522,7 +666,28 @@
         "Longitude": -90.31259,
         "Name": "GALAPAGOS NATIVE",
         "PhoneNo": 59352524730,
-        "Website": "n/a"
+        "Website": "n/a",
+        "Image": {
+          "url": "hotels/native/",
+          "images": [
+            {
+              "id": "1",
+              "file": "native1.jpg"
+            },
+            {
+              "id": "2",
+              "file": "native2.jpg"
+            },
+            {
+              "id": "3",
+              "file": "native3.jpg"
+            },
+            {
+              "id": "4",
+              "file": "native4.jpg"
+            }
+          ]
+        },
       },
       "-Mk0sOQN18s7NXERXiCq": {
         "Email": "reservas@galapagossuites.com",
@@ -533,7 +698,28 @@
         "Longitude": -90.3120601,
         "Name": "GALAPAGOS SUITES",
         "PhoneNo": 59352526209,
-        "Website": "https:www.galapagossuites.com"
+        "Website": "https:www.galapagossuites.com",
+        "Image": {
+          "url": "hotels/suites/",
+          "images": [
+            {
+              "id": "1",
+              "file": "suites1.jpg"
+            },
+            {
+              "id": "2",
+              "file": "suites2.jpg"
+            },
+            {
+              "id": "3",
+              "file": "suites3.jpg"
+            },
+            {
+              "id": "4",
+              "file": "suites4.jpg"
+            }
+          ]
+        }
       },
       "-Mk0sOYUK-kcds7MHhai": {
         "Email": "alekrc@hotmail.com",
@@ -544,7 +730,28 @@
         "Longitude": -90.3196244,
         "Name": "Gecko Guest House",
         "PhoneNo": 59352527244,
-        "Website": "n/a"
+        "Website": "n/a",
+        "Image": {
+          "url": "hotels/gecko/",
+          "images": [
+            {
+              "id": "1",
+              "file": "gecko1.jpg"
+            },
+            {
+              "id": "2",
+              "file": "gecko2.jpg"
+            },
+            {
+              "id": "3",
+              "file": "gecko3.jpg"
+            },
+            {
+              "id": "4",
+              "file": "gecko4.jpg"
+            }
+          ]
+        }
       },
       "-Mk0sOcLcBoL11gH_yRB": {
         "Email": "chioperez72@hotmail.com",
@@ -555,7 +762,28 @@
         "Longitude": -90.3167327,
         "Name": "Hostal Casa Cascada",
         "PhoneNo": 59352527212,
-        "Website": "n/a"
+        "Website": "n/a",
+        "Image": {
+          "url": "hotels/cascada/",
+          "images": [
+            {
+              "id": "1",
+              "file": "cascada1.jpg"
+            },
+            {
+              "id": "2",
+              "file": "cascada2.jpg"
+            },
+            {
+              "id": "3",
+              "file": "cascada3.jpg"
+            },
+            {
+              "id": "4",
+              "file": "cascada4.jpg"
+            }
+          ]
+        }
       },
       "-Mk0sOgELGxX5BbAejW4": {
         "Email": "operaciones@hotelespanagalapagos.com",
@@ -566,7 +794,28 @@
         "Longitude": -90.3128234,
         "Name": "Hostal EspaÃ±a",
         "PhoneNo": 59352526108,
-        "Website": "https:www.hotelespanagalapagos.com"
+        "Website": "https:www.hotelespanagalapagos.com",
+        "Image": {
+          "url": "hotels/espana/",
+          "images": [
+            {
+              "id": "1",
+              "file": "espana1.jpg"
+            },
+            {
+              "id": "2",
+              "file": "espana2.jpg"
+            },
+            {
+              "id": "3",
+              "file": "espana3.jpg"
+            },
+            {
+              "id": "4",
+              "file": "espana4.jpg"
+            }
+          ]
+        }
       },
       "-Mk0sOkCQgHPs1616VAc": {
         "Email": "manager@finchbayhotel.com",
@@ -577,15 +826,52 @@
         "Longitude": -90.311283,
         "Name": "Hostal Finch Bay Hotel",
         "PhoneNo": 59352526297,
-        "Website": "https:www.finchbayhotel.com"
+        "Website": "https:www.finchbayhotel.com",
+        "Image": {
+          "url": "hotels/finch/",
+          "images": [
+            {
+              "id": "1",
+              "file": "finch1.jpg"
+            },
+            {
+              "id": "2",
+              "file": "finch2.jpg"
+            },
+            {
+              "id": "3",
+              "file": "finch3.jpg"
+            },
+            {
+              "id": "4",
+              "file": "finch4.jpg"
+            }
+          ]
+        }
       },
       "-Mk0sOnWNs--HL97rKMn": {
         "Email": "islaazul.galapagos@gmail.com",
-        "Image": [
-          "island1.jpg",
-          "island2.jpg",
-          "island1.jpg"
-        ],
+        "Image": {
+          "url": "hotels/azul/",
+          "images": [
+            {
+              "id": "1",
+              "file": "azul1.jpg"
+            },
+            {
+              "id": "2",
+              "file": "azul2.jpg"
+            },
+            {
+              "id": "3",
+              "file": "azul3.jpg"
+            },
+            {
+              "id": "4",
+              "file": "azul4.jpg"
+            }
+          ]
+        },
         "Latitude": -0.7413355,
         "LocalImages": {
           "folderName": "azul"
@@ -597,6 +883,27 @@
       },
       "-Mk0sOrLBhorKyla21iU": {
         "Email": "posadadelmargalapagos@gmail.com",
+        "Image": {
+          "url": "hotels/posada/",
+          "images": [
+            {
+              "id": "1",
+              "file": "posada1.jpg"
+            },
+            {
+              "id": "2",
+              "file": "posada2.jpg"
+            },
+            {
+              "id": "3",
+              "file": "posada3.jpg"
+            },
+            {
+              "id": "4",
+              "file": "posada4.jpg"
+            }
+          ]
+        },
         "Latitude": -0.7462514,
         "LocalImages": {
           "folderName": "posada"
@@ -608,6 +915,27 @@
       },
       "-Mk0sOuQRgWXBw1sPRn1": {
         "Email": "info@whitehousegalapagos.com.ec",
+        "Image": {
+          "url": "hotels/white/",
+          "images": [
+            {
+              "id": "1",
+              "file": "white1.jpg"
+            },
+            {
+              "id": "2",
+              "file": "white2.jpg"
+            },
+            {
+              "id": "3",
+              "file": "white3.jpg"
+            },
+            {
+              "id": "4",
+              "file": "white4.jpg"
+            }
+          ]
+        },
         "Latitude": -0.7416026,
         "LocalImages": {
           "folderName": "white"
@@ -619,9 +947,27 @@
       },
       "-Mk0sP04wYYIJJhkZrxn": {
         "Email": "frontoffice@royalpalmgalapagos.com",
-        "Image": [
-          "island2.jpg"
-        ],
+        "Image": {
+          "url": "hotels/palm/",
+          "images": [
+            {
+              "id": "1",
+              "file": "palm1.jpg"
+            },
+            {
+              "id": "2",
+              "file": "palm2.jpg"
+            },
+            {
+              "id": "3",
+              "file": "palm3.jpg"
+            },
+            {
+              "id": "4",
+              "file": "palm4.jpg"
+            }
+          ]
+        },
         "Latitude": -0.4475459,
         "LocalImages": {
           "folderName": "palm"
@@ -634,6 +980,27 @@
       "-Mk0sP6B5wT7Yt32wjO2": {
         "Email": "info@brisadelpacifico.com.ec",
         "Latitude": -0.738991,
+        "Image": {
+          "url": "hotels/pacifico/",
+          "images": [
+            {
+              "id": "1",
+              "file": "pacifico1.jpg"
+            },
+            {
+              "id": "2",
+              "file": "pacifico2.jpg"
+            },
+            {
+              "id": "3",
+              "file": "pacifico3.jpg"
+            },
+            {
+              "id": "4",
+              "file": "pacifico4.jpg"
+            }
+          ]
+        },
         "LocalImages": {
           "folderName": "pacifico"
         },
@@ -645,6 +1012,27 @@
       "-Mk0sPBIBw0pr7pii6Bc": {
         "Email": "colomagalapagos@gmail.com",
         "Latitude": -0.7436061,
+        "Image": {
+          "url": "hotels/coloma/",
+          "images": [
+            {
+              "id": "1",
+              "file": "coloma1.jpg"
+            },
+            {
+              "id": "2",
+              "file": "coloma2.jpg"
+            },
+            {
+              "id": "3",
+              "file": "coloma3.jpg"
+            },
+            {
+              "id": "4",
+              "file": "coloma4.jpg"
+            }
+          ]
+        },
         "LocalImages": {
           "folderName": "coloma"
         },
@@ -656,6 +1044,27 @@
       "-Mk0sPJJWSFENVFFpFZT": {
         "Email": "lilianabetancourt1978@hotmail.com",
         "Latitude": -0.7399606,
+        "Image": {
+          "url": "hotels/islands/",
+          "images": [
+            {
+              "id": "1",
+              "file": "islands1.jpg"
+            },
+            {
+              "id": "2",
+              "file": "islands2.jpg"
+            },
+            {
+              "id": "3",
+              "file": "islands3.jpg"
+            },
+            {
+              "id": "4",
+              "file": "islands4.jpg"
+            }
+          ]
+        },
         "LocalImages": {
           "folderName": "islands"
         },
@@ -667,6 +1076,27 @@
       "-Mk0sPMOBhBANcGG9my8": {
         "Email": "recepcion@ikalagalapagoshotel.com",
         "Latitude": -0.7470129,
+        "Image": {
+          "url": "hotels/ikala/",
+          "images": [
+            {
+              "id": "1",
+              "file": "ikala1.jpg"
+            },
+            {
+              "id": "2",
+              "file": "ikala2.jpg"
+            },
+            {
+              "id": "3",
+              "file": "ikala3.jpg"
+            },
+            {
+              "id": "4",
+              "file": "ikala4.jpg"
+            }
+          ]
+        },
         "LocalImages": {
           "folderName": "ikala"
         },
@@ -677,9 +1107,27 @@
       },
       "-Mk0sPRA-5FKR37d2t0f": {
         "Email": "reservations@laislahotel.com.ec",
-        "Image": [
-          "island3.jpg"
-        ],
+        "Image": {
+          "url": "hotels/laisla/",
+          "images": [
+            {
+              "id": "1",
+              "file": "laisla1.jpg"
+            },
+            {
+              "id": "2",
+              "file": "laisla2.jpg"
+            },
+            {
+              "id": "3",
+              "file": "laisla3.jpg"
+            },
+            {
+              "id": "4",
+              "file": "laisla4.jpg"
+            }
+          ]
+        },
         "Latitude": -0.7437264,
         "LocalImages": {
           "folderName": "laisla"
@@ -694,9 +1142,27 @@
       },
       "-Mk0sPUhSwCM5obE7nfx": {
         "Email": "galapagossuitespalace@gmail.com",
-        "Image": [
-          "island4.jpg"
-        ],
+        "Image": {
+          "url": "hotels/palace/",
+          "images": [
+            {
+              "id": "1",
+              "file": "palace1.jpg"
+            },
+            {
+              "id": "2",
+              "file": "palace2.jpg"
+            },
+            {
+              "id": "3",
+              "file": "palace3.jpg"
+            },
+            {
+              "id": "4",
+              "file": "palace4.jpg"
+            }
+          ]
+        },
         "Latitude": -0.7400845,
         "LocalImages": {
           "folderName": "palace"
@@ -712,6 +1178,27 @@
       "-Mk0sPZ9Y1B1z9SxXsed": {
         "Email": "info@casademathias.com",
         "Latitude": -0.7394291,
+        "Image": {
+          "url": "hotels/mathias/",
+          "images": [
+            {
+              "id": "1",
+              "file": "mathias1.jpg"
+            },
+            {
+              "id": "2",
+              "file": "mathias2.jpg"
+            },
+            {
+              "id": "3",
+              "file": "mathias3.jpg"
+            },
+            {
+              "id": "4",
+              "file": "mathias4.jpg"
+            }
+          ]
+        },
         "LocalImages": {
           "folderName": "mathias"
         },
@@ -723,6 +1210,27 @@
       "-Mk0sPglDwAOUPEp5fgT": {
         "Email": "miguel8905@gmail.com",
         "Latitude": -0.739531,
+        "Image": {
+          "url": "hotels/redonda/",
+          "images": [
+            {
+              "id": "1",
+              "file": "redonda1.jpg"
+            },
+            {
+              "id": "2",
+              "file": "redonda2.jpg"
+            },
+            {
+              "id": "3",
+              "file": "redonda3.jpg"
+            },
+            {
+              "id": "4",
+              "file": "redonda4.jpg"
+            }
+          ]
+        },
         "LocalImages": {
           "folderName": "redonda"
         },
@@ -734,6 +1242,27 @@
       "-Mk0sPkEmv5wa_mtZF1V": {
         "Email": "lavahousehostal@gmail.com",
         "Latitude": -0.7418246,
+        "Image": {
+          "url": "hotels/hostal/",
+          "images": [
+            {
+              "id": "1",
+              "file": "hostal1.jpg"
+            },
+            {
+              "id": "2",
+              "file": "hostal2.jpg"
+            },
+            {
+              "id": "3",
+              "file": "hostal3.jpg"
+            },
+            {
+              "id": "4",
+              "file": "hostal4.jpg"
+            }
+          ]
+        },
         "LocalImages": {
           "folderName": "hostal"
         },
@@ -745,6 +1274,27 @@
       "-Mk0sPmvI_txhzTIAisO": {
         "Email": "galapagosvilla@gmail.com",
         "Latitude": -0.750352,
+        "Image": {
+          "url": "hotels/pension/",
+          "images": [
+            {
+              "id": "1",
+              "file": "pension1.jpg"
+            },
+            {
+              "id": "2",
+              "file": "pension2.jpg"
+            },
+            {
+              "id": "3",
+              "file": "pension3.jpg"
+            },
+            {
+              "id": "4",
+              "file": "pension4.jpg"
+            }
+          ]
+        },
         "LocalImages": {
           "folderName": "pension"
         },
@@ -756,6 +1306,27 @@
       "-Mk0sPq5ZcCM_ErchFvN": {
         "Email": "info@cucuvesuites.com",
         "Latitude": -0.744638,
+        "Image": {
+          "url": "hotels/cucuve/",
+          "images": [
+            {
+              "id": "1",
+              "file": "cucuve1.jpg"
+            },
+            {
+              "id": "2",
+              "file": "cucuve2.jpg"
+            },
+            {
+              "id": "3",
+              "file": "cucuve3.jpg"
+            },
+            {
+              "id": "4",
+              "file": "cucuve4.jpg"
+            }
+          ]
+        },
         "LocalImages": {
           "folderName": "cucuve"
         },
@@ -767,6 +1338,27 @@
       "-Mk0sPsnoREbOntEAcIP": {
         "Email": "elbambugalapagos@hotmail.com",
         "Latitude": -0.7460834,
+        "Image": {
+          "url": "hotels/bambu/",
+          "images": [
+            {
+              "id": "1",
+              "file": "bambu1.jpg"
+            },
+            {
+              "id": "2",
+              "file": "bambu2.jpg"
+            },
+            {
+              "id": "3",
+              "file": "bambu3.jpg"
+            },
+            {
+              "id": "4",
+              "file": "bambu4.jpg"
+            }
+          ]
+        },
         "LocalImages": {
           "folderName": "bambu"
         },
@@ -778,6 +1370,27 @@
       "-Mk0sPvRNui0so57siYR": {
         "Email": "execpres@gmail.com",
         "Latitude": -0.7396105,
+        "Image": {
+          "url": "hotels/caleta/",
+          "images": [
+            {
+              "id": "1",
+              "file": "caleta1.jpg"
+            },
+            {
+              "id": "2",
+              "file": "caleta2.jpg"
+            },
+            {
+              "id": "3",
+              "file": "caleta3.jpg"
+            },
+            {
+              "id": "4",
+              "file": "caleta4.jpg"
+            }
+          ]
+        },
         "LocalImages": {
           "folderName": "caleta"
         },
@@ -789,6 +1402,27 @@
       "-Mk0sQ1OQBM1zaijpJn5": {
         "Email": "andrew.balfour@pikaialodge.com",
         "Latitude": -0.6456405,
+        "Image": {
+          "url": "hotels/pikaia/",
+          "images": [
+            {
+              "id": "1",
+              "file": "pikaia1.jpg"
+            },
+            {
+              "id": "2",
+              "file": "pikaia2.jpg"
+            },
+            {
+              "id": "3",
+              "file": "pikaia3.jpg"
+            },
+            {
+              "id": "4",
+              "file": "pikaia4.jpg"
+            }
+          ]
+        },
         "LocalImages": {
           "folderName": "pikaia"
         },
@@ -800,6 +1434,27 @@
       "-Mk0sQ5AqnTxalGg5DI9": {
         "Email": "felipe@scalesialodge.com",
         "Latitude": -0.7360958,
+        "Image": {
+          "url": "hotels/scalesia/",
+          "images": [
+            {
+              "id": "1",
+              "file": "scalesia1.jpg"
+            },
+            {
+              "id": "2",
+              "file": "scalesia2.jpg"
+            },
+            {
+              "id": "3",
+              "file": "scalesia3.jpg"
+            },
+            {
+              "id": "4",
+              "file": "scalesia4.jpg"
+            }
+          ]
+        },
         "LocalImages": {
           "folderName": "scalesia"
         },
@@ -811,6 +1466,27 @@
       "-Mk0sQ9yRtYa5Ld3erKa": {
         "Email": "info@torremargalapagos.com",
         "Latitude": -0.7424767,
+        "Image": {
+          "url": "hotels/torre/",
+          "images": [
+            {
+              "id": "1",
+              "file": "torre1.jpg"
+            },
+            {
+              "id": "2",
+              "file": "torre2.jpg"
+            },
+            {
+              "id": "3",
+              "file": "torre3.jpg"
+            },
+            {
+              "id": "4",
+              "file": "torre4.jpg"
+            }
+          ]
+        },
         "LocalImages": {
           "folderName": "torre"
         },
@@ -822,6 +1498,27 @@
       "-Mk0sQDOQOE3xjSuJZDN": {
         "Email": "twinlodgegal@gmail.com",
         "Latitude": -0.691603,
+        "Image": {
+          "url": "hotels/twin/",
+          "images": [
+            {
+              "id": "1",
+              "file": "twin1.jpg"
+            },
+            {
+              "id": "2",
+              "file": "twin2.jpg"
+            },
+            {
+              "id": "3",
+              "file": "twin3.jpg"
+            },
+            {
+              "id": "4",
+              "file": "twin4.jpg"
+            }
+          ]
+        },
         "LocalImages": {
           "folderName": "twin"
         },
@@ -833,6 +1530,27 @@
       "-Mk0sQGVw5rNhrg-NjSf": {
         "Email": "luisfabricio1977@hotmail.com",
         "Latitude": -0.7424751,
+        "Image": {
+          "url": "hotels/zuri/",
+          "images": [
+            {
+              "id": "1",
+              "file": "zuri1.jpg"
+            },
+            {
+              "id": "2",
+              "file": "zuri2.jpg"
+            },
+            {
+              "id": "3",
+              "file": "zuri3.jpg"
+            },
+            {
+              "id": "4",
+              "file": "zuri4.jpg"
+            }
+          ]
+        },
         "LocalImages": {
           "folderName": "zuri"
         },
