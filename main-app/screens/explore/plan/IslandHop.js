@@ -1,12 +1,10 @@
 import * as React from "react";
 import { StyleSheet, Dimensions, SafeAreaView, ScrollView } from "react-native";
 import ExploreHeader from "../ExploreHeader";
-
-import transports from "../../../data/transport.json";
 import { Card } from "../../../components";
 import transportImages from "../../../assets/img/transport";
 import globalStateContext from "../../../context/globalContext";
-import { addFavorite } from "../../../utils";
+import { addFavorite, getImages } from "../../../utils";
 class IslandHop extends React.Component {
   static contextType = globalStateContext;
 
@@ -26,6 +24,11 @@ class IslandHop extends React.Component {
           {propertyNames.map((key) => {
             const transport = Transports_list[key];
             const isFavorite = !!favorites.travels[key];
+            const localImages =
+              transportImages[transport.LocalImages.folderName].images;
+
+            const { Image } = transport;
+            const imageSouce = getImages(Image, localImages);
             return (
               <Card
                 key={key}
@@ -37,9 +40,7 @@ class IslandHop extends React.Component {
                 }}
                 website={transport.Website}
                 email={transport.Email}
-                images={
-                  transportImages[transport.LocalImages.folderName].images
-                }
+                images={imageSouce}
                 addFavorite={() =>
                   addFavorite(this.context, "travels", key, transport)
                 }
@@ -64,81 +65,5 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: "white",
     flex: 1
-  },
-  header: {
-    flexDirection: "row",
-    paddingTop: 16,
-    paddingBottom: 16,
-    paddingLeft: 34,
-    alignItems: "center"
-  },
-  headerText: {
-    paddingLeft: 16,
-    fontSize: 28 * rem,
-    fontWeight: "600"
-  },
-  regularBold: {
-    fontWeight: "600",
-    color: "#000000",
-    fontSize: 17 * rem,
-    paddingLeft: 30,
-    paddingTop: 16,
-    paddingBottom: 16,
-    flexWrap: "wrap"
-  },
-  numberRow: {
-    flexDirection: "row",
-    paddingTop: 16,
-    paddingBottom: 16,
-    paddingLeft: 34,
-    alignItems: "stretch"
-  },
-  wrapper: {
-    height: 200 * rem
-  },
-  slide: {
-    justifyContent: "center",
-    alignItems: "center",
-    width: Dimensions.get("window").width
-  },
-  slideImage: {
-    height: 200 * rem,
-    width: Dimensions.get("window").width
-  },
-  infoPhone: {
-    width: 20 * rem,
-    height: 18 * rem
-  },
-  infoEmail: {
-    width: 21 * rem,
-    height: 16 * rem
-  },
-  infoAddress: {
-    width: 18 * rem,
-    height: 21 * rem
-  },
-  infoWeb: {
-    width: 20 * rem,
-    height: 20 * rem
-  },
-  infoText: {
-    fontSize: 17 * rem,
-    color: "#616161",
-    lineHeight: 20 * rem,
-    marginLeft: 10 * rem,
-    marginRight: 20 * rem
-  },
-  numberRow: {
-    flexDirection: "row",
-    paddingTop: 20,
-    justifyContent: "center",
-    flexWrap: "wrap"
-  },
-  lastRow: {
-    flexDirection: "row",
-    paddingTop: 20,
-    paddingBottom: 50,
-    justifyContent: "center",
-    flexWrap: "wrap"
   }
 });
