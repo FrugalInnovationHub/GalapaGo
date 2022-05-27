@@ -3,9 +3,8 @@ import { StyleSheet, SafeAreaView, ScrollView } from "react-native";
 import ExploreHeader from "../ExploreHeader";
 import { Card } from "../../../components";
 import agenciesImages from "../../../assets/img/travel-agencies";
-import agencies from "../../../data/agencies.json";
 import globalStateContext from "../../../context/globalContext";
-import { addFavorite } from "../../../utils";
+import { addFavorite, getImages } from "../../../utils";
 class TravelAgencies extends React.Component {
   static contextType = globalStateContext;
 
@@ -25,6 +24,11 @@ class TravelAgencies extends React.Component {
           {propertyNames.map((key) => {
             const agency = Agencies_list[key];
             const isFavorite = !!favorites.agencies[key];
+
+            const localImages =
+              agenciesImages[agency.LocalImages.folderName].images;
+            const { Image } = agency;
+            const imageSouce = getImages(Image, localImages);
             return (
               <Card
                 key={key}
@@ -36,7 +40,7 @@ class TravelAgencies extends React.Component {
                 }}
                 website={agency.Website}
                 email={agency.Email}
-                images={agenciesImages[agency.LocalImages.folderName].images}
+                images={imageSouce}
                 addFavorite={() =>
                   addFavorite(this.context, "agencies", key, agency)
                 }
