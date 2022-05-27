@@ -36,7 +36,7 @@ const travelAgenciesImages = {
       { id: "1", file: require("./mn-isabela/1.jpg") },
       { id: "2", file: require("./mn-isabela/2.jpg") },
       { id: "3", file: require("./mn-isabela/3.jpg") },
-      { id: "3", file: require("./mn-isabela/4.jpg") }
+      { id: "4", file: require("./mn-isabela/4.jpg") }
     ]
   },
   "mn-national-geographic": {
