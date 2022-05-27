@@ -12,7 +12,7 @@ const getImages = (imageInfo, localImages) => {
     } else {
       return {
         id: item.id,
-        file: `${imageDir}${url}${item.file}`
+        file: { uri: `${imageDir}${url}${item.file}` }
       };
     }
   });
