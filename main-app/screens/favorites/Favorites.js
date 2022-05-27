@@ -5,7 +5,7 @@ import FavoritesHeader from "./FavoritesHeader";
 import globalStateContext from "../../context/globalContext";
 import { isEmpty } from "../../utils";
 import { Empty, Label, Icon, Card } from "../../components";
-import { addFavorite } from "../../utils";
+import { addFavorite, getImages } from "../../utils";
 import hotelImages from "../../assets/img/hotels";
 import restaurantImages from "../../assets/img/restaurants";
 import agenciesImages from "../../assets/img/travel-agencies";
@@ -66,6 +66,12 @@ class Favorites extends React.Component {
               />
               {restaurantKeys.map((key) => {
                 const restaurant = restaurants[key];
+
+                const localImages =
+                  restaurantImages[restaurant.LocalImages.folderName].images;
+
+                const { Image } = restaurant;
+                const imageSouce = getImages(Image, localImages);
                 return (
                   <Card
                     key={key}
@@ -77,9 +83,7 @@ class Favorites extends React.Component {
                     }}
                     website={restaurant.Website}
                     email={restaurant.Email}
-                    images={
-                      restaurantImages[restaurant.LocalImages.folderName].images
-                    }
+                    images={imageSouce}
                     addFavorite={() =>
                       addFavorite(this.context, "restaurants", key, restaurant)
                     }
@@ -129,6 +133,12 @@ class Favorites extends React.Component {
               />
               {agencyKeys.map((key) => {
                 const agency = agencies[key];
+
+                const localImages =
+                  agenciesImages[agency.LocalImages.folderName].images;
+                const { Image } = agency;
+                const imageSouce = getImages(Image, localImages);
+
                 return (
                   <Card
                     key={key}
@@ -140,9 +150,7 @@ class Favorites extends React.Component {
                     }}
                     website={agency.Website}
                     email={agency.Email}
-                    images={
-                      agenciesImages[agency.LocalImages.folderName].images
-                    }
+                    images={imageSouce}
                     addFavorite={() =>
                       addFavorite(this.context, "agencies", key, agency)
                     }
