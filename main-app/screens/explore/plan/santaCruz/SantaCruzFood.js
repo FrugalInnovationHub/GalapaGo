@@ -3,9 +3,8 @@ import { StyleSheet, SafeAreaView, ScrollView } from "react-native";
 import { Card } from "../../../../components";
 import ExploreHeader from "../../ExploreHeader";
 import restaurantImages from "../../../../assets/img/restaurants";
-import restaurants from "../../../../data/Restaurants.json";
 import globalStateContext from "../../../../context/globalContext";
-import { addFavorite } from "../../../../utils";
+import { addFavorite, getImages } from "../../../../utils";
 class SantaCruzFood extends React.Component {
   static contextType = globalStateContext;
 
@@ -28,6 +27,11 @@ class SantaCruzFood extends React.Component {
           {propertyNames.map((key) => {
             const restaurant = Restaurants_list[key];
             const isFavorite = !!favorites.restaurants[key];
+            const localImages =
+              restaurantImages[restaurant.LocalImages.folderName].images;
+
+            const { Image } = restaurant;
+            const imageSouce = getImages(Image, localImages);
             return (
               <Card
                 key={key}
@@ -39,9 +43,7 @@ class SantaCruzFood extends React.Component {
                 }}
                 website={restaurant.Website}
                 email={restaurant.Email}
-                images={
-                  restaurantImages[restaurant.LocalImages.folderName].images
-                }
+                images={imageSouce}
                 addFavorite={() =>
                   addFavorite(this.context, "restaurants", key, restaurant)
                 }
