@@ -34,7 +34,7 @@ const Card = ({
       </View>
       <Swiper style={styles.body} showsButtons={false}>
         {images.map((image) => (
-          <View style={styles.slide} key={`${image.title}+${name}`}>
+          <View style={styles.slide} key={`${image.id}+${name}`}>
             <Image
               source={image.file}
               style={styles.slideImage}
