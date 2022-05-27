@@ -1,8 +1,14 @@
 import * as FileSystem from "expo-file-system";
 import { imageDir } from "../config/fileSystem";
+import { getStorage, ref, getDownloadURL } from "firebase/storage";
+import { storage, BASE_URL_OF_STORAGE } from "../config/firebase";
+import { ensureMutipleDirExists } from "../utils/ensureDirExists";
+import { downloadMultipleImages } from "./downloadImage";
+
+import hotelimages from "../assets/img/hotels";
 import transportImages from "../assets/img/transport";
 import agencyImages from "../assets/img/travel-agencies";
-import { async } from "@firebase/util";
+import restaurantImages from "../assets/img/restaurants";
 
 const isFileExist = async (url) => {
   const fileInfo = await FileSystem.getInfoAsync(url);
@@ -40,6 +46,29 @@ const getUndownloadImages = async (dataList, _localImages) => {
   return undownloadImages;
 };
 
+/**
+ *
+ * @param {Array} images
+ */
+const getImagesWithDownloadUrl = async (images) => {
+  const downloadUrls = [];
+
+  for (const image of images) {
+    try {
+      const downloadUrl = await getDownloadURL(
+        ref(storage, `${BASE_URL_OF_STORAGE}${image.url}${image.file}`)
+      );
+      if (downloadUrl) {
+        downloadUrls.push({ ...image, downloadUrl });
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  return downloadUrls;
+};
+
 const updateImages = async (database) => {
   console.log("updateImages database ", database.Timestamp);
   const { Agencies, Hotels, Restaurants, Transports } = database;
@@ -47,11 +76,29 @@ const updateImages = async (database) => {
   const { Hotels_list } = Hotels;
   const { Restaurants_list } = Restaurants;
   const { Transports_list } = Transports;
-  const undownloadImages = await getUndownloadImages(
-    Agencies_list,
-    agencyImages
-  );
-  console.log("undownloadImages", undownloadImages);
+
+  try {
+    const undownloadAgencyImages = await getUndownloadImages(
+      Agencies_list,
+      agencyImages
+    );
+    const undownloadRestaurantImages = await getUndownloadImages(
+      Restaurants_list,
+      restaurantImages
+    );
+
+    const undownloadImages = []
+      .concat(undownloadAgencyImages)
+      .concat(undownloadRestaurantImages);
+
+    console.log(undownloadImages);
+
+    const imagesWithDownloadUrl = await getImagesWithDownloadUrl(
+      undownloadImages
+    );
+    // await ensureMutipleDirExists(imagesWithDownloadUrl);
+    // await downloadMultipleImages(imagesWithDownloadUrl);
+  } catch (error) {}
 
   //check agencies
   //check foods
