@@ -11,8 +11,7 @@ import {
   updateImages
 } from "./utils";
 import { getDatabase } from "firebase/database";
-import { getStorage, ref, getDownloadURL } from "firebase/storage";
-import app from "./config/firebase";
+import { app } from "./config/firebase";
 
 const DATABASE = getDatabase(app);
 
@@ -88,24 +87,11 @@ export default class App extends React.Component {
     const favorites = await getParsedDataFromAsyncStorage("favorites");
     const { type, isConnected } = await NetInfo.fetch();
     const isLastUpdateOneWeekAgo = await checkUpdateTime();
-    const storage = getStorage(app);
-
-    // getDownloadURL(
-    //   ref(
-    //     storage,
-    //     "gs://galapago-d4744.appspot.com/travel-agencies/fds-travel/1.jpg"
-    //   )
-    // )
-    //   .then((url) => {
-    //     console.log("show url", url);
-    //   })
-    //   .catch((error) => {
-    //     // Handle any errors
-    //   });
 
     console.log("isLastUpdateOneWeekAgo", isLastUpdateOneWeekAgo);
     console.log("isConnected", isConnected, type);
-    if (type === "wifi") updateImages(localDatabase);
+
+    let latestDatabase = localDatabase;
 
     if (isConnected && isLastUpdateOneWeekAgo) {
       try {
@@ -128,6 +114,7 @@ export default class App extends React.Component {
           if (isOnlineNewThanLocal) {
             console.log("onlineDatabase is new than localDatabase");
             await this.initContextState(favorites, onlineDatabase);
+            latestDatabase = onlineDatabase;
             // if (type === "wifi") updateImages(onlineDatabase);
           } else {
             console.log("onlineDatabase is not new than localDatabase");
@@ -140,6 +127,8 @@ export default class App extends React.Component {
     } else {
       await this.initContextState(favorites, localDatabase);
     }
+
+    if (isConnected && type === "wifi") updateImages(latestDatabase);
   }
 
   componentDidMount() {

@@ -1,6 +1,6 @@
 import * as FileSystem from "expo-file-system";
 import { imageDir } from "../config/fileSystem";
-import { getStorage, ref, getDownloadURL } from "firebase/storage";
+import { ref, getDownloadURL } from "firebase/storage";
 import { storage, BASE_URL_OF_STORAGE } from "../config/firebase";
 import { ensureMutipleDirExists } from "../utils/ensureDirExists";
 import { downloadMultipleImages } from "./downloadImage";
@@ -87,23 +87,37 @@ const updateImages = async (database) => {
       restaurantImages
     );
 
+    const undownloadHotelImages = await getUndownloadImages(
+      Hotels_list,
+      hotelimages
+    );
+
+    const undownloadTransportImages = await getUndownloadImages(
+      Transports_list,
+      transportImages
+    );
+
     const undownloadImages = []
       .concat(undownloadAgencyImages)
-      .concat(undownloadRestaurantImages);
+      .concat(undownloadRestaurantImages)
+      .concat(undownloadHotelImages)
+      .concat(undownloadTransportImages);
 
-    console.log(undownloadImages);
+    console.log("undownloadImages", undownloadImages);
+
+    if (undownloadImages.length === 0) return;
 
     const imagesWithDownloadUrl = await getImagesWithDownloadUrl(
       undownloadImages
     );
-    // await ensureMutipleDirExists(imagesWithDownloadUrl);
-    // await downloadMultipleImages(imagesWithDownloadUrl);
-  } catch (error) {}
 
-  //check agencies
-  //check foods
-  //check hotels
-  //check transports
+    console.log("imagesWithDownloadUrl", imagesWithDownloadUrl);
+
+    await ensureMutipleDirExists(imagesWithDownloadUrl);
+    await downloadMultipleImages(imagesWithDownloadUrl);
+  } catch (error) {
+    console.log("error", error);
+  }
 };
 
 export default updateImages;

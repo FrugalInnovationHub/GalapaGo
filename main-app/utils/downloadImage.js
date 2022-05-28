@@ -1,6 +1,6 @@
 import * as FileSystem from "expo-file-system";
 import { ensureDirExists } from "./ensureDirExists";
-export const imageDir = FileSystem.documentDirectory + "images/";
+import { imageDir } from "../config/fileSystem";
 const imageFileUri = (fileName) => imageDir + `${fileName}`;
 
 /**
@@ -33,7 +33,7 @@ export async function downloadMultipleImages(images) {
     console.log("Downloading", images.length, "image files...");
     await Promise.all(
       images.map(({ url, file, downloadUrl }) =>
-        FileSystem.downloadAsync(imageUrl(`${url}${file}`), downloadUrl)
+        FileSystem.downloadAsync(downloadUrl, `${imageDir}${url}${file}`)
       )
     );
   } catch (e) {

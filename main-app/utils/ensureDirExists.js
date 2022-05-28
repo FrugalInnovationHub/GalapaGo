@@ -1,5 +1,5 @@
 import * as FileSystem from "expo-file-system";
-
+import { imageDir } from "../config/fileSystem";
 /**
  * Checks if gif directory exists. If not, creates it
  * @param {string} imageDir
@@ -12,9 +12,9 @@ export const ensureDirExists = async (imageDir) => {
   }
 };
 
-export const ensureMutipleDirExists = async (imageDirs) => {
-  for (const imageDir of imageDirs) {
-    const { url } = imageDir;
-    await ensureDirExists(url);
+export const ensureMutipleDirExists = async (images) => {
+  for (const image of images) {
+    const { url, file } = image;
+    await ensureDirExists(`${imageDir}${url}`);
   }
 };
